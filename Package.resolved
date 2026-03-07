@@ -1,0 +1,15 @@
+{
+  "originHash" : "ae1524ee59adc5249de1a9c8360588a2fda0420e93b6cd1f5a6d892dd47d4dc8",
+  "pins" : [
+    {
+      "identity" : "foundationkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Anurag-Chourasia/FoundationKit.git",
+      "state" : {
+        "revision" : "242e31f40b533870f4bdb086463d258505c32545",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

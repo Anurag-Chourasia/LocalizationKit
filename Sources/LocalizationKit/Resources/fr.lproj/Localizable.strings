@@ -1,0 +1,6 @@
+"common.ok" = "OK";
+"common.cancel" = "Annuler";
+"common.welcome" = "Bienvenue, %@ !";
+"errors.generic" = "Une erreur est survenue";
+"errors.retry_count.one" = "1 nouvelle tentative";
+"errors.retry_count.other" = "%d nouvelles tentatives";

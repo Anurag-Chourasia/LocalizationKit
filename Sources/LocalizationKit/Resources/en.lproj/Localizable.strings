@@ -1,0 +1,7 @@
+"common.ok" = "OK";
+"common.cancel" = "Cancel";
+"common.welcome" = "Welcome, %@!";
+"errors.generic" = "Something went wrong";
+"errors.retry_count.zero" = "No retries left";
+"errors.retry_count.one" = "1 retry left";
+"errors.retry_count.other" = "%d retries left";
