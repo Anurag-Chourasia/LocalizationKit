@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Anurag-Chourasia/FoundationKit.git",
       "state" : {
-        "revision" : "242e31f40b533870f4bdb086463d258505c32545",
-        "version" : "0.1.0"
+        "revision" : "bb31bce9d4981684eacf11a560e7e32a2b0975a7",
+        "version" : "0.1.1"
       }
     }
   ],
