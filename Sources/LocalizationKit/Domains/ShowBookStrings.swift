@@ -15,6 +15,16 @@ public struct ShowBookStrings: Sendable {
 
     public var savedBooks: String { provider.string("showbook.saved_books.title") }
     public var searchForBooks: String { provider.string("showbook.search.placeholder") }
+    public var searchKeepTyping: String { provider.string("showbook.search.keep_typing") }
+    public var searchStartSearching: String { provider.string("showbook.search.start_searching") }
+    public var searchNoBooksFound: String { provider.string("showbook.search.no_books_found") }
+    public var searchUnableToSearch: String { provider.string("showbook.search.unable_to_search") }
+    public var searchConnectionError: String { provider.string("showbook.search.connection_error") }
+    public var searchMinimumCharacters: String { provider.string("showbook.search.minimum_characters") }
+
+    public var sortBy: String { provider.string("showbook.sort.by") }
+    public var loadingMore: String { provider.string("showbook.loading.more") }
+    public var loadingProgress: String { provider.string("showbook.loading.progress") }
 
     public var editions: String { provider.string("showbook.details.editions") }
     public var editionDetails: String { provider.string("showbook.details.edition_details") }
@@ -24,6 +34,23 @@ public struct ShowBookStrings: Sendable {
     public var shareCover: String { provider.string("showbook.details.share_cover") }
     public var coverUnavailable: String { provider.string("showbook.details.cover_unavailable") }
     public var closeCoverPreview: String { provider.string("showbook.details.close_cover_preview") }
+    public var loadingBookDetails: String { provider.string("showbook.details.loading_details") }
+    public var loadingEditions: String { provider.string("showbook.details.loading_editions") }
+    public var loadMoreEditions: String { provider.string("showbook.details.load_more_editions") }
+    public var retryEditions: String { provider.string("showbook.details.retry_editions") }
+    public var bookDetailsTitle: String { provider.string("showbook.details.title") }
+    public var editionDetailsTitle: String { provider.string("showbook.details.edition_details_title") }
+    public var description: String { provider.string("showbook.details.description") }
+    public var noDescription: String { provider.string("showbook.details.no_description") }
+    public var firstPublished: String { provider.string("showbook.details.first_published") }
+    public var subjects: String { provider.string("showbook.details.subjects") }
+    public var published: String { provider.string("showbook.details.published") }
+    public var publisher: String { provider.string("showbook.details.publisher") }
+    public var format: String { provider.string("showbook.details.format") }
+    public var pages: String { provider.string("showbook.details.pages") }
+    public var isbn13: String { provider.string("showbook.details.isbn13") }
+    public var isbn10: String { provider.string("showbook.details.isbn10") }
+    public var languages: String { provider.string("showbook.details.languages") }
 
     public var appOptions: String { provider.string("showbook.menu.app_options") }
     public var appearance: String { provider.string("showbook.menu.appearance") }

@@ -1,8 +1,9 @@
 import SwiftUI
 import Foundation
 
-// MARK: - Scoped Localized Context
+// MARK: - Scoped Localized Context with KeyPath Subscripts
 
+@dynamicMemberLookup
 public struct LocalizedContext<Domain: LocalizationDomain>: Sendable {
     public let provider: LocalizationProviding
     public let domain: Domain.Strings
@@ -27,6 +28,20 @@ public struct LocalizedContext<Domain: LocalizationDomain>: Sendable {
     public func string(_ key: String) -> String {
         provider.string(key)
     }
+
+    // Direct KeyPath Subscripts: l10n[\.key]
+    public subscript(keyPath: KeyPath<Domain.Strings, String>) -> String {
+        domain[keyPath: keyPath]
+    }
+
+    public subscript(keyPath: KeyPath<CommonStrings, String>) -> String {
+        common[keyPath: keyPath]
+    }
+
+    // Dynamic Member Lookup: l10n.key
+    public subscript(dynamicMember keyPath: KeyPath<Domain.Strings, String>) -> String {
+        domain[keyPath: keyPath]
+    }
 }
 
 // MARK: - Common Shared Strings
@@ -40,12 +55,30 @@ public struct CommonStrings: Sendable {
 
     public var ok: String { provider.string("common.ok") }
     public var cancel: String { provider.string("common.cancel") }
+    public var yes: String { provider.string("common.yes") }
+    public var no: String { provider.string("common.no") }
+    public var clear: String { provider.string("common.clear") }
     public var share: String { provider.string("common.share") }
     public var close: String { provider.string("common.close") }
     public var done: String { provider.string("account.done") }
     public var retry: String { provider.string("errors.recoverable_retry") }
     public var dismiss: String { provider.string("errors.recoverable_dismiss") }
+    public var error: String { provider.string("common.error") }
     public var errorGeneric: String { provider.string("errors.generic") }
+}
+
+// MARK: - SwiftUI KeyPath Text Initializers
+
+extension Text {
+    /// Initialize with a direct domain keypath: `Text(\.previewShareTitle, in: l10n)`
+    public init<Domain: LocalizationDomain>(_ keyPath: KeyPath<Domain.Strings, String>, in l10n: LocalizedContext<Domain>) {
+        self.init(l10n[keyPath])
+    }
+
+    /// Initialize with a direct common keypath: `Text(\.share, in: l10n)`
+    public init<Domain: LocalizationDomain>(_ keyPath: KeyPath<CommonStrings, String>, in l10n: LocalizedContext<Domain>) {
+        self.init(l10n[keyPath])
+    }
 }
 
 // MARK: - Environment Keys for Scoped Domains

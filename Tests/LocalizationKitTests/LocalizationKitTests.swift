@@ -239,6 +239,32 @@ extension LocalizationKitTests {
         XCTAssertEqual(showBook.domain.discover, "Discover")
     }
 
+    func testDirectKeyPathSubscriptAccess() {
+        let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
+        let motivation = LocalizedContext<MotivationDomain>(provider: controller)
+        
+        // Direct KeyPath Subscript: l10n[\.key]
+        XCTAssertEqual(motivation[\.appName], "Motivation Daily")
+        XCTAssertEqual(motivation[\.favourites], "Favourites")
+        XCTAssertEqual(motivation[\.imageNotAvailable], "Image not available")
+        XCTAssertEqual(motivation[\.share], "Share")
+        XCTAssertEqual(motivation[\.ok], "OK")
+        
+        // Dynamic member lookup: l10n.key
+        XCTAssertEqual(motivation.appName, "Motivation Daily")
+        XCTAssertEqual(motivation.favourites, "Favourites")
+
+        let myTV = LocalizedContext<MyTVDomain>(provider: controller)
+        XCTAssertEqual(myTV[\.appName], "My TV")
+        XCTAssertEqual(myTV[\.allChannels], "All Channels")
+        XCTAssertEqual(myTV[\.share], "Share")
+
+        let showBook = LocalizedContext<ShowBookDomain>(provider: controller)
+        XCTAssertEqual(showBook[\.appName], "Show Book")
+        XCTAssertEqual(showBook[\.discover], "Discover")
+        XCTAssertEqual(showBook[\.savedBooks], "Saved books")
+    }
+
     func testMultiDomainContextRTLArabic() {
         let controller = LocalizationController(initialLocale: Locale(identifier: "ar"))
         let motivation = LocalizedContext<MotivationDomain>(provider: controller)
