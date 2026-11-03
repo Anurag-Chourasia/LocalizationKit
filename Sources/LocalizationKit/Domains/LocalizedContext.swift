@@ -189,6 +189,42 @@ extension String {
     }
 }
 
+// MARK: - SwiftUI KeyPath Accessibility Modifiers
+
+extension View {
+    public func accessibilityLabel(_ keyPath: KeyPath<MotivationStrings, String>) -> some View {
+        self.accessibilityLabel(Text(keyPath))
+    }
+
+    public func accessibilityLabel(_ keyPath: KeyPath<MyTVStrings, String>) -> some View {
+        self.accessibilityLabel(Text(keyPath))
+    }
+
+    public func accessibilityLabel(_ keyPath: KeyPath<ShowBookStrings, String>) -> some View {
+        self.accessibilityLabel(Text(keyPath))
+    }
+
+    public func accessibilityLabel(_ keyPath: KeyPath<CommonStrings, String>) -> some View {
+        self.accessibilityLabel(Text(keyPath))
+    }
+
+    public func accessibilityHint(_ keyPath: KeyPath<MotivationStrings, String>) -> some View {
+        self.accessibilityHint(Text(keyPath))
+    }
+
+    public func accessibilityHint(_ keyPath: KeyPath<MyTVStrings, String>) -> some View {
+        self.accessibilityHint(Text(keyPath))
+    }
+
+    public func accessibilityHint(_ keyPath: KeyPath<ShowBookStrings, String>) -> some View {
+        self.accessibilityHint(Text(keyPath))
+    }
+
+    public func accessibilityHint(_ keyPath: KeyPath<CommonStrings, String>) -> some View {
+        self.accessibilityHint(Text(keyPath))
+    }
+}
+
 // MARK: - Environment Keys for Scoped Domains
 
 private struct MotivationL10nKey: EnvironmentKey {
