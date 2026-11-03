@@ -151,8 +151,20 @@ extension Button where Label == Text {
         }
     }
 
+    public init(_ keyPath: KeyPath<CommonStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
+        self.init(role: role, action: action) {
+            Text(keyPath)
+        }
+    }
+
     public init(_ keyPath: KeyPath<MotivationStrings, String>, action: @escaping () -> Void) {
         self.init(action: action) {
+            Text(keyPath)
+        }
+    }
+
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
+        self.init(role: role, action: action) {
             Text(keyPath)
         }
     }
@@ -163,8 +175,20 @@ extension Button where Label == Text {
         }
     }
 
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
+        self.init(role: role, action: action) {
+            Text(keyPath)
+        }
+    }
+
     public init(_ keyPath: KeyPath<ShowBookStrings, String>, action: @escaping () -> Void) {
         self.init(action: action) {
+            Text(keyPath)
+        }
+    }
+
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
+        self.init(role: role, action: action) {
             Text(keyPath)
         }
     }
