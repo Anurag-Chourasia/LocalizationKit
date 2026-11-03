@@ -24,6 +24,12 @@ public final class LocalizationController: LocalizationProviding, @unchecked Sen
         }
     }
 
+    public var isRightToLeft: Bool {
+        let activeLocale = locale
+        let identifier = activeLocale.language.languageCode?.identifier ?? activeLocale.identifier
+        return Locale.Language(identifier: identifier).characterDirection == .rightToLeft
+    }
+
     public func setLocale(_ locale: Locale) {
         lock.withLock {
             currentLocale = locale
