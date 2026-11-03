@@ -219,3 +219,16 @@
 "a11y.stream.play.hint" = "Plays this stream.";
 "a11y.openLink.hint" = "Opens link.";
 "a11y.selected" = "Selected";
+
+/* Motivation additions */
+"motivation.share.copied" = "Copied!";
+"motivation.photos.access_title" = "Photo Access Needed";
+"motivation.share.image_failed_title" = "Share Image Failed";
+"motivation.share.image_failed_message" = "We couldn't prepare the share image. Please try again.";
+"motivation.photos.permission_required_title" = "Permission Required";
+"motivation.photos.permission_required_message" = "Allow photo access to save images.";
+"motivation.share.saved_title" = "Saved";
+"motivation.share.saved_message" = "Image saved to Photos.";
+"motivation.share.save_failed_title" = "Save Failed";
+"motivation.share.save_failed_message" = "Could not save image. Please try again.";
+

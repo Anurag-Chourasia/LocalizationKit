@@ -42,6 +42,10 @@ public struct LocalizedContext<Domain: LocalizationDomain>: Sendable {
     public subscript(dynamicMember keyPath: KeyPath<Domain.Strings, String>) -> String {
         domain[keyPath: keyPath]
     }
+
+    public static var shared: LocalizedContext<Domain> {
+        LocalizedContext<Domain>(provider: LocalizationController.shared)
+    }
 }
 
 // MARK: - Common Shared Strings
@@ -53,31 +57,135 @@ public struct CommonStrings: Sendable {
         self.provider = provider
     }
 
+    public static var shared: CommonStrings {
+        CommonStrings(provider: LocalizationController.shared)
+    }
+
     public var ok: String { provider.string("common.ok") }
     public var cancel: String { provider.string("common.cancel") }
+    public var welcome: String { provider.string("common.welcome") }
+    public var errorGeneric: String { provider.string("errors.generic") }
+    public var errorsRetryCountZero: String { provider.string("errors.retry_count.zero") }
+    public var errorsRetryCountOne: String { provider.string("errors.retry_count.one") }
+    public var errorsRetryCountOther: String { provider.string("errors.retry_count.other") }
+    public var authTitleSignIn: String { provider.string("auth.title.sign_in") }
+    public var authTitleCreateAccount: String { provider.string("auth.title.create_account") }
+    public var authTitleResetPassword: String { provider.string("auth.title.reset_password") }
+    public var authTitleChooseNewPassword: String { provider.string("auth.title.choose_new_password") }
+    public var authFieldEmail: String { provider.string("auth.field.email") }
+    public var authFieldPassword: String { provider.string("auth.field.password") }
+    public var authFieldConfirmPassword: String { provider.string("auth.field.confirm_password") }
+    public var authButtonForgotPassword: String { provider.string("auth.button.forgot_password") }
+    public var authButtonCreateAnAccount: String { provider.string("auth.button.create_an_account") }
+    public var authButtonBackToSignIn: String { provider.string("auth.button.back_to_sign_in") }
+    public var authButtonSignOut: String { provider.string("auth.button.sign_out") }
+    public var authButtonDeleteAccount: String { provider.string("auth.button.delete_account") }
+    public var authOrContinueWith: String { provider.string("auth.or_continue_with") }
+    public var authStatusPleaseWait: String { provider.string("auth.status.please_wait") }
+    public var authInstructionPasswordRequirements: String { provider.string("auth.instruction.password_requirements") }
+    public var authInstructionResetEmailSent: String { provider.string("auth.instruction.reset_email_sent") }
+    public var accountTitle: String { provider.string("account.title") }
+    public var accountSignedIn: String { provider.string("account.signed_in") }
+    public var accountDeleteConfirmationTitle: String { provider.string("account.delete_confirmation_title") }
+    public var accountDeleteConfirmationAction: String { provider.string("account.delete_confirmation_action") }
+    public var accountDeleteConfirmationMessage: String { provider.string("account.delete_confirmation_message") }
+    public var accountDeleteFooterNotice: String { provider.string("account.delete_footer_notice") }
+    public var done: String { provider.string("account.done") }
+    public var errorsNetworkUnreachable: String { provider.string("errors.network_unreachable") }
+    public var errorsInvalidCredentials: String { provider.string("errors.invalid_credentials") }
+    public var errorsSessionExpired: String { provider.string("errors.session_expired") }
+    public var errorsAccountDeletionFailed: String { provider.string("errors.account_deletion_failed") }
+    public var retry: String { provider.string("errors.recoverable_retry") }
+    public var dismiss: String { provider.string("errors.recoverable_dismiss") }
+    public var errorsStoreLoadFailed: String { provider.string("errors.store_load_failed") }
+    public var errorsStoreLoadMessage: String { provider.string("errors.store_load_message") }
+    public var share: String { provider.string("common.share") }
+    public var close: String { provider.string("common.close") }
     public var yes: String { provider.string("common.yes") }
     public var no: String { provider.string("common.no") }
     public var clear: String { provider.string("common.clear") }
-    public var share: String { provider.string("common.share") }
-    public var close: String { provider.string("common.close") }
-    public var done: String { provider.string("account.done") }
-    public var retry: String { provider.string("errors.recoverable_retry") }
-    public var dismiss: String { provider.string("errors.recoverable_dismiss") }
     public var error: String { provider.string("common.error") }
-    public var errorGeneric: String { provider.string("errors.generic") }
 }
 
 // MARK: - SwiftUI KeyPath Text Initializers
 
 extension Text {
-    /// Initialize with a direct domain keypath: `Text(\.previewShareTitle, in: l10n)`
+    /// Initialize with a direct Motivation keypath: `Text(\.imageNotAvailable)`
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, in context: LocalizedContext<MotivationDomain> = .shared) {
+        self.init(context[keyPath])
+    }
+
+    /// Initialize with a direct MyTV keypath: `Text(\.allChannels)`
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, in context: LocalizedContext<MyTVDomain> = .shared) {
+        self.init(context[keyPath])
+    }
+
+    /// Initialize with a direct ShowBook keypath: `Text(\.searchKeepTyping)`
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, in context: LocalizedContext<ShowBookDomain> = .shared) {
+        self.init(context[keyPath])
+    }
+
+    /// Initialize with a direct Common keypath: `Text(\.share)` or `Text(\.ok)`
+    public init(_ keyPath: KeyPath<CommonStrings, String>, in context: CommonStrings = .shared) {
+        self.init(context[keyPath: keyPath])
+    }
+
+    /// Initialize with explicit context: `Text(\.previewShareTitle, in: l10n)`
     public init<Domain: LocalizationDomain>(_ keyPath: KeyPath<Domain.Strings, String>, in l10n: LocalizedContext<Domain>) {
         self.init(l10n[keyPath])
     }
 
-    /// Initialize with a direct common keypath: `Text(\.share, in: l10n)`
+    /// Initialize with explicit common context: `Text(\.share, in: l10n)`
     public init<Domain: LocalizationDomain>(_ keyPath: KeyPath<CommonStrings, String>, in l10n: LocalizedContext<Domain>) {
         self.init(l10n[keyPath])
+    }
+}
+
+// MARK: - SwiftUI KeyPath Button Initializers
+
+extension Button where Label == Text {
+    public init(_ keyPath: KeyPath<CommonStrings, String>, action: @escaping () -> Void) {
+        self.init(action: action) {
+            Text(keyPath)
+        }
+    }
+
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, action: @escaping () -> Void) {
+        self.init(action: action) {
+            Text(keyPath)
+        }
+    }
+
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, action: @escaping () -> Void) {
+        self.init(action: action) {
+            Text(keyPath)
+        }
+    }
+
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, action: @escaping () -> Void) {
+        self.init(action: action) {
+            Text(keyPath)
+        }
+    }
+}
+
+// MARK: - KeyPath String Convenience Initializers
+
+extension String {
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, in context: LocalizedContext<MotivationDomain> = .shared) {
+        self = context[keyPath]
+    }
+
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, in context: LocalizedContext<MyTVDomain> = .shared) {
+        self = context[keyPath]
+    }
+
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, in context: LocalizedContext<ShowBookDomain> = .shared) {
+        self = context[keyPath]
+    }
+
+    public init(_ keyPath: KeyPath<CommonStrings, String>, in context: CommonStrings = .shared) {
+        self = context[keyPath: keyPath]
     }
 }
 

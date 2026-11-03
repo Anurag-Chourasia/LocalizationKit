@@ -7,6 +7,7 @@ public struct MotivationStrings: Sendable {
         self.provider = provider
     }
 
+    /* Motivation Daily Domain */
     public var appName: String {
         provider.string("motivation.app.name")
     }
@@ -114,4 +115,46 @@ public struct MotivationStrings: Sendable {
     public var randomCategory: String {
         provider.string("motivation.category.random")
     }
+
+    /* Motivation additions */
+    public var copied: String {
+        provider.string("motivation.share.copied")
+    }
+
+    public var photosAccessAlertTitle: String {
+        provider.string("motivation.photos.access_title")
+    }
+
+    public var shareImageFailed: String {
+        provider.string("motivation.share.image_failed_title")
+    }
+
+    public var shareImageFailedMessage: String {
+        provider.string("motivation.share.image_failed_message")
+    }
+
+    public var permissionRequired: String {
+        provider.string("motivation.photos.permission_required_title")
+    }
+
+    public var permissionRequiredPhotosMessage: String {
+        provider.string("motivation.photos.permission_required_message")
+    }
+
+    public var saved: String {
+        provider.string("motivation.share.saved_title")
+    }
+
+    public var imageSavedToPhotos: String {
+        provider.string("motivation.share.saved_message")
+    }
+
+    public var saveFailed: String {
+        provider.string("motivation.share.save_failed_title")
+    }
+
+    public var couldNotSaveImage: String {
+        provider.string("motivation.share.save_failed_message")
+    }
+
 }

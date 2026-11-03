@@ -1,220 +1,433 @@
 "common.ok" = "OK";
+
 "common.cancel" = "Annuler";
+
 "common.welcome" = "Bienvenue, %@ !";
+
 "errors.generic" = "Une erreur est survenue";
+
+"errors.retry_count.zero" = "No retries left";
+
 "errors.retry_count.one" = "1 nouvelle tentative";
+
 "errors.retry_count.other" = "%d nouvelles tentatives";
 
 /* Authentication */
 "auth.title.sign_in" = "Connexion";
+
 "auth.title.create_account" = "Créer un compte";
+
 "auth.title.reset_password" = "Réinitialiser le mot de passe";
+
 "auth.title.choose_new_password" = "Choisir un nouveau mot de passe";
+
 "auth.field.email" = "E-mail";
+
 "auth.field.password" = "Mot de passe";
+
 "auth.field.confirm_password" = "Confirmer le mot de passe";
+
 "auth.button.forgot_password" = "Mot de passe oublié ?";
+
 "auth.button.create_an_account" = "Créer un compte";
+
 "auth.button.back_to_sign_in" = "Retour à la connexion";
+
 "auth.button.sign_out" = "Se déconnecter";
+
 "auth.button.delete_account" = "Supprimer le compte";
+
 "auth.or_continue_with" = "ou continuer avec";
+
 "auth.status.please_wait" = "Veuillez patienter";
+
 "auth.instruction.password_requirements" = "Utilisez au moins 8 caractères. Les mots de passe doivent correspondre.";
+
 "auth.instruction.reset_email_sent" = "Nous vous enverrons un lien pour choisir un nouveau mot de passe. Ouvrez-le sur cet appareil.";
 
 /* Account */
 "account.title" = "Compte";
+
 "account.signed_in" = "Connecté";
+
 "account.delete_confirmation_title" = "Supprimer le compte ?";
+
 "account.delete_confirmation_action" = "Supprimer définitivement le compte";
+
 "account.delete_confirmation_message" = "Cette action supprimera définitivement votre identité cloud et vos enregistrements. Cette action est irréversible.";
+
 "account.delete_footer_notice" = "Supprime définitivement vos identifiants de compte et les enregistrements cloud associés sur l'ensemble de ce portfolio.";
+
 "account.done" = "Terminé";
 
 /* Recoverable Errors */
 "errors.network_unreachable" = "Connexion réseau perdue. Veuillez vérifier votre connexion Internet.";
+
 "errors.invalid_credentials" = "E-mail ou mot de passe invalide. Veuillez réessayer.";
+
 "errors.session_expired" = "Votre session a expiré. Veuillez vous reconnecter.";
+
 "errors.account_deletion_failed" = "Impossible de supprimer le compte pour le moment. Veuillez réessayer.";
+
 "errors.recoverable_retry" = "Réessayer";
+
 "errors.recoverable_dismiss" = "Fermer";
+
 "errors.store_load_failed" = "Stockage non disponible";
+
 "errors.store_load_message" = "Impossible de charger les données hors ligne. Les données sont conservées.";
 
 /* Common */
 "common.share" = "Partager";
+
 "common.close" = "Fermer";
 
 /* Motivation Daily Domain */
 "motivation.app.name" = "Motivation Quotidienne";
+
 "motivation.favourites.title" = "Favoris";
+
 "motivation.about.developer" = "À propos du développeur";
+
 "motivation.favourites.clear_all" = "Tout effacer";
+
 "motivation.favourites.remove" = "Supprimer le favori";
+
 "motivation.favourites.empty_title" = "Aucun favori pour le moment";
+
 "motivation.favourites.empty_message" = "Les citations ajoutées aux favoris apparaîtront ici.";
+
 "motivation.image.not_available" = "Image non disponible";
+
 "motivation.share.preparing_image" = "Préparation de l'image...";
+
 "motivation.share.preview_title" = "Aperçu - Ce qui sera partagé";
+
 "motivation.share.quote_and_image" = "Partager citation + image";
+
 "motivation.share.quote_embedded_subtitle" = "Citation incrustée dans l'image";
+
 "motivation.share.image_only" = "Partager l'image uniquement";
+
 "motivation.share.wallpaper_background_subtitle" = "Fond d'écran sans citation";
+
 "motivation.share.save_to_photos" = "Enregistrer dans Photos";
+
 "motivation.share.choose_what_to_save" = "Choisir quoi enregistrer";
+
 "motivation.share.quote_only" = "Partager la citation uniquement";
+
 "motivation.share.black_gradient_subtitle" = "Citation sur dégradé noir";
+
 "motivation.share.copy_quote" = "Copier la citation";
+
 "motivation.share.paste_anywhere" = "Coller n'importe où";
+
 "motivation.share.copied_toast" = "Citation copiée dans le presse-papiers";
+
 "motivation.photos.access_message" = "Autorisez l'accès aux photos dans les Réglages pour enregistrer.";
+
 "motivation.photos.open_settings" = "Ouvrir les Réglages";
+
 "motivation.share.save_only_image" = "Enregistrer uniquement l'image";
+
 "motivation.share.save_image_plus_quote" = "Enregistrer image + citation";
+
 "motivation.share.save_quote_gradient" = "Enregistrer la citation (dégradé noir)";
+
 "motivation.category.random" = "Aléatoire";
 
 /* ShowBook Domain */
 "showbook.app.name" = "Show Book";
+
 "showbook.discover.title" = "Découvrir";
+
 "showbook.discover.subtitle" = "Trouvez votre prochaine lecture.";
+
 "showbook.discover.unavailable" = "Découverte indisponible";
+
 "showbook.discover.no_books" = "Aucun livre disponible dans cette catégorie.";
+
 "showbook.saved_books.title" = "Livres enregistrés";
+
 "showbook.search.placeholder" = "Rechercher des livres";
+
 "showbook.details.editions" = "Éditions";
+
 "showbook.details.edition_details" = "Détails de l'édition";
+
 "showbook.details.no_editions" = "Aucune édition disponible.";
+
 "showbook.details.not_rated" = "Non noté";
+
 "showbook.details.preview_cover" = "Aperçu de la couverture";
+
 "showbook.details.share_cover" = "Partager la couverture";
+
 "showbook.details.cover_unavailable" = "Couverture indisponible";
+
 "showbook.details.close_cover_preview" = "Fermer l'aperçu";
+
 "showbook.menu.app_options" = "Options de l'application";
+
 "showbook.menu.appearance" = "Apparence";
+
 "showbook.appearance.light" = "Clair";
+
 "showbook.appearance.dark" = "Sombre";
+
 "showbook.menu.know_developer" = "Rencontrer le développeur";
+
 "showbook.logout.confirmation_title" = "Êtes-vous sûr ?";
+
 "showbook.logout.action" = "Se déconnecter";
 
 /* myTV Domain */
 "app.name" = "My TV";
+
 "app.cancel" = "Annuler";
+
 "app.retry" = "Réessayer";
+
 "app.ok" = "OK";
+
 "app.grouping.name" = "Nom";
+
 "app.grouping.country" = "Pays";
+
 "app.grouping.category" = "Catégorie";
+
 "app.offline.banner" = "Vous êtes hors ligne. Affichage du contenu en cache.";
+
 "app.showLess" = "Afficher moins";
+
 "app.readMore" = "Lire la suite";
+
 "app.appearance.color.system" = "Système";
+
 "app.appearance.color.light" = "Clair";
+
 "app.appearance.color.dark" = "Sombre";
+
 "app.search" = "Rechercher";
+
 "app.apply" = "Appliquer";
+
 "loading.preparing.stream" = "Préparation du flux…";
+
 "channel.scope.all" = "Toutes les chaînes";
+
 "channel.scope.favorites" = "Favoris";
+
 "channel.empty.title" = "Aucune chaîne";
+
 "channel.empty.message" = "Aucune chaîne disponible pour le moment.";
+
 "channel.no.results.title" = "Aucun résultat";
+
 "channel.no.results.message" = "Essayez de modifier votre recherche ou vos filtres.";
+
 "channel.layout.list" = "Liste";
+
 "channel.layout.grid" = "Grille";
+
 "channel.layout.grid.unavailable.title" = "Disposition en grille indisponible";
+
 "channel.layout.grid.unavailable.message" = "La disposition en grille n'est pas disponible avec cette taille de texte.";
+
 "channel.layout.grid.unavailable.banner" = "Grille indisponible à cette taille de texte.";
+
 "channel.alert.clear.cache.title" = "Effacer le cache des chaînes ?";
+
 "channel.alert.clear.cache.confirm" = "Effacer le cache";
+
 "channel.alert.clear.filters.title" = "Effacer les filtres et le regroupement ?";
+
 "channel.alert.clear.filters.confirm" = "Effacer les filtres";
+
 "channel.alert.remove.favorites.title" = "Supprimer tous les favoris ?";
+
 "channel.alert.remove.favorites.confirm" = "Supprimer les favoris";
+
 "channel.menu.section.sortAndFilter.title" = "Trier et filtrer";
+
 "channel.filter.countries" = "Pays";
+
 "channel.filter.categories" = "Catégories";
+
 "stream.player.error.title" = "Erreur de lecture";
+
 "stream.player.error.noWorkingStreams" = "Aucun flux fonctionnel trouvé.";
+
 "stream.player.error.invalidURL" = "URL du flux invalide.";
+
 "stream.player.error.cannotPlay" = "Ce flux ne peut pas être lu.";
+
 "stream.player.error.failed" = "Échec de la lecture.";
+
 "about.title" = "À propos";
+
 "about.disclaimer.title" = "Avis de non-responsabilité";
+
 "about.disclaimer.text" = "My TV est une application de démonstration créée à des fins éducatives uniquement.";
 
 "common.yes" = "Oui";
+
 "common.no" = "Non";
+
 "common.clear" = "Effacer";
+
 "common.error" = "Erreur";
 
 /* ShowBook additions */
 "showbook.search.keep_typing" = "Continuez à taper";
+
 "showbook.search.start_searching" = "Commencez à chercher pour voir des livres";
+
 "showbook.search.no_books_found" = "Aucun livre trouvé";
+
 "showbook.search.unable_to_search" = "Impossible de chercher";
+
 "showbook.search.connection_error" = "Impossible de charger les livres. Vérifiez votre connexion.";
+
 "showbook.search.minimum_characters" = "Entrez au moins 3 caractères pour commencer.";
+
 "showbook.sort.by" = "Trier par";
+
 "showbook.loading.more" = "Chargement supplémentaire...";
+
 "showbook.loading.progress" = "Chargement.";
+
 "showbook.details.loading_details" = "Chargement des détails…";
+
 "showbook.details.loading_editions" = "Chargement des éditions…";
+
 "showbook.details.load_more_editions" = "Plus d'éditions";
+
 "showbook.details.retry_editions" = "Réessayer les éditions";
+
 "showbook.details.title" = "Détails du livre";
+
 "showbook.details.edition_details_title" = "Détails de l'édition";
+
 "showbook.details.description" = "Description";
+
 "showbook.details.no_description" = "Aucune description disponible.";
+
 "showbook.details.first_published" = "Première publication";
+
 "showbook.details.subjects" = "Sujets";
+
 "showbook.details.published" = "Publié";
+
 "showbook.details.publisher" = "Éditeur";
+
 "showbook.details.format" = "Format";
+
 "showbook.details.pages" = "Pages";
+
 "showbook.details.isbn13" = "ISBN-13";
+
 "showbook.details.isbn10" = "ISBN-10";
+
 "showbook.details.languages" = "Langues";
 
 /* myTV additions */
 "channel.layout.title" = "Disposition";
+
 "channel.layout.grid.unavailable.ok" = "OK";
+
 "channel.layout.grid.auto_list.title" = "Passé en liste";
+
 "channel.layout.grid.auto_list.message" = "Grille indisponible à cette taille de police. Passage en liste.";
+
 "channel.layout.grid.auto_list.ok" = "OK";
+
 "channel.menu.section.group_by.title" = "Grouper par";
+
 "channel.menu.section.sorting.title" = "Tri";
+
 "channel.menu.section.Filter.title" = "Filtre";
+
 "channel.menu.section.section.title" = "Section";
+
 "channel.menu.section.channel.title" = "Chaîne";
+
 "channel.menu.section.actions" = "Actions";
+
 "channel.menu.section.layout" = "Disposition";
+
 "channel.menu.section.appearance" = "Apparence";
+
 "channel.menu.section.about" = "À propos";
+
 "channel.menu.action.clearCache" = "Vider le cache";
+
 "channel.menu.action.clearFilters" = "Effacer les filtres";
+
 "channel.menu.action.removeFavorites" = "Supprimer les favoris";
+
 "channel.sort.order.ascending" = "A-Z ↓";
+
 "channel.sort.order.descending" = "Z-A ↑";
+
 "multiSelectView.section.selected" = "Sélectionné";
+
 "multiSelectView.section.all" = "Tous";
+
 "stream.list.empty.title" = "Aucun flux disponible";
+
 "stream.list.empty.message" = "Cette chaîne n'a aucun flux diffusable.";
+
 "about.alert.error.title" = "Erreur";
+
 "about.alert.error.ok" = "OK";
+
 "about.alert.error.invalidLink" = "Impossible d'ouvrir ce lien.";
+
 "about.app.info.title" = "Informations sur l'application";
+
 "about.app.name" = "My TV";
+
 "about.app.version.prefix" = "Version";
+
 "about.social.title" = "Restons connectés";
+
 "a11y.menu.options" = "Options";
+
 "a11y.menu.options.hint" = "Ouvre le tri, les filtres et les paramètres.";
+
 "a11y.favorite.add" = "Ajouter aux favoris";
+
 "a11y.favorite.remove" = "Supprimer des favoris";
+
 "a11y.favorite.hint" = "Touchez deux fois pour basculer.";
+
 "a11y.channel.open.hint" = "Ouvre les flux de cette chaîne.";
+
 "a11y.stream.play.hint" = "Lit ce flux.";
+
 "a11y.openLink.hint" = "Ouvre le lien.";
+
 "a11y.selected" = "Sélectionné";
+
+/* Motivation additions */
+"motivation.share.copied" = "Copié !";
+
+"motivation.photos.access_title" = "Accès aux photos requis";
+
+"motivation.share.image_failed_title" = "Échec du partage d'image";
+
+"motivation.share.image_failed_message" = "Impossible de préparer l'image de partage. Veuillez réessayer.";
+
+"motivation.photos.permission_required_title" = "Autorisation requise";
+
+"motivation.photos.permission_required_message" = "Autorisez l'accès aux photos pour enregistrer les images.";
+
+"motivation.share.saved_title" = "Enregistré";
+
+"motivation.share.saved_message" = "Image enregistrée dans Photos.";
+
+"motivation.share.save_failed_title" = "Échec de l'enregistrement";
+
+"motivation.share.save_failed_message" = "Impossible d'enregistrer l'image. Veuillez réessayer.";

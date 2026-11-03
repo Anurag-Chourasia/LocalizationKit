@@ -1,6 +1,8 @@
 import Foundation
 
 public final class LocalizationController: LocalizationProviding, @unchecked Sendable {
+    public static let shared = LocalizationController()
+
     private let bundle: Bundle
     private let fallbackLocale: Locale
     private let lock = NSLock()

@@ -1,0 +1,11 @@
+# SwiftGen configuration for LocalizationKit
+# Generates Swift symbols for strings when running `swiftgen`
+
+strings:
+  inputs: Sources/LocalizationKit/Resources/en.lproj/Localizable.strings
+  outputs:
+    templateName: structured-swift5
+    output: Sources/LocalizationKit/Generated/Strings.swift
+    params:
+      enumName: L10n
+      publicAccess: true

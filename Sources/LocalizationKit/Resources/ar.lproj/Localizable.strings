@@ -1,221 +1,433 @@
 "common.ok" = "موافق";
+
 "common.cancel" = "إلغاء";
+
 "common.welcome" = "مرحباً، %@!";
+
 "errors.generic" = "حدث خطأ ما";
+
 "errors.retry_count.zero" = "لا توجد محاولات متبقية";
+
 "errors.retry_count.one" = "محاولة واحدة متبقية";
+
 "errors.retry_count.other" = "%d محاولات متبقية";
 
 /* Authentication */
 "auth.title.sign_in" = "تسجيل الدخول";
+
 "auth.title.create_account" = "إنشاء حساب";
+
 "auth.title.reset_password" = "إعادة تعيين كلمة المرور";
+
 "auth.title.choose_new_password" = "اختر كلمة مرور جديدة";
+
 "auth.field.email" = "البريد الإلكتروني";
+
 "auth.field.password" = "كلمة المرور";
+
 "auth.field.confirm_password" = "تأكيد كلمة المرور";
+
 "auth.button.forgot_password" = "هل نسيت كلمة المرور؟";
+
 "auth.button.create_an_account" = "إنشاء حساب";
+
 "auth.button.back_to_sign_in" = "العودة إلى تسجيل الدخول";
+
 "auth.button.sign_out" = "تسجيل الخروج";
+
 "auth.button.delete_account" = "حذف الحساب";
+
 "auth.or_continue_with" = "أو المتابعة باستخدام";
+
 "auth.status.please_wait" = "يرجى الانتظار";
+
 "auth.instruction.password_requirements" = "استخدم 8 أحرف على الأقل. يجب أن تتطابق كلمات المرور.";
+
 "auth.instruction.reset_email_sent" = "سنرسل لك رابطاً عبر البريد الإلكتروني لاختيار كلمة مرور جديدة. افتحه على هذا الجهاز.";
 
 /* Account */
 "account.title" = "الحساب";
+
 "account.signed_in" = "تم تسجيل الدخول";
+
 "account.delete_confirmation_title" = "حذف الحساب؟";
+
 "account.delete_confirmation_action" = "حذف الحساب نهائياً";
+
 "account.delete_confirmation_message" = "سيؤدي هذا إلى إزالة هويتك وسجلاتك السحابية نهائياً. لا يمكنك التراجع عن هذا الإجراء.";
+
 "account.delete_footer_notice" = "يحذف بيانات اعتماد حسابك والسجلات السحابية المرتبطة به عبر هذا الحافظة نهائياً.";
+
 "account.done" = "تم";
 
 /* Recoverable Errors */
 "errors.network_unreachable" = "تم فقد الاتصال بالشبكة. يرجى التحقق من اتصالك بالإنترنت.";
+
 "errors.invalid_credentials" = "البريد الإلكتروني أو كلمة المرور غير صحيحة. يرجى المحاولة مرة أخرى.";
+
 "errors.session_expired" = "انتهت صلاحية جلستك. يرجى تسجيل الدخول مرة أخرى.";
+
 "errors.account_deletion_failed" = "تعذر حذف الحساب في الوقت الحالي. يرجى إعادة المحاولة.";
+
 "errors.recoverable_retry" = "إعادة المحاولة";
+
 "errors.recoverable_dismiss" = "تجاهل";
+
 "errors.store_load_failed" = "وحدة التخزين غير متوفرة";
+
 "errors.store_load_message" = "تعذر تحميل البيانات دون اتصال. يتم الاحتفاظ بالبيانات المحفوظة بأمان.";
 
 /* Common */
 "common.share" = "مشاركة";
+
 "common.close" = "إغلاق";
 
 /* Motivation Daily Domain */
 "motivation.app.name" = "التحفيز اليومي";
+
 "motivation.favourites.title" = "المفضلة";
+
 "motivation.about.developer" = "حول المطور";
+
 "motivation.favourites.clear_all" = "مسح الكل";
+
 "motivation.favourites.remove" = "إزالة المفضلة";
+
 "motivation.favourites.empty_title" = "لا توجد مفضلات بعد";
+
 "motivation.favourites.empty_message" = "ستظهر هنا الاقتباسات التي تضع عليها علامة المفضلة.";
+
 "motivation.image.not_available" = "الصورة غير متوفرة";
+
 "motivation.share.preparing_image" = "جارٍ إعداد الصورة...";
+
 "motivation.share.preview_title" = "معاينة - هذا ما ستتم مشاركته";
+
 "motivation.share.quote_and_image" = "مشاركة الاقتباس + الصورة";
+
 "motivation.share.quote_embedded_subtitle" = "اقتباس مدمج في الصورة";
+
 "motivation.share.image_only" = "مشاركة الصورة فقط";
+
 "motivation.share.wallpaper_background_subtitle" = "خلفية الشاشة بدون اقتباس";
+
 "motivation.share.save_to_photos" = "حفظ في الصور";
+
 "motivation.share.choose_what_to_save" = "اختر ما تريد حفظه";
+
 "motivation.share.quote_only" = "مشاركة الاقتباس فقط";
+
 "motivation.share.black_gradient_subtitle" = "اقتباس على خلفية سوداء متدرجة";
+
 "motivation.share.copy_quote" = "نسخ الاقتباس";
+
 "motivation.share.paste_anywhere" = "لصق في أي مكان";
+
 "motivation.share.copied_toast" = "تم نسخ الاقتباس إلى الحافظة";
+
 "motivation.photos.access_message" = "اسمح بالوصول إلى الصور في الإعدادات لحفظ الخلفيات.";
+
 "motivation.photos.open_settings" = "فتح الإعدادات";
+
 "motivation.share.save_only_image" = "حفظ الصورة فقط";
+
 "motivation.share.save_image_plus_quote" = "حفظ الصورة + الاقتباس";
+
 "motivation.share.save_quote_gradient" = "حفظ الاقتباس (تدرج أسود)";
+
 "motivation.category.random" = "عشوائي";
 
 /* ShowBook Domain */
 "showbook.app.name" = "شو بوك";
+
 "showbook.discover.title" = "اكتشف";
+
 "showbook.discover.subtitle" = "ابحث عن قراءتك القادمة. تصفح فئة أو ابحث أعلاه.";
+
 "showbook.discover.unavailable" = "خدمة الاكتشاف غير متوفرة حالياً";
+
 "showbook.discover.no_books" = "لا توجد كتب متاحة في هذه الفئة بعد.";
+
 "showbook.saved_books.title" = "الكتب المحفوظة";
+
 "showbook.search.placeholder" = "البحث عن الكتب";
+
 "showbook.details.editions" = "الإصدارات";
+
 "showbook.details.edition_details" = "تفاصيل الإصدار";
+
 "showbook.details.no_editions" = "لا توجد إصدارات متاحة.";
+
 "showbook.details.not_rated" = "غير مقيّم";
+
 "showbook.details.preview_cover" = "معاينة الغلاف";
+
 "showbook.details.share_cover" = "مشاركة الغلاف";
+
 "showbook.details.cover_unavailable" = "الغلاف غير متوفر";
+
 "showbook.details.close_cover_preview" = "إغلاق معاينة الغلاف";
+
 "showbook.menu.app_options" = "خيارات التطبيق";
+
 "showbook.menu.appearance" = "المظهر";
+
 "showbook.appearance.light" = "فاتح";
+
 "showbook.appearance.dark" = "داكن";
+
 "showbook.menu.know_developer" = "تعرف على المطور";
+
 "showbook.logout.confirmation_title" = "هل أنت متأكد؟";
+
 "showbook.logout.action" = "تسجيل الخروج";
 
 /* myTV Domain */
 "app.name" = "ماي تي في";
+
 "app.cancel" = "إلغاء";
+
 "app.retry" = "إعادة المحاولة";
+
 "app.ok" = "موافق";
+
 "app.grouping.name" = "الاسم";
+
 "app.grouping.country" = "الدولة";
+
 "app.grouping.category" = "الفئة";
+
 "app.offline.banner" = "أنت غير متصل. عرض المحتوى المخزن مؤقتاً.";
+
 "app.showLess" = "عرض أقل";
+
 "app.readMore" = "اقرأ المزيد";
+
 "app.appearance.color.system" = "تلقائي";
+
 "app.appearance.color.light" = "فاتح";
+
 "app.appearance.color.dark" = "داكن";
+
 "app.search" = "بحث";
+
 "app.apply" = "تطبيق";
+
 "loading.preparing.stream" = "جارٍ إعداد البث…";
+
 "channel.scope.all" = "جميع القنوات";
+
 "channel.scope.favorites" = "المفضلة";
+
 "channel.empty.title" = "لا توجد قنوات";
+
 "channel.empty.message" = "لا توجد قنوات متاحة حالياً.";
+
 "channel.no.results.title" = "لا توجد نتائج";
+
 "channel.no.results.message" = "حاول تغيير كلمات البحث أو الفلاتر.";
+
 "channel.layout.list" = "قائمة";
+
 "channel.layout.grid" = "شبكة";
+
 "channel.layout.grid.unavailable.title" = "تخطيط الشبكة غير متوفر";
+
 "channel.layout.grid.unavailable.message" = "تخطيط الشبكة غير متوفر مع حجم النص الحالي لتسهيلات الاستخدام.";
+
 "channel.layout.grid.unavailable.banner" = "الشبكة غير متاحة بهذا الحجم من الخط. قم بتصغير الخط للمشاهدة.";
+
 "channel.alert.clear.cache.title" = "مسح بيانات القنوات المؤقتة؟";
+
 "channel.alert.clear.cache.confirm" = "مسح الذاكرة المؤقتة";
+
 "channel.alert.clear.filters.title" = "مسح الفلاتر والتجميع؟";
+
 "channel.alert.clear.filters.confirm" = "مسح الفلاتر";
+
 "channel.alert.remove.favorites.title" = "إزالة جميع المفضلات؟";
+
 "channel.alert.remove.favorites.confirm" = "إزالة المفضلات";
+
 "channel.menu.section.sortAndFilter.title" = "الترتيب والتصفية";
+
 "channel.filter.countries" = "الدول";
+
 "channel.filter.categories" = "الفئات";
+
 "stream.player.error.title" = "خطأ في التشغيل";
+
 "stream.player.error.noWorkingStreams" = "لم يتم العثور على أي بث يعمل.";
+
 "stream.player.error.invalidURL" = "رابط البث غير صالح.";
+
 "stream.player.error.cannotPlay" = "تعذر تشغيل هذا البث.";
+
 "stream.player.error.failed" = "فشل التشغيل.";
+
 "about.title" = "حول";
+
 "about.disclaimer.title" = "إخلاء المسؤولية";
+
 "about.disclaimer.text" = "ماي تي في هو تطبيق تجريبي للأغراض التعليمية فقط.";
 
 "common.yes" = "نعم";
+
 "common.no" = "لا";
+
 "common.clear" = "مسح";
+
 "common.error" = "خطأ";
 
 /* ShowBook additions */
 "showbook.search.keep_typing" = "تابع الكتابة";
+
 "showbook.search.start_searching" = "ابدأ البحث لرؤية الكتب";
+
 "showbook.search.no_books_found" = "لم يتم العثور على كتب";
+
 "showbook.search.unable_to_search" = "تعذر البحث";
+
 "showbook.search.connection_error" = "تعذر تحميل الكتب. يرجى التحقق من الاتصال.";
+
 "showbook.search.minimum_characters" = "أدخل 3 أحرف على الأقل للبدء.";
+
 "showbook.sort.by" = "ترتيب حسب";
+
 "showbook.loading.more" = "جاري تحميل المزيد...";
+
 "showbook.loading.progress" = "جاري التحميل.";
+
 "showbook.details.loading_details" = "جاري تحميل تفاصيل الكتاب…";
+
 "showbook.details.loading_editions" = "جاري تحميل الطبعات…";
+
 "showbook.details.load_more_editions" = "تحميل المزيد من الطبعات";
+
 "showbook.details.retry_editions" = "إعادة محاولة الطبعات";
+
 "showbook.details.title" = "تفاصيل الكتاب";
+
 "showbook.details.edition_details_title" = "تفاصيل الطبعة";
+
 "showbook.details.description" = "الوصف";
+
 "showbook.details.no_description" = "لا يوجد وصف متاح.";
+
 "showbook.details.first_published" = "نُشر لأول مرة";
+
 "showbook.details.subjects" = "الموضوعات";
+
 "showbook.details.published" = "تاريخ النشر";
+
 "showbook.details.publisher" = "الناشر";
+
 "showbook.details.format" = "التنسيق";
+
 "showbook.details.pages" = "الصفحات";
+
 "showbook.details.isbn13" = "ردمك-13";
+
 "showbook.details.isbn10" = "ردمك-10";
+
 "showbook.details.languages" = "اللغات";
 
 /* myTV additions */
 "channel.layout.title" = "التنسيق";
+
 "channel.layout.grid.unavailable.ok" = "موافق";
+
 "channel.layout.grid.auto_list.title" = "تم التبديل إلى القائمة";
+
 "channel.layout.grid.auto_list.message" = "تخطيط الشبكة غير متوفر بحجم النص الحالي. تم التبديل إلى القائمة.";
+
 "channel.layout.grid.auto_list.ok" = "موافق";
+
 "channel.menu.section.group_by.title" = "تجميع حسب";
+
 "channel.menu.section.sorting.title" = "الترتيب";
+
 "channel.menu.section.Filter.title" = "تصفية";
+
 "channel.menu.section.section.title" = "القسم";
+
 "channel.menu.section.channel.title" = "القناة";
+
 "channel.menu.section.actions" = "الإجراءات";
+
 "channel.menu.section.layout" = "التنسيق";
+
 "channel.menu.section.appearance" = "المظهر";
+
 "channel.menu.section.about" = "حول";
+
 "channel.menu.action.clearCache" = "مسح الذاكرة المؤقتة";
+
 "channel.menu.action.clearFilters" = "مسح الفلاتر";
+
 "channel.menu.action.removeFavorites" = "إزالة المفضلة";
+
 "channel.sort.order.ascending" = "أ-ي ↓";
+
 "channel.sort.order.descending" = "ي-أ ↑";
+
 "multiSelectView.section.selected" = "المحدد";
+
 "multiSelectView.section.all" = "الكل";
+
 "stream.list.empty.title" = "لا تتوفر بثوث";
+
 "stream.list.empty.message" = "هذه القناة لا تحتوي على بثوث قابلة للتشغيل.";
+
 "about.alert.error.title" = "خطأ";
+
 "about.alert.error.ok" = "موافق";
+
 "about.alert.error.invalidLink" = "تعذر فتح هذا الرابط.";
+
 "about.app.info.title" = "معلومات التطبيق";
+
 "about.app.name" = "My TV";
+
 "about.app.version.prefix" = "الإصدار";
+
 "about.social.title" = "تواصل معنا";
+
 "a11y.menu.options" = "خيارات";
+
 "a11y.menu.options.hint" = "يفتح خيارات الترتيب والتصفية والإعدادات.";
+
 "a11y.favorite.add" = "إضافة إلى المفضلة";
+
 "a11y.favorite.remove" = "إزالة من المفضلة";
+
 "a11y.favorite.hint" = "انقر مرتين للتبديل.";
+
 "a11y.channel.open.hint" = "يفتح بثوث هذه القناة.";
+
 "a11y.stream.play.hint" = "يشغل هذا البث.";
+
 "a11y.openLink.hint" = "يفتح الرابط.";
+
 "a11y.selected" = "محدد";
+
+/* Motivation additions */
+"motivation.share.copied" = "تم النسخ!";
+
+"motivation.photos.access_title" = "مطلوب الإذن بالوصول للصور";
+
+"motivation.share.image_failed_title" = "فشل مشاركة الصورة";
+
+"motivation.share.image_failed_message" = "تعذر إعداد صورة المشاركة. يرجى المحاولة مرة أخرى.";
+
+"motivation.photos.permission_required_title" = "الإذن مطلوب";
+
+"motivation.photos.permission_required_message" = "اسمح بالوصول إلى الصور لحفظ الصور.";
+
+"motivation.share.saved_title" = "تم الحفظ";
+
+"motivation.share.saved_message" = "تم حفظ الصورة في الصور.";
+
+"motivation.share.save_failed_title" = "فشل الحفظ";
+
+"motivation.share.save_failed_message" = "تعذر حفظ الصورة. يرجى المحاولة مرة أخرى.";
