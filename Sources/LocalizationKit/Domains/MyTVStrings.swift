@@ -12,18 +12,6 @@ public struct MyTVStrings: Sendable {
         provider.string("app.name")
     }
 
-    public var cancel: String {
-        provider.string("app.cancel")
-    }
-
-    public var retry: String {
-        provider.string("app.retry")
-    }
-
-    public var ok: String {
-        provider.string("app.ok")
-    }
-
     public var groupingName: String {
         provider.string("app.grouping.name")
     }
