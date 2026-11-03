@@ -223,6 +223,54 @@ extension View {
     public func accessibilityHint(_ keyPath: KeyPath<CommonStrings, String>) -> some View {
         self.accessibilityHint(Text(keyPath))
     }
+
+    // Alert & Dialog KeyPath Modifiers
+    public func alert<A: View, M: View>(
+        _ titleKeyPath: KeyPath<MotivationStrings, String>,
+        isPresented: Binding<Bool>,
+        @ViewBuilder actions: () -> A,
+        @ViewBuilder message: () -> M
+    ) -> some View {
+        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions, message: message)
+    }
+
+    public func alert<A: View, M: View>(
+        _ titleKeyPath: KeyPath<CommonStrings, String>,
+        isPresented: Binding<Bool>,
+        @ViewBuilder actions: () -> A,
+        @ViewBuilder message: () -> M
+    ) -> some View {
+        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions, message: message)
+    }
+
+    public func confirmationDialog<A: View, M: View>(
+        _ titleKeyPath: KeyPath<MotivationStrings, String>,
+        isPresented: Binding<Bool>,
+        titleVisibility: Visibility = .automatic,
+        @ViewBuilder actions: () -> A,
+        @ViewBuilder message: () -> M
+    ) -> some View {
+        self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions, message: message)
+    }
+
+    public func confirmationDialog<A: View>(
+        _ titleKeyPath: KeyPath<MotivationStrings, String>,
+        isPresented: Binding<Bool>,
+        titleVisibility: Visibility = .automatic,
+        @ViewBuilder actions: () -> A
+    ) -> some View {
+        self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions)
+    }
+
+    public func confirmationDialog<A: View, M: View>(
+        _ titleKeyPath: KeyPath<CommonStrings, String>,
+        isPresented: Binding<Bool>,
+        titleVisibility: Visibility = .automatic,
+        @ViewBuilder actions: () -> A,
+        @ViewBuilder message: () -> M
+    ) -> some View {
+        self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions, message: message)
+    }
 }
 
 // MARK: - Environment Keys for Scoped Domains
