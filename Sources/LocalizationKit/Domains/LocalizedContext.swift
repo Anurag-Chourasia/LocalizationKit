@@ -208,42 +208,6 @@ extension Alert.Button {
     public static func destructive(_ keyPath: KeyPath<CommonStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
         .destructive(Text(keyPath), action: action)
     }
-
-    public static func `default`(_ keyPath: KeyPath<MotivationStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .default(Text(keyPath), action: action)
-    }
-
-    public static func cancel(_ keyPath: KeyPath<MotivationStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .cancel(Text(keyPath), action: action)
-    }
-
-    public static func destructive(_ keyPath: KeyPath<MotivationStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .destructive(Text(keyPath), action: action)
-    }
-
-    public static func `default`(_ keyPath: KeyPath<MyTVStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .default(Text(keyPath), action: action)
-    }
-
-    public static func cancel(_ keyPath: KeyPath<MyTVStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .cancel(Text(keyPath), action: action)
-    }
-
-    public static func destructive(_ keyPath: KeyPath<MyTVStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .destructive(Text(keyPath), action: action)
-    }
-
-    public static func `default`(_ keyPath: KeyPath<ShowBookStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .default(Text(keyPath), action: action)
-    }
-
-    public static func cancel(_ keyPath: KeyPath<ShowBookStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .cancel(Text(keyPath), action: action)
-    }
-
-    public static func destructive(_ keyPath: KeyPath<ShowBookStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .destructive(Text(keyPath), action: action)
-    }
 }
 
 // MARK: - KeyPath String Convenience Initializers
