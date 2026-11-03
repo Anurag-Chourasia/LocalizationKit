@@ -224,7 +224,7 @@ extension LocalizationKitTests {
         let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
         
         let motivation = LocalizedContext<MotivationDomain>(provider: controller)
-        XCTAssertEqual(motivation.domain.appName, "Motivation Daily")
+        XCTAssertEqual(motivation.domain.motivationAppName, "Motivation Daily")
         XCTAssertEqual(motivation.domain.favourites, "Favourites")
         XCTAssertEqual(motivation.domain.imageNotAvailable, "Image not available")
         XCTAssertEqual(motivation.common.ok, "OK")
@@ -244,14 +244,14 @@ extension LocalizationKitTests {
         let motivation = LocalizedContext<MotivationDomain>(provider: controller)
         
         // Direct KeyPath Subscript: l10n[\.key]
-        XCTAssertEqual(motivation[\.appName], "Motivation Daily")
+        XCTAssertEqual(motivation[\.motivationAppName], "Motivation Daily")
         XCTAssertEqual(motivation[\.favourites], "Favourites")
         XCTAssertEqual(motivation[\.imageNotAvailable], "Image not available")
         XCTAssertEqual(motivation[\.share], "Share")
         XCTAssertEqual(motivation[\.ok], "OK")
         
         // Dynamic member lookup: l10n.key
-        XCTAssertEqual(motivation.appName, "Motivation Daily")
+        XCTAssertEqual(motivation.motivationAppName, "Motivation Daily")
         XCTAssertEqual(motivation.favourites, "Favourites")
 
         let myTV = LocalizedContext<MyTVDomain>(provider: controller)
@@ -268,7 +268,7 @@ extension LocalizationKitTests {
     func testMultiDomainContextRTLArabic() {
         let controller = LocalizationController(initialLocale: Locale(identifier: "ar"))
         let motivation = LocalizedContext<MotivationDomain>(provider: controller)
-        XCTAssertEqual(motivation.domain.appName, "التحفيز اليومي")
+        XCTAssertEqual(motivation.domain.motivationAppName, "التحفيز اليومي")
         XCTAssertEqual(motivation.domain.imageNotAvailable, "الصورة غير متوفرة")
         XCTAssertEqual(motivation.common.share, "مشاركة")
     }

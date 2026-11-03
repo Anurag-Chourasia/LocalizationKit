@@ -101,6 +101,7 @@ public struct CommonStrings: Sendable {
     public var errorsStoreLoadMessage: String { provider.string("errors.store_load_message") }
     public var share: String { provider.string("common.share") }
     public var close: String { provider.string("common.close") }
+    public var back: String { provider.string("common.back") }
     public var yes: String { provider.string("common.yes") }
     public var no: String { provider.string("common.no") }
     public var clear: String { provider.string("common.clear") }

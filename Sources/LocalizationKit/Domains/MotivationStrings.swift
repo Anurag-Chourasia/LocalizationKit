@@ -8,7 +8,7 @@ public struct MotivationStrings: Sendable {
     }
 
     /* Motivation Daily Domain */
-    public var appName: String {
+    public var motivationAppName: String {
         provider.string("motivation.app.name")
     }
 
@@ -112,8 +112,28 @@ public struct MotivationStrings: Sendable {
         provider.string("motivation.share.save_quote_gradient")
     }
 
+    public var shareSaving: String {
+        provider.string("motivation.share.saving")
+    }
+
     public var randomCategory: String {
         provider.string("motivation.category.random")
+    }
+
+    public var sourceZenQuotes: String {
+        provider.string("motivation.source.zen_quotes")
+    }
+
+    public var sourceQuotable: String {
+        provider.string("motivation.source.quotable")
+    }
+
+    public var sourceQuoteGarden: String {
+        provider.string("motivation.source.quote_garden")
+    }
+
+    public var sourceAdviceSlip: String {
+        provider.string("motivation.source.advice_slip")
     }
 
     /* Motivation additions */

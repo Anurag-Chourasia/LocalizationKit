@@ -46,6 +46,8 @@
 /* Common */
 "common.share" = "Share";
 "common.close" = "Close";
+"common.back" = "Back";
+"common.done" = "Done";
 
 /* Motivation Daily Domain */
 "motivation.app.name" = "Motivation Daily";
@@ -74,7 +76,12 @@
 "motivation.share.save_only_image" = "Save Only Image";
 "motivation.share.save_image_plus_quote" = "Save Image + Quote";
 "motivation.share.save_quote_gradient" = "Save Quote (Black Gradient)";
+"motivation.share.saving" = "Saving...";
 "motivation.category.random" = "Random";
+"motivation.source.zen_quotes" = "ZenQuotes";
+"motivation.source.quotable" = "Quotable";
+"motivation.source.quote_garden" = "QuoteGarden";
+"motivation.source.advice_slip" = "AdviceSlip";
 
 /* ShowBook Domain */
 "showbook.app.name" = "Show Book";

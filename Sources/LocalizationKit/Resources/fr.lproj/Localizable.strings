@@ -82,6 +82,10 @@
 
 "common.close" = "Fermer";
 
+"common.back" = "Back";
+
+"common.done" = "Done";
+
 /* Motivation Daily Domain */
 "motivation.app.name" = "Motivation Quotidienne";
 
@@ -135,7 +139,17 @@
 
 "motivation.share.save_quote_gradient" = "Enregistrer la citation (dégradé noir)";
 
+"motivation.share.saving" = "Saving...";
+
 "motivation.category.random" = "Aléatoire";
+
+"motivation.source.zen_quotes" = "ZenQuotes";
+
+"motivation.source.quotable" = "Quotable";
+
+"motivation.source.quote_garden" = "QuoteGarden";
+
+"motivation.source.advice_slip" = "AdviceSlip";
 
 /* ShowBook Domain */
 "showbook.app.name" = "Show Book";
