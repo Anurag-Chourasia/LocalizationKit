@@ -1,0 +1,44 @@
+"common.ok" = "موافق";
+"common.cancel" = "إلغاء";
+"common.welcome" = "مرحباً، %@!";
+"errors.generic" = "حدث خطأ ما";
+"errors.retry_count.zero" = "لا توجد محاولات متبقية";
+"errors.retry_count.one" = "محاولة واحدة متبقية";
+"errors.retry_count.other" = "%d محاولات متبقية";
+
+/* Authentication */
+"auth.title.sign_in" = "تسجيل الدخول";
+"auth.title.create_account" = "إنشاء حساب";
+"auth.title.reset_password" = "إعادة تعيين كلمة المرور";
+"auth.title.choose_new_password" = "اختر كلمة مرور جديدة";
+"auth.field.email" = "البريد الإلكتروني";
+"auth.field.password" = "كلمة المرور";
+"auth.field.confirm_password" = "تأكيد كلمة المرور";
+"auth.button.forgot_password" = "هل نسيت كلمة المرور؟";
+"auth.button.create_an_account" = "إنشاء حساب";
+"auth.button.back_to_sign_in" = "العودة إلى تسجيل الدخول";
+"auth.button.sign_out" = "تسجيل الخروج";
+"auth.button.delete_account" = "حذف الحساب";
+"auth.or_continue_with" = "أو المتابعة باستخدام";
+"auth.status.please_wait" = "يرجى الانتظار";
+"auth.instruction.password_requirements" = "استخدم 8 أحرف على الأقل. يجب أن تتطابق كلمات المرور.";
+"auth.instruction.reset_email_sent" = "سنرسل لك رابطاً عبر البريد الإلكتروني لاختيار كلمة مرور جديدة. افتحه على هذا الجهاز.";
+
+/* Account */
+"account.title" = "الحساب";
+"account.signed_in" = "تم تسجيل الدخول";
+"account.delete_confirmation_title" = "حذف الحساب؟";
+"account.delete_confirmation_action" = "حذف الحساب نهائياً";
+"account.delete_confirmation_message" = "سيؤدي هذا إلى إزالة هويتك وسجلاتك السحابية نهائياً. لا يمكنك التراجع عن هذا الإجراء.";
+"account.delete_footer_notice" = "يحذف بيانات اعتماد حسابك والسجلات السحابية المرتبطة به عبر هذا الحافظة نهائياً.";
+"account.done" = "تم";
+
+/* Recoverable Errors */
+"errors.network_unreachable" = "تم فقد الاتصال بالشبكة. يرجى التحقق من اتصالك بالإنترنت.";
+"errors.invalid_credentials" = "البريد الإلكتروني أو كلمة المرور غير صحيحة. يرجى المحاولة مرة أخرى.";
+"errors.session_expired" = "انتهت صلاحية جلستك. يرجى تسجيل الدخول مرة أخرى.";
+"errors.account_deletion_failed" = "تعذر حذف الحساب في الوقت الحالي. يرجى إعادة المحاولة.";
+"errors.recoverable_retry" = "إعادة المحاولة";
+"errors.recoverable_dismiss" = "تجاهل";
+"errors.store_load_failed" = "وحدة التخزين غير متوفرة";
+"errors.store_load_message" = "تعذر تحميل البيانات دون اتصال. يتم الاحتفاظ بالبيانات المحفوظة بأمان.";

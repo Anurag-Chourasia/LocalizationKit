@@ -77,7 +77,58 @@ final class LocalizationKitTests: XCTestCase {
     }
 
     func testGeneratedStringsDeclaresSupportedLocales() {
-        XCTAssertEqual(GeneratedStrings.supportedLocales, ["en", "fr"])
+        XCTAssertEqual(GeneratedStrings.supportedLocales, ["en", "fr", "ar"])
+    }
+
+    func testArabicStringsAndRTLDirection() {
+        let arabicController = LocalizationController(initialLocale: Locale(identifier: "ar"))
+        XCTAssertTrue(arabicController.isRightToLeft)
+        XCTAssertEqual(arabicController.string("common.ok"), "موافق")
+        XCTAssertEqual(arabicController.string("common.cancel"), "إلغاء")
+        XCTAssertEqual(L10n.Auth.signIn(using: arabicController), "تسجيل الدخول")
+        XCTAssertEqual(L10n.Auth.createAccount(using: arabicController), "إنشاء حساب")
+        XCTAssertEqual(L10n.Account.title(using: arabicController), "الحساب")
+        XCTAssertEqual(L10n.Errors.networkUnreachable(using: arabicController), "تم فقد الاتصال بالشبكة. يرجى التحقق من اتصالك بالإنترنت.")
+
+        let englishController = LocalizationController(initialLocale: Locale(identifier: "en"))
+        XCTAssertFalse(englishController.isRightToLeft)
+
+        let frenchController = LocalizationController(initialLocale: Locale(identifier: "fr"))
+        XCTAssertFalse(frenchController.isRightToLeft)
+    }
+
+    func testAuthAndAccountStringsAcrossLocales() {
+        let enController = LocalizationController(initialLocale: Locale(identifier: "en"))
+        let frController = LocalizationController(initialLocale: Locale(identifier: "fr"))
+
+        XCTAssertEqual(L10n.Auth.signIn(using: enController), "Sign in")
+        XCTAssertEqual(L10n.Auth.signIn(using: frController), "Connexion")
+
+        XCTAssertEqual(L10n.Auth.email(using: enController), "Email")
+        XCTAssertEqual(L10n.Auth.email(using: frController), "E-mail")
+
+        XCTAssertEqual(L10n.Auth.password(using: enController), "Password")
+        XCTAssertEqual(L10n.Auth.password(using: frController), "Mot de passe")
+
+        XCTAssertEqual(L10n.Auth.forgotPassword(using: enController), "Forgot password?")
+        XCTAssertEqual(L10n.Auth.forgotPassword(using: frController), "Mot de passe oublié ?")
+
+        XCTAssertEqual(L10n.Account.signOut(using: enController), "Sign out")
+        XCTAssertEqual(L10n.Account.signOut(using: frController), "Se déconnecter")
+
+        XCTAssertEqual(L10n.Account.deleteAccount(using: enController), "Delete account")
+        XCTAssertEqual(L10n.Account.deleteAccount(using: frController), "Supprimer le compte")
+    }
+
+    func testRecoverableErrorsStrings() {
+        let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
+
+        XCTAssertEqual(L10n.Errors.networkUnreachable(using: controller), "Network connection lost. Please check your internet connection.")
+        XCTAssertEqual(L10n.Errors.invalidCredentials(using: controller), "Invalid email or password. Please try again.")
+        XCTAssertEqual(L10n.Errors.sessionExpired(using: controller), "Your session has expired. Please sign in again.")
+        XCTAssertEqual(L10n.Errors.recoverableRetry(using: controller), "Try Again")
+        XCTAssertEqual(L10n.Errors.recoverableDismiss(using: controller), "Dismiss")
+        XCTAssertEqual(L10n.Errors.storeLoadFailed(using: controller), "Storage Unavailable")
     }
 
     func testPluralizationSuffixesAreDeterministic() {

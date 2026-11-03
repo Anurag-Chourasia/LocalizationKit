@@ -4,3 +4,40 @@
 "errors.generic" = "Une erreur est survenue";
 "errors.retry_count.one" = "1 nouvelle tentative";
 "errors.retry_count.other" = "%d nouvelles tentatives";
+
+/* Authentication */
+"auth.title.sign_in" = "Connexion";
+"auth.title.create_account" = "Créer un compte";
+"auth.title.reset_password" = "Réinitialiser le mot de passe";
+"auth.title.choose_new_password" = "Choisir un nouveau mot de passe";
+"auth.field.email" = "E-mail";
+"auth.field.password" = "Mot de passe";
+"auth.field.confirm_password" = "Confirmer le mot de passe";
+"auth.button.forgot_password" = "Mot de passe oublié ?";
+"auth.button.create_an_account" = "Créer un compte";
+"auth.button.back_to_sign_in" = "Retour à la connexion";
+"auth.button.sign_out" = "Se déconnecter";
+"auth.button.delete_account" = "Supprimer le compte";
+"auth.or_continue_with" = "ou continuer avec";
+"auth.status.please_wait" = "Veuillez patienter";
+"auth.instruction.password_requirements" = "Utilisez au moins 8 caractères. Les mots de passe doivent correspondre.";
+"auth.instruction.reset_email_sent" = "Nous vous enverrons un lien pour choisir un nouveau mot de passe. Ouvrez-le sur cet appareil.";
+
+/* Account */
+"account.title" = "Compte";
+"account.signed_in" = "Connecté";
+"account.delete_confirmation_title" = "Supprimer le compte ?";
+"account.delete_confirmation_action" = "Supprimer définitivement le compte";
+"account.delete_confirmation_message" = "Cette action supprimera définitivement votre identité cloud et vos enregistrements. Cette action est irréversible.";
+"account.delete_footer_notice" = "Supprime définitivement vos identifiants de compte et les enregistrements cloud associés sur l'ensemble de ce portfolio.";
+"account.done" = "Terminé";
+
+/* Recoverable Errors */
+"errors.network_unreachable" = "Connexion réseau perdue. Veuillez vérifier votre connexion Internet.";
+"errors.invalid_credentials" = "E-mail ou mot de passe invalide. Veuillez réessayer.";
+"errors.session_expired" = "Votre session a expiré. Veuillez vous reconnecter.";
+"errors.account_deletion_failed" = "Impossible de supprimer le compte pour le moment. Veuillez réessayer.";
+"errors.recoverable_retry" = "Réessayer";
+"errors.recoverable_dismiss" = "Fermer";
+"errors.store_load_failed" = "Stockage non disponible";
+"errors.store_load_message" = "Impossible de charger les données hors ligne. Les données sont conservées.";
