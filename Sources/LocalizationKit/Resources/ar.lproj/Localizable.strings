@@ -457,3 +457,46 @@
 "motivation.share.save_failed_title" = "فشل الحفظ";
 
 "motivation.share.save_failed_message" = "تعذر حفظ الصورة. يرجى المحاولة مرة أخرى.";
+
+/* Developer Settings */
+"developer.title" = "إعدادات المطور";
+"developer.subtitle.motivation" = "قم بتهيئة بيئة تشغيل وتخزين وميزات Motivation Daily. هز الجهاز لإعادة الفتح.";
+"developer.subtitle.mytv" = "قم بتهيئة بيئة تشغيل وتخزين وميزات MyTV. هز الجهاز لإعادة الفتح.";
+"developer.subtitle.showbook" = "قم بتهيئة بيئة تشغيل وتخزين وميزات ShowBook. هز الجهاز لإعادة الفتح.";
+"developer.quick_presets" = "الإعدادات المسبقة السريعة";
+"developer.preset.showcase" = "عرض توضيحي (مملوء)";
+"developer.preset.empty" = "حالة فارغة (بدون نتائج)";
+"developer.preset.offline" = "المرونة دون اتصال";
+"developer.preset.live_feed" = "موجز مباشر";
+"developer.preset.live_directory" = "دليل مباشر";
+"developer.preset.live_library" = "مكتبة مباشرة";
+"developer.cache_and_offline" = "ذاكرة التخزين المؤقت والتخزين دون اتصال";
+"developer.disk_cache" = "ذاكرة التخزين المؤقت على القرص";
+"developer.checking" = "جارٍ التحقق...";
+"developer.purge_cache" = "مسح ذاكرة التخزين المؤقت";
+"developer.purge_quote_cache" = "مسح ذاكرة التخزين المؤقت للاقتباسات";
+"developer.purge_channel_cache" = "مسح ذاكرة التخزين المؤقت للقنوات";
+"developer.purge_catalog_cache" = "مسح ذاكرة التخزين المؤقت للكتالوج";
+"developer.environment" = "البيئة";
+"developer.data_source" = "مصدر البيانات";
+"developer.scenario" = "السيناريو";
+"developer.scenario.success" = "نجاح";
+"developer.scenario.empty" = "نتائج فارغة";
+"developer.scenario.offline" = "خطأ دون اتصال";
+"developer.feature_flags" = "ميزات تجريبية";
+"developer.authentication" = "المصادقة · AuthKit";
+"developer.debug_logs" = "سجلات تصحيح الأخطاء";
+"developer.http_logs" = "سجلات HTTP في وحدة تحكم Xcode";
+"developer.version_simulation" = "محاكاة الإصدار";
+"developer.installed_version" = "الإصدار المثبت";
+"developer.installed_build" = "رقم البناء المثبت";
+"developer.simulated_version" = "الإصدار المحاكى";
+"developer.simulated_build" = "رقم البناء المحاكى";
+"developer.privacy_support" = "الخصوصية والدعم";
+"developer.privacy_policy" = "سياسة الخصوصية";
+"developer.support" = "دعم المطور";
+"developer.reset_settings" = "إعادة ضبط إعدادات المطور";
+"developer.theme_and_display" = "المظهر والعرض";
+"developer.simulate_offline" = "محاكاة وضع عدم الاتصال";
+"developer.close_profile" = "إغلاق ملف المطور الشخصي";
+"developer.open_app" = "فتح التطبيق";

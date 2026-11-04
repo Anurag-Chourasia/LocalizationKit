@@ -457,3 +457,46 @@
 "motivation.share.save_failed_title" = "Échec de l'enregistrement";
 
 "motivation.share.save_failed_message" = "Impossible d'enregistrer l'image. Veuillez réessayer.";
+
+/* Developer Settings */
+"developer.title" = "Paramètres de développeur";
+"developer.subtitle.motivation" = "Configurez l'exécution, le cache et les fonctionnalités de Motivation Daily. Secouez l'appareil pour rouvrir.";
+"developer.subtitle.mytv" = "Configurez l'exécution, le cache et les fonctionnalités de MyTV. Secouez l'appareil pour rouvrir.";
+"developer.subtitle.showbook" = "Configurez l'exécution, le cache et les fonctionnalités de ShowBook. Secouez l'appareil pour rouvrir.";
+"developer.quick_presets" = "Préréglages rapides";
+"developer.preset.showcase" = "Démonstration (peuplé)";
+"developer.preset.empty" = "État vide (zéro résultat)";
+"developer.preset.offline" = "Résilience hors ligne";
+"developer.preset.live_feed" = "Flux en direct";
+"developer.preset.live_directory" = "Répertoire en direct";
+"developer.preset.live_library" = "Bibliothèque en direct";
+"developer.cache_and_offline" = "Cache et stockage hors ligne";
+"developer.disk_cache" = "Cache disque";
+"developer.checking" = "Vérification en cours...";
+"developer.purge_cache" = "Vider le cache";
+"developer.purge_quote_cache" = "Vider le cache de citations";
+"developer.purge_channel_cache" = "Vider le cache de chaînes";
+"developer.purge_catalog_cache" = "Vider le cache du catalogue";
+"developer.environment" = "Environnement";
+"developer.data_source" = "Source de données";
+"developer.scenario" = "Scénario";
+"developer.scenario.success" = "Succès";
+"developer.scenario.empty" = "Résultats vides";
+"developer.scenario.offline" = "Erreur hors ligne";
+"developer.feature_flags" = "Options de fonctionnalité";
+"developer.authentication" = "Authentification · AuthKit";
+"developer.debug_logs" = "Journaux de débogage";
+"developer.http_logs" = "Journaux HTTP dans la console Xcode";
+"developer.version_simulation" = "Simulation de version";
+"developer.installed_version" = "Version installée";
+"developer.installed_build" = "Build installé";
+"developer.simulated_version" = "Version simulée";
+"developer.simulated_build" = "Build simulé";
+"developer.privacy_support" = "Confidentialité et support";
+"developer.privacy_policy" = "Politique de confidentialité";
+"developer.support" = "Support développeur";
+"developer.reset_settings" = "Réinitialiser les paramètres développeur";
+"developer.theme_and_display" = "Thème et affichage";
+"developer.simulate_offline" = "Simuler le mode hors ligne";
+"developer.close_profile" = "Fermer le profil développeur";
+"developer.open_app" = "Ouvrir l'application";

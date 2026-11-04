@@ -245,3 +245,46 @@
 "motivation.share.save_failed_title" = "Save Failed";
 "motivation.share.save_failed_message" = "Could not save image. Please try again.";
 
+/* Developer Settings */
+"developer.title" = "Developer Settings";
+"developer.subtitle.motivation" = "Configure Motivation Daily runtime, cache, and feature flags. Shake device from any screen to reopen.";
+"developer.subtitle.mytv" = "Configure MyTV runtime, cache, and feature flags. Shake device from any screen to reopen.";
+"developer.subtitle.showbook" = "Configure ShowBook runtime, cache, and feature flags. Shake device from any screen to reopen.";
+"developer.quick_presets" = "Quick presets";
+"developer.preset.showcase" = "Showcase (Populated)";
+"developer.preset.empty" = "Empty State (Zero Results)";
+"developer.preset.offline" = "Offline Resilience";
+"developer.preset.live_feed" = "Live Feed";
+"developer.preset.live_directory" = "Live Directory";
+"developer.preset.live_library" = "Live Open Library";
+"developer.cache_and_offline" = "Cache & offline storage";
+"developer.disk_cache" = "Disk cache";
+"developer.checking" = "Checking...";
+"developer.purge_cache" = "Purge cache";
+"developer.purge_quote_cache" = "Purge quote cache";
+"developer.purge_channel_cache" = "Purge channel cache";
+"developer.purge_catalog_cache" = "Purge catalog cache";
+"developer.environment" = "Environment";
+"developer.data_source" = "Data source";
+"developer.scenario" = "Scenario";
+"developer.scenario.success" = "Success";
+"developer.scenario.empty" = "Empty results";
+"developer.scenario.offline" = "Offline error";
+"developer.feature_flags" = "Feature flags";
+"developer.authentication" = "Authentication · AuthKit";
+"developer.debug_logs" = "Debug logs";
+"developer.http_logs" = "HTTP logs in Xcode console";
+"developer.version_simulation" = "Version simulation";
+"developer.installed_version" = "Installed version";
+"developer.installed_build" = "Installed build";
+"developer.simulated_version" = "Simulated version";
+"developer.simulated_build" = "Simulated build";
+"developer.privacy_support" = "Privacy & Support";
+"developer.privacy_policy" = "Privacy Policy";
+"developer.support" = "Developer Support";
+"developer.reset_settings" = "Reset developer settings";
+"developer.theme_and_display" = "Theme & Display";
+"developer.simulate_offline" = "Simulate Offline Mode";
+"developer.close_profile" = "Close developer profile";
+"developer.open_app" = "Open App";
+

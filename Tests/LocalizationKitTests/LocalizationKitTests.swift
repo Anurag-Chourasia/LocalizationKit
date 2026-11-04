@@ -265,6 +265,20 @@ extension LocalizationKitTests {
         XCTAssertEqual(showBook[\.savedBooks], "Saved books")
     }
 
+    func testDeveloperSettingsStrings() {
+        let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
+        let common = CommonStrings(provider: controller)
+
+        XCTAssertEqual(common.developerSettingsTitle, "Developer Settings")
+        XCTAssertEqual(common.developerQuickPresets, "Quick presets")
+        XCTAssertEqual(common.developerPresetShowcase, "Showcase (Populated)")
+        XCTAssertEqual(common.developerPresetEmpty, "Empty State (Zero Results)")
+        XCTAssertEqual(common.developerPresetOffline, "Offline Resilience")
+        XCTAssertEqual(common.developerSupport, "Developer Support")
+        XCTAssertEqual(common.developerPrivacyPolicy, "Privacy Policy")
+        XCTAssertEqual(common.developerResetSettings, "Reset developer settings")
+    }
+
     func testMultiDomainContextRTLArabic() {
         let controller = LocalizationController(initialLocale: Locale(identifier: "ar"))
         let motivation = LocalizedContext<MotivationDomain>(provider: controller)

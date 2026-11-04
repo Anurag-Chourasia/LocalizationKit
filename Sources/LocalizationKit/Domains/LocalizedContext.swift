@@ -109,6 +109,49 @@ public struct CommonStrings: Sendable {
     public var showcaseDemoA11y: String { provider.string("common.showcase.demo.a11y") }
     public var showcaseDemoTitle: String { provider.string("common.showcase.demo.title") }
     public var showcaseDemoTapForControls: String { provider.string("common.showcase.demo.tap_for_controls") }
+
+    // Developer & Diagnostics Common Strings
+    public var developerSettingsTitle: String { provider.string("developer.title") }
+    public var developerSettingsSubtitleMotivation: String { provider.string("developer.subtitle.motivation") }
+    public var developerSettingsSubtitleMyTV: String { provider.string("developer.subtitle.mytv") }
+    public var developerSettingsSubtitleShowBook: String { provider.string("developer.subtitle.showbook") }
+    public var developerQuickPresets: String { provider.string("developer.quick_presets") }
+    public var developerPresetShowcase: String { provider.string("developer.preset.showcase") }
+    public var developerPresetEmpty: String { provider.string("developer.preset.empty") }
+    public var developerPresetOffline: String { provider.string("developer.preset.offline") }
+    public var developerPresetLiveFeed: String { provider.string("developer.preset.live_feed") }
+    public var developerPresetLiveDirectory: String { provider.string("developer.preset.live_directory") }
+    public var developerPresetLiveLibrary: String { provider.string("developer.preset.live_library") }
+    public var developerCacheAndOffline: String { provider.string("developer.cache_and_offline") }
+    public var developerDiskCache: String { provider.string("developer.disk_cache") }
+    public var developerChecking: String { provider.string("developer.checking") }
+    public var developerPurgeCache: String { provider.string("developer.purge_cache") }
+    public var developerPurgeQuoteCache: String { provider.string("developer.purge_quote_cache") }
+    public var developerPurgeChannelCache: String { provider.string("developer.purge_channel_cache") }
+    public var developerPurgeCatalogCache: String { provider.string("developer.purge_catalog_cache") }
+    public var developerEnvironment: String { provider.string("developer.environment") }
+    public var developerDataSource: String { provider.string("developer.data_source") }
+    public var developerScenario: String { provider.string("developer.scenario") }
+    public var developerScenarioSuccess: String { provider.string("developer.scenario.success") }
+    public var developerScenarioEmpty: String { provider.string("developer.scenario.empty") }
+    public var developerScenarioOffline: String { provider.string("developer.scenario.offline") }
+    public var developerFeatureFlags: String { provider.string("developer.feature_flags") }
+    public var developerAuthentication: String { provider.string("developer.authentication") }
+    public var developerDebugLogs: String { provider.string("developer.debug_logs") }
+    public var developerHttpLogs: String { provider.string("developer.http_logs") }
+    public var developerVersionSimulation: String { provider.string("developer.version_simulation") }
+    public var developerInstalledVersion: String { provider.string("developer.installed_version") }
+    public var developerInstalledBuild: String { provider.string("developer.installed_build") }
+    public var developerSimulatedVersion: String { provider.string("developer.simulated_version") }
+    public var developerSimulatedBuild: String { provider.string("developer.simulated_build") }
+    public var developerPrivacySupport: String { provider.string("developer.privacy_support") }
+    public var developerPrivacyPolicy: String { provider.string("developer.privacy_policy") }
+    public var developerSupport: String { provider.string("developer.support") }
+    public var developerResetSettings: String { provider.string("developer.reset_settings") }
+    public var developerThemeAndDisplay: String { provider.string("developer.theme_and_display") }
+    public var developerSimulateOffline: String { provider.string("developer.simulate_offline") }
+    public var developerCloseProfile: String { provider.string("developer.close_profile") }
+    public var developerOpenApp: String { provider.string("developer.open_app") }
 }
 
 // MARK: - SwiftUI KeyPath Text Initializers
