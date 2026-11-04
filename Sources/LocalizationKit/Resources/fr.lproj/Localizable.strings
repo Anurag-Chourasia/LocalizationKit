@@ -293,6 +293,12 @@
 
 "common.error" = "Erreur";
 
+"common.showcase.demo.a11y" = "Mode démo vitrine. Touchez pour ouvrir les réglages développeur.";
+
+"common.showcase.demo.title" = "DÉMO VITRINE";
+
+"common.showcase.demo.tap_for_controls" = "• Touchez pour les contrôles";
+
 /* ShowBook additions */
 "showbook.search.keep_typing" = "Continuez à taper";
 
@@ -345,6 +351,10 @@
 "showbook.details.isbn10" = "ISBN-10";
 
 "showbook.details.languages" = "Langues";
+
+"showbook.a11y.bookmark.remove" = "Supprimer le signet";
+
+"showbook.a11y.bookmark.add" = "Ajouter aux signets";
 
 /* myTV additions */
 "channel.layout.title" = "Disposition";
@@ -424,6 +434,8 @@
 "a11y.openLink.hint" = "Ouvre le lien.";
 
 "a11y.selected" = "Sélectionné";
+
+"a11y.channel.logo" = "Logo de la chaîne";
 
 /* Motivation additions */
 "motivation.share.copied" = "Copié !";

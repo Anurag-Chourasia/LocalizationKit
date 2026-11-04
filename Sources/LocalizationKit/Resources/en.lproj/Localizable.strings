@@ -157,6 +157,9 @@
 "common.no" = "No";
 "common.clear" = "Clear";
 "common.error" = "Error";
+"common.showcase.demo.a11y" = "Showcase demo mode. Tap to open developer settings.";
+"common.showcase.demo.title" = "SHOWCASE DEMO";
+"common.showcase.demo.tap_for_controls" = "• Tap for Controls";
 
 /* ShowBook additions */
 "showbook.search.keep_typing" = "Keep typing";
@@ -185,6 +188,8 @@
 "showbook.details.isbn13" = "ISBN-13";
 "showbook.details.isbn10" = "ISBN-10";
 "showbook.details.languages" = "Languages";
+"showbook.a11y.bookmark.remove" = "Remove bookmark";
+"showbook.a11y.bookmark.add" = "Bookmark book";
 
 /* myTV additions */
 "channel.layout.title" = "Layout";
@@ -226,6 +231,7 @@
 "a11y.stream.play.hint" = "Plays this stream.";
 "a11y.openLink.hint" = "Opens link.";
 "a11y.selected" = "Selected";
+"a11y.channel.logo" = "Channel logo";
 
 /* Motivation additions */
 "motivation.share.copied" = "Copied!";

@@ -329,4 +329,8 @@ public struct MyTVStrings: Sendable {
         provider.string("a11y.selected")
     }
 
+    public var channelLogo: String {
+        provider.string("a11y.channel.logo")
+    }
+
 }

@@ -106,6 +106,9 @@ public struct CommonStrings: Sendable {
     public var no: String { provider.string("common.no") }
     public var clear: String { provider.string("common.clear") }
     public var error: String { provider.string("common.error") }
+    public var showcaseDemoA11y: String { provider.string("common.showcase.demo.a11y") }
+    public var showcaseDemoTitle: String { provider.string("common.showcase.demo.title") }
+    public var showcaseDemoTapForControls: String { provider.string("common.showcase.demo.tap_for_controls") }
 }
 
 // MARK: - SwiftUI KeyPath Text Initializers

@@ -201,4 +201,12 @@ public struct ShowBookStrings: Sendable {
         provider.string("showbook.details.languages")
     }
 
+    public var bookmarkRemove: String {
+        provider.string("showbook.a11y.bookmark.remove")
+    }
+
+    public var bookmarkAdd: String {
+        provider.string("showbook.a11y.bookmark.add")
+    }
+
 }

@@ -293,6 +293,12 @@
 
 "common.error" = "خطأ";
 
+"common.showcase.demo.a11y" = "وضع العرض التوضيحي. اضغط لفتح إعدادات المطور.";
+
+"common.showcase.demo.title" = "عرض تجريبي";
+
+"common.showcase.demo.tap_for_controls" = "• اضغط لعناصر التحكم";
+
 /* ShowBook additions */
 "showbook.search.keep_typing" = "تابع الكتابة";
 
@@ -345,6 +351,10 @@
 "showbook.details.isbn10" = "ردمك-10";
 
 "showbook.details.languages" = "اللغات";
+
+"showbook.a11y.bookmark.remove" = "إزالة الإشارة المرجعية";
+
+"showbook.a11y.bookmark.add" = "إضافة إلى الإشارات المرجعية";
 
 /* myTV additions */
 "channel.layout.title" = "التنسيق";
@@ -424,6 +434,8 @@
 "a11y.openLink.hint" = "يفتح الرابط.";
 
 "a11y.selected" = "محدد";
+
+"a11y.channel.logo" = "شعار القناة";
 
 /* Motivation additions */
 "motivation.share.copied" = "تم النسخ!";
