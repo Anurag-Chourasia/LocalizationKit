@@ -197,4 +197,48 @@ public struct MotivationStrings: Sendable {
         provider.string("motivation.developer.privacy")
     }
 
+    public var themeDefault: String {
+        provider.string("motivation.theme.default")
+    }
+
+    public var themeOcean: String {
+        provider.string("motivation.theme.ocean")
+    }
+
+    public var themeMint: String {
+        provider.string("motivation.theme.mint")
+    }
+
+    public var themeSunset: String {
+        provider.string("motivation.theme.sunset")
+    }
+
+    public var themeMenu: String {
+        provider.string("motivation.theme.menu")
+    }
+
+    public var ratioFullscreen: String {
+        provider.string("motivation.ratio.fullscreen")
+    }
+
+    public var categoryInspiration: String {
+        provider.string("motivation.category.inspiration")
+    }
+
+    public var categoryWisdom: String {
+        provider.string("motivation.category.wisdom")
+    }
+
+    public var categorySuccess: String {
+        provider.string("motivation.category.success")
+    }
+
+    public var categoryHappiness: String {
+        provider.string("motivation.category.happiness")
+    }
+
+    public var categoryLife: String {
+        provider.string("motivation.category.life")
+    }
+
 }

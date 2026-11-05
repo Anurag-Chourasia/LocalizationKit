@@ -461,4 +461,8 @@ public struct ShowBookStrings: Sendable {
         provider.string("showbook.error.category_failed")
     }
 
+    public var developerRatings: String {
+        provider.string("showbook.developer.ratings")
+    }
+
 }
