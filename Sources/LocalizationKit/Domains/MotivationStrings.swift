@@ -241,4 +241,20 @@ public struct MotivationStrings: Sendable {
         provider.string("motivation.category.life")
     }
 
+    public var connectivityConnected: String {
+        provider.string("motivation.connectivity.connected")
+    }
+
+    public var connectivityOffline: String {
+        provider.string("motivation.connectivity.offline")
+    }
+
+    public var categoryFocus: String {
+        provider.string("motivation.category.focus")
+    }
+
+    public var categoryGrowth: String {
+        provider.string("motivation.category.growth")
+    }
+
 }

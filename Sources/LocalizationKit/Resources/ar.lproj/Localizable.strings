@@ -740,3 +740,11 @@
 "channel.developer.haptics" = "استجابة لمسية";
 
 "channel.developer.logo_preview" = "معاينة الشعار ومشاركته";
+
+"motivation.connectivity.connected" = "متصل";
+
+"motivation.connectivity.offline" = "لا يوجد اتصال بالإنترنت";
+
+"motivation.category.focus" = "تركيز";
+
+"motivation.category.growth" = "نمو";

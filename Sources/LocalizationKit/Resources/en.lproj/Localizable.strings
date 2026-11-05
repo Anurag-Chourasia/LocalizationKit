@@ -488,3 +488,11 @@
 "channel.developer.haptics" = "Haptic feedback";
 
 "channel.developer.logo_preview" = "Logo preview and sharing";
+
+"motivation.connectivity.connected" = "Connected";
+
+"motivation.connectivity.offline" = "No internet";
+
+"motivation.category.focus" = "Focus";
+
+"motivation.category.growth" = "Growth";

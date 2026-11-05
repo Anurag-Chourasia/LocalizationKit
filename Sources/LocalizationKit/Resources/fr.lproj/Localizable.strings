@@ -740,3 +740,11 @@
 "channel.developer.haptics" = "Retour haptique";
 
 "channel.developer.logo_preview" = "Aperçu et partage du logo";
+
+"motivation.connectivity.connected" = "Connecté";
+
+"motivation.connectivity.offline" = "Pas de connexion Internet";
+
+"motivation.category.focus" = "Concentration";
+
+"motivation.category.growth" = "Développement";
