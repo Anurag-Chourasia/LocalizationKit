@@ -209,4 +209,256 @@ public struct ShowBookStrings: Sendable {
         provider.string("showbook.a11y.bookmark.add")
     }
 
+    public var loadingEdition: String {
+        provider.string("showbook.loading.edition")
+    }
+
+    public var loadingCover: String {
+        provider.string("showbook.loading.cover")
+    }
+
+    public var detailsCoverPreview: String {
+        provider.string("showbook.details.cover_preview")
+    }
+
+    public var detailsBookCover: String {
+        provider.string("showbook.details.book_cover")
+    }
+
+    public var detailsNotAvailable: String {
+        provider.string("showbook.details.not_available")
+    }
+
+    public var detailsShareFailed: String {
+        provider.string("showbook.details.share_failed")
+    }
+
+    public var welcomeTitle: String {
+        provider.string("showbook.welcome.title")
+    }
+
+    public var authLoginWelcome: String {
+        provider.string("showbook.auth.login_welcome")
+    }
+
+    public var authSignupWelcome: String {
+        provider.string("showbook.auth.signup_welcome")
+    }
+
+    public var authValidEmail: String {
+        provider.string("showbook.auth.valid_email")
+    }
+
+    public var authUppercase: String {
+        provider.string("showbook.auth.uppercase")
+    }
+
+    public var authLowercase: String {
+        provider.string("showbook.auth.lowercase")
+    }
+
+    public var authSpecial: String {
+        provider.string("showbook.auth.special")
+    }
+
+    public var authNumber: String {
+        provider.string("showbook.auth.number")
+    }
+
+    public var authLength: String {
+        provider.string("showbook.auth.length")
+    }
+
+    public var loadingLibrary: String {
+        provider.string("showbook.loading.library")
+    }
+
+    public var countrySelect: String {
+        provider.string("showbook.country.select")
+    }
+
+    public var discoverFinding: String {
+        provider.string("showbook.discover.finding")
+    }
+
+    public var discoverCategory: String {
+        provider.string("showbook.discover.category")
+    }
+
+    public var actionClear: String {
+        provider.string("showbook.action.clear")
+    }
+
+    public var actionRetry: String {
+        provider.string("showbook.action.retry")
+    }
+
+    public var alertError: String {
+        provider.string("showbook.alert.error")
+    }
+
+    public var actionYes: String {
+        provider.string("showbook.action.yes")
+    }
+
+    public var appearanceSystem: String {
+        provider.string("showbook.appearance.system")
+    }
+
+    public var layoutReadability: String {
+        provider.string("showbook.layout.readability")
+    }
+
+    public var detailsNoAuthor: String {
+        provider.string("showbook.details.no_author")
+    }
+
+    public var detailsOpens: String {
+        provider.string("showbook.details.opens")
+    }
+
+    public var detailsFor: String {
+        provider.string("showbook.details.for")
+    }
+
+    public var detailsRatings: String {
+        provider.string("showbook.details.ratings")
+    }
+
+    public var discoverCached: String {
+        provider.string("showbook.discover.cached")
+    }
+
+    public var discoverSortTitle: String {
+        provider.string("showbook.discover.sort_title")
+    }
+
+    public var discoverSortAverage: String {
+        provider.string("showbook.discover.sort_average")
+    }
+
+    public var discoverSortHits: String {
+        provider.string("showbook.discover.sort_hits")
+    }
+
+    public var categoryFiction: String {
+        provider.string("showbook.category.fiction")
+    }
+
+    public var categoryMystery: String {
+        provider.string("showbook.category.mystery")
+    }
+
+    public var categoryScience: String {
+        provider.string("showbook.category.science")
+    }
+
+    public var categoryHistory: String {
+        provider.string("showbook.category.history")
+    }
+
+    public var layoutListTitle: String {
+        provider.string("showbook.layout.list_title")
+    }
+
+    public var developerAuthNote: String {
+        provider.string("showbook.developer.auth_note")
+    }
+
+    public var developerLogsNote: String {
+        provider.string("showbook.developer.logs_note")
+    }
+
+    public var developerLive: String {
+        provider.string("showbook.developer.live")
+    }
+
+    public var developerStubNote: String {
+        provider.string("showbook.developer.stub_note")
+    }
+
+    public var developerLayout: String {
+        provider.string("showbook.developer.layout")
+    }
+
+    public var developerLayoutA: String {
+        provider.string("showbook.developer.layout_a")
+    }
+
+    public var developerLayoutB: String {
+        provider.string("showbook.developer.layout_b")
+    }
+
+    public var developerExperimentNote: String {
+        provider.string("showbook.developer.experiment_note")
+    }
+
+    public var developerExperiment: String {
+        provider.string("showbook.developer.experiment")
+    }
+
+    public var developerVersionNote: String {
+        provider.string("showbook.developer.version_note")
+    }
+
+    public var developerPrivacy: String {
+        provider.string("showbook.developer.privacy")
+    }
+
+    public var errorEmptyFields: String {
+        provider.string("showbook.error.empty_fields")
+    }
+
+    public var errorInvalidEmail: String {
+        provider.string("showbook.error.invalid_email")
+    }
+
+    public var errorLoginPassword: String {
+        provider.string("showbook.error.login_password")
+    }
+
+    public var errorSignupPassword: String {
+        provider.string("showbook.error.signup_password")
+    }
+
+    public var errorSaveLogin: String {
+        provider.string("showbook.error.save_login")
+    }
+
+    public var errorSaveAccount: String {
+        provider.string("showbook.error.save_account")
+    }
+
+    public var errorUnexpected: String {
+        provider.string("showbook.error.unexpected")
+    }
+
+    public var errorCountries: String {
+        provider.string("showbook.error.countries")
+    }
+
+    public var errorNotFound: String {
+        provider.string("showbook.error.not_found")
+    }
+
+    public var errorBusy: String {
+        provider.string("showbook.error.busy")
+    }
+
+    public var errorRecordFailed: String {
+        provider.string("showbook.error.record_failed")
+    }
+
+    public var errorUnreadable: String {
+        provider.string("showbook.error.unreadable")
+    }
+
+    public var errorDetailsFailed: String {
+        provider.string("showbook.error.details_failed")
+    }
+
+    public var errorCategoryFailed: String {
+        provider.string("showbook.error.category_failed")
+    }
+
 }

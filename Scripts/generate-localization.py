@@ -8,7 +8,7 @@ Workflow:
 2. This script:
    - Parses `en.lproj/Localizable.strings`.
    - Automatically synchronizes all other `*.lproj/Localizable.strings` (fr, ar, etc.),
-     preserving existing translations and adding missing keys.
+     preserving existing translations and requiring explicit translations for new keys.
    - Categorizes keys into domains: Motivation, MyTV, ShowBook, and Common.
    - Generates strongly-typed Domain structs:
      - MotivationStrings.swift
@@ -206,6 +206,15 @@ CUSTOM_PROPERTY_MAPPINGS = {
     "showbook.logout.confirmation_title": "logoutConfirmationTitle",
     "showbook.logout.action": "logout",
 
+    "a11y.channel.logo": "channelLogo",
+    "developer.title": "developerSettingsTitle",
+    "developer.subtitle.motivation": "developerSettingsSubtitleMotivation",
+    "developer.subtitle.mytv": "developerSettingsSubtitleMyTV",
+    "developer.subtitle.showbook": "developerSettingsSubtitleShowBook",
+
+    "showbook.a11y.bookmark.remove": "bookmarkRemove",
+    "showbook.a11y.bookmark.add": "bookmarkAdd",
+
     # Common
     "common.ok": "ok",
     "common.cancel": "cancel",
@@ -265,12 +274,16 @@ def sync_locale_file(en_entries, target_path: Path):
     Preserves existing translations and appends/inserts missing keys.
     """
     _, target_map = parse_strings_file(target_path)
+    missing = [key for _, key, _ in en_entries if key not in target_map]
+    if missing:
+        raise ValueError(f"Missing translations in {target_path}: {', '.join(missing)}. "
+                         "Add explicit translations before generating Swift sources.")
     
     lines = []
     current_section = None
     
     for comment, key, en_val in en_entries:
-        target_val = target_map.get(key, en_val)
+        target_val = target_map[key]
         if comment:
             lines.append(f"{comment}")
         # Escape quotes in key/val
@@ -297,6 +310,8 @@ def categorize_keys(en_entries):
     }
 
     for comment, key, val in en_entries:
+        if key in {"app.cancel", "app.retry", "app.ok"}:
+            continue  # Shared CommonStrings owns these unqualified convenience properties.
         prop_name = key_to_camel_case(key)
         
         if key.startswith("motivation."):
@@ -359,15 +374,20 @@ def generate_localized_context_file(common_props, output_path: Path):
         "",
         "    public init(provider: LocalizationProviding) {",
         "        self.provider = provider",
+        "        let strings: any Sendable",
         "        if Domain.self == MotivationDomain.self {",
-        "            self.domain = MotivationStrings(provider: provider) as! Domain.Strings",
+        "            strings = MotivationStrings(provider: provider)",
         "        } else if Domain.self == MyTVDomain.self {",
-        "            self.domain = MyTVStrings(provider: provider) as! Domain.Strings",
+        "            strings = MyTVStrings(provider: provider)",
         "        } else if Domain.self == ShowBookDomain.self {",
-        "            self.domain = ShowBookStrings(provider: provider) as! Domain.Strings",
+        "            strings = ShowBookStrings(provider: provider)",
         "        } else {",
         '            fatalError("Unsupported LocalizationDomain: \\(Domain.self)")',
         "        }",
+        "        guard let typedStrings = strings as? Domain.Strings else {",
+        '            fatalError("Invalid strings type for LocalizationDomain: \\(Domain.self)")',
+        "        }",
+        "        self.domain = typedStrings",
         "    }",
         "",
         "    public var common: CommonStrings {",
@@ -636,6 +656,22 @@ def generate_localized_context_file(common_props, output_path: Path):
         "}"
     ])
 
+    for domain in ("CommonStrings", "MotivationStrings", "MyTVStrings", "ShowBookStrings"):
+        lines.extend([
+            "extension Button where Label == Text {",
+            f"    public init(_ keyPath: KeyPath<{domain}, String>, role: ButtonRole?, action: @escaping () -> Void) {{",
+            "        self.init(role: role, action: action) { Text(keyPath) }",
+            "    }",
+            "}",
+        ])
+    lines.append("extension Alert.Button {")
+    for method in ("default", "cancel", "destructive"):
+        lines.extend([
+            f"    public static func `{method}`(_ keyPath: KeyPath<CommonStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {{",
+            f"        .{method}(Text(keyPath), action: action)",
+            "    }",
+        ])
+    lines.append("}")
     output_path.write_text("\n".join(lines).strip() + "\n", encoding="utf-8")
     os.system(f"xattr -c '{output_path}' 2>/dev/null || true")
 

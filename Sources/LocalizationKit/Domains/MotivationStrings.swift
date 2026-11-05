@@ -177,4 +177,24 @@ public struct MotivationStrings: Sendable {
         provider.string("motivation.share.save_failed_message")
     }
 
+    public var authorUnknown: String {
+        provider.string("motivation.author.unknown")
+    }
+
+    public var developerLive: String {
+        provider.string("motivation.developer.live")
+    }
+
+    public var developerStubNote: String {
+        provider.string("motivation.developer.stub_note")
+    }
+
+    public var developerAuthNote: String {
+        provider.string("motivation.developer.auth_note")
+    }
+
+    public var developerPrivacy: String {
+        provider.string("motivation.developer.privacy")
+    }
+
 }

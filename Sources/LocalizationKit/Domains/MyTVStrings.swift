@@ -333,4 +333,68 @@ public struct MyTVStrings: Sendable {
         provider.string("a11y.channel.logo")
     }
 
+    public var channelStreamsUnavailable: String {
+        provider.string("channel.streams.unavailable")
+    }
+
+    public var channelLogoPreview: String {
+        provider.string("channel.logo.preview")
+    }
+
+    public var channelLogoUnavailable: String {
+        provider.string("channel.logo.unavailable")
+    }
+
+    public var channelLogoLoading: String {
+        provider.string("channel.logo.loading")
+    }
+
+    public var channelLogoPreviewTitle: String {
+        provider.string("channel.logo.preview_title")
+    }
+
+    public var channelLogoClose: String {
+        provider.string("channel.logo.close")
+    }
+
+    public var channelLogoShare: String {
+        provider.string("channel.logo.share")
+    }
+
+    public var channelLogoShareFailed: String {
+        provider.string("channel.logo.share_failed")
+    }
+
+    public var streamPlayerClose: String {
+        provider.string("stream.player.close")
+    }
+
+    public var channelDeveloperLive: String {
+        provider.string("channel.developer.live")
+    }
+
+    public var channelDeveloperStubNote: String {
+        provider.string("channel.developer.stub_note")
+    }
+
+    public var channelDeveloperAuthNote: String {
+        provider.string("channel.developer.auth_note")
+    }
+
+    public var channelDeveloperLogsNote: String {
+        provider.string("channel.developer.logs_note")
+    }
+
+    public var channelDeveloperLayout: String {
+        provider.string("channel.developer.layout")
+    }
+
+    public var channelDeveloperVersionNote: String {
+        provider.string("channel.developer.version_note")
+    }
+
+    public var channelDeveloperPrivacy: String {
+        provider.string("channel.developer.privacy")
+    }
+
 }

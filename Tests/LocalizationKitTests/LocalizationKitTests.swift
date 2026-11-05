@@ -14,6 +14,18 @@ final class LocalizationKitTests: XCTestCase {
         try super.tearDownWithError()
     }
 
+    func testShowBookPresentationStringsResolveAcrossSupportedLocales() {
+        for (locale, expected) in [("en", "Loading edition…"),
+                                   ("fr", "Chargement de l’édition…"),
+                                   ("ar", "جارٍ تحميل الطبعة…")] {
+            let controller = LocalizationController(initialLocale: Locale(identifier: locale))
+            let strings = ShowBookStrings(provider: controller)
+            XCTAssertEqual(strings.loadingEdition, expected)
+            XCTAssertFalse(strings.authLoginWelcome.contains("showbook."))
+            XCTAssertTrue(strings.authLoginWelcome.contains("\n"))
+        }
+    }
+
     func testStringLookupUsesInitialLocale() {
         let controller = LocalizationController(initialLocale: Locale(identifier: "fr"))
 
@@ -218,11 +230,10 @@ final class LocalizationKitTests: XCTestCase {
     }
 }
 
-
 extension LocalizationKitTests {
     func testMultiDomainScopedContextsResolveCorrectly() {
         let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
-        
+
         let motivation = LocalizedContext<MotivationDomain>(provider: controller)
         XCTAssertEqual(motivation.domain.motivationAppName, "Motivation Daily")
         XCTAssertEqual(motivation.domain.favourites, "Favourites")
@@ -242,14 +253,14 @@ extension LocalizationKitTests {
     func testDirectKeyPathSubscriptAccess() {
         let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
         let motivation = LocalizedContext<MotivationDomain>(provider: controller)
-        
+
         // Direct KeyPath Subscript: l10n[\.key]
         XCTAssertEqual(motivation[\.motivationAppName], "Motivation Daily")
         XCTAssertEqual(motivation[\.favourites], "Favourites")
         XCTAssertEqual(motivation[\.imageNotAvailable], "Image not available")
         XCTAssertEqual(motivation[\.share], "Share")
         XCTAssertEqual(motivation[\.ok], "OK")
-        
+
         // Dynamic member lookup: l10n.key
         XCTAssertEqual(motivation.motivationAppName, "Motivation Daily")
         XCTAssertEqual(motivation.favourites, "Favourites")

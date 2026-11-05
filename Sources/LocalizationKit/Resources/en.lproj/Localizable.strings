@@ -288,3 +288,175 @@
 "developer.close_profile" = "Close developer profile";
 "developer.open_app" = "Open App";
 
+
+"showbook.loading.edition" = "Loading edition…";
+
+"showbook.loading.cover" = "Loading cover…";
+
+"showbook.details.cover_preview" = "Cover preview";
+
+"showbook.details.book_cover" = "Book cover";
+
+"showbook.details.not_available" = "Not available";
+
+"showbook.details.share_failed" = "Couldn’t share cover";
+
+"showbook.welcome.title" = "Welcome";
+
+"showbook.auth.login_welcome" = "Welcome,\nlog in to continue";
+
+"showbook.auth.signup_welcome" = "Welcome,\nSign up to continue";
+
+"showbook.auth.valid_email" = "Must be a valid email";
+
+"showbook.auth.uppercase" = "Must contain an uppercase";
+
+"showbook.auth.lowercase" = "Must contain a lowercase";
+
+"showbook.auth.special" = "Must contain a special character";
+
+"showbook.auth.number" = "Must contain a number character";
+
+"showbook.auth.length" = "At least 8 characters";
+
+"showbook.loading.library" = "Opening library";
+
+"showbook.country.select" = "Select an Item";
+
+"showbook.discover.finding" = "Finding books…";
+
+"showbook.discover.category" = "Category";
+
+"showbook.action.clear" = "Clear";
+
+"showbook.action.retry" = "Retry";
+
+"showbook.alert.error" = "Error";
+
+"showbook.action.yes" = "Yes";
+
+"showbook.appearance.system" = "System";
+
+"showbook.layout.readability" = "List layout keeps book details readable at this text size.";
+
+"showbook.details.no_author" = "No Author";
+
+"showbook.details.opens" = "Opens book details";
+
+"showbook.details.for" = "Details for %@";
+
+"showbook.details.ratings" = "%@ average · %@ ratings";
+
+"showbook.discover.cached" = "Saved titles · %@. Covers may need a connection.";
+
+"showbook.discover.sort_title" = "Title";
+
+"showbook.discover.sort_average" = "Average";
+
+"showbook.discover.sort_hits" = "Hits";
+
+"showbook.category.fiction" = "Fiction";
+
+"showbook.category.mystery" = "Mystery";
+
+"showbook.category.science" = "Science";
+
+"showbook.category.history" = "History";
+
+"showbook.layout.list_title" = "List layout";
+
+"channel.streams.unavailable" = "No streams available";
+
+"channel.logo.preview" = "Preview logo";
+
+"channel.logo.unavailable" = "Logo unavailable";
+
+"channel.logo.loading" = "Loading logo…";
+
+"channel.logo.preview_title" = "Logo preview";
+
+"channel.logo.close" = "Close logo preview";
+
+"channel.logo.share" = "Share logo";
+
+"channel.logo.share_failed" = "Couldn’t share logo";
+
+"stream.player.close" = "Close player";
+
+"motivation.author.unknown" = "Unknown";
+
+"developer.source.stub" = "Stub · local fixtures";
+
+"developer.release_ignores" = "Release builds ignore this setting.";
+
+"channel.developer.live" = "Live · IPTV directory";
+
+"channel.developer.stub_note" = "Stub mode uses local channels and makes no directory or playback requests. Favorites remain on this device.";
+
+"channel.developer.auth_note" = "New feature, off by default. When enabled, Open MyTV shows sign-in before the channel catalog. Apply settings to activate changes; disabling it keeps any saved session for later.";
+
+"channel.developer.logs_note" = "Redacted directory requests and responses. Large responses can slow debugging. Release builds never enable these logs.";
+
+"channel.developer.layout" = "Channel layout";
+
+"channel.developer.version_note" = "Changes only the version displayed in Know Your Developer.";
+
+"channel.developer.privacy" = "MyTV saves favorite channels locally on your device. Stream playback is direct and unauthenticated. No personal data is tracked or sold to third parties.";
+
+"motivation.developer.live" = "Live · Quotable & ZenQuotes";
+
+"motivation.developer.stub_note" = "Stub mode uses local quotes and wallpapers without making remote network requests.";
+
+"motivation.developer.auth_note" = "New feature, off by default. Enable to require sign-in before the feed. Apply settings to activate changes; disabling it preserves the saved session.";
+
+"motivation.developer.privacy" = "Motivation Daily stores favorited quotes and lightweight settings locally on your device. Quote and wallpaper fetching is unauthenticated. No personal data is tracked or sold to third parties.";
+
+"showbook.developer.auth_note" = "New feature, off by default. Enable to use cloud sign-in. Apply settings to activate changes; disabling it preserves the saved cloud session.";
+
+"showbook.developer.logs_note" = "Full redacted request and response bodies. Large logs can slow debugging. Release builds never enable this.";
+
+"showbook.developer.live" = "Live · Open Library";
+
+"showbook.developer.stub_note" = "Live uses the production APIs. Stub replaces API responses and disables remote cover loading. Local accounts and bookmarks remain on this device.";
+
+"showbook.developer.layout" = "Discover layout";
+
+"showbook.developer.layout_a" = "A · List";
+
+"showbook.developer.layout_b" = "B · Grid";
+
+"showbook.developer.experiment_note" = "Local experiment override for visual testing. No remote assignment, analytics, or experiment results are collected.";
+
+"showbook.developer.experiment" = "A/B testing";
+
+"showbook.developer.version_note" = "Overrides the version shown in Know Your Developer. The signed bundle and App Store version stay unchanged; change those in Xcode.";
+
+"showbook.developer.privacy" = "ShowBook stores user bookmarks locally on device or securely in Supabase when cloud authentication is enabled. No personal data is tracked or sold to third parties.";
+
+"showbook.error.empty_fields" = "Fields cannot be empty";
+
+"showbook.error.invalid_email" = "Enter a valid email";
+
+"showbook.error.login_password" = "Password Must contain 8 characters minimum including 1 alphabet, 1 number, and 1 special character like @,#";
+
+"showbook.error.signup_password" = "Password must contain 8 characters minimum including 1 alphabet, 1 number, and 1 special character like @,#";
+
+"showbook.error.save_login" = "Unable to save login. Please try again.";
+
+"showbook.error.save_account" = "Unable to save account. Please try again.";
+
+"showbook.error.unexpected" = "Unexpected error";
+
+"showbook.error.countries" = "No countries available";
+
+"showbook.error.not_found" = "This record is no longer available on Open Library.";
+
+"showbook.error.busy" = "Open Library is busy. Please wait a moment and retry.";
+
+"showbook.error.record_failed" = "Open Library could not load this record. Please try again.";
+
+"showbook.error.unreadable" = "This record could not be read. Please try again later.";
+
+"showbook.error.details_failed" = "Unable to load details. Check your connection and retry.";
+
+"showbook.error.category_failed" = "Couldn’t load this category. Check your connection and try again.";
