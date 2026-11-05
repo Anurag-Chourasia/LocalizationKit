@@ -14,6 +14,16 @@ final class LocalizationKitTests: XCTestCase {
         try super.tearDownWithError()
     }
 
+    func testMyTVDisclaimerRetainsCreditsPrivacyAndSupportAcrossLocales() {
+        for language in ["en", "fr", "ar"] {
+            let provider = LocalizationController(initialLocale: Locale(identifier: language))
+            let disclaimer = MyTVStrings(provider: provider).aboutDisclaimerText
+            XCTAssertTrue(disclaimer.contains("https://github.com/iptv-org"))
+            XCTAssertTrue(disclaimer.contains("Docs/PrivacyInventory.md"))
+            XCTAssertTrue(disclaimer.contains("mailto:anuragchourasiaios@gmail.com"))
+        }
+    }
+
     func testShowBookPresentationStringsResolveAcrossSupportedLocales() {
         for (locale, expected) in [("en", "Loading edition…"),
                                    ("fr", "Chargement de l’édition…"),

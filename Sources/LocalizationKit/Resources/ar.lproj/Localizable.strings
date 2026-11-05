@@ -283,7 +283,7 @@
 
 "about.disclaimer.title" = "إخلاء المسؤولية";
 
-"about.disclaimer.text" = "ماي تي في هو تطبيق تجريبي للأغراض التعليمية فقط.";
+"about.disclaimer.text" = "My TV تطبيق تجريبي مخصص للأغراض التعليمية فقط.\\n\\nلا يستضيف هذا التطبيق أي محتوى وسائط أو يبثه أو يعيد توزيعه. تأتي جميع بيانات قنوات IPTV من مشروع iptv-org مفتوح المصدر.\\n\\nتقع مسؤولية توفر المحتوى وقانونيته وحقوق استخدامه بالكامل على مزودي المحتوى المعنيين.\\n\\nالمصدر:\\nhttps://github.com/iptv-org\\n\\n[سياسة الخصوصية](https://github.com/Anurag-Chourasia/myTV/blob/main/Docs/PrivacyInventory.md) • [الدعم](mailto:anuragchourasiaios@gmail.com)";
 
 "common.yes" = "نعم";
 
