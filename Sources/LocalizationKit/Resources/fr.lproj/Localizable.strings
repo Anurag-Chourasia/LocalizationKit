@@ -748,3 +748,37 @@
 "motivation.category.focus" = "Concentration";
 
 "motivation.category.growth" = "Développement";
+
+"motivation.refresh.failed" = "Échec de l’actualisation";
+
+"motivation.feed.top.title" = "Début du fil";
+
+"motivation.feed.top.message" = "Vous êtes déjà au début du fil. Faites défiler vers le bas.";
+
+"motivation.feed.end.title" = "Fin de cette section";
+
+"motivation.feed.end.message" = "Vous avez atteint la fin de cette section. Essayez un autre onglet ou une autre section.";
+
+"motivation.about.disclaimer" = "Les citations et fonds d’écran proviennent d’API publiques (Quotable, ZenQuotes, AdviceSlip et Picsum). Tous les contenus appartiennent à leurs auteurs et créateurs respectifs.";
+
+"motivation.profile.app_information" = "Informations sur l’application";
+
+"motivation.profile.version" = "Version";
+
+"motivation.profile.disclaimer" = "Avertissement";
+
+"motivation.profile.connect" = "Restons en contact";
+
+"motivation.profile.read_more" = "En savoir plus";
+
+"motivation.profile.show_less" = "Afficher moins";
+
+"motivation.profile.link_hint" = "Touchez deux fois pour ouvrir dans le navigateur";
+
+"motivation.profile.link_error" = "Impossible d’ouvrir le lien";
+
+"motivation.error.retry_later" = "Veuillez réessayer plus tard.";
+
+"motivation.error.refresh" = "Actualisation impossible pour le moment.";
+
+"motivation.error.timeout" = "Le délai de la requête est dépassé. Réessayez.";

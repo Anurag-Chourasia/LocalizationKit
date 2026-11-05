@@ -496,3 +496,37 @@
 "motivation.category.focus" = "Focus";
 
 "motivation.category.growth" = "Growth";
+
+"motivation.refresh.failed" = "Refresh Failed";
+
+"motivation.feed.top.title" = "Top of the feed";
+
+"motivation.feed.top.message" = "You are already at the top of the feed. Try scrolling down.";
+
+"motivation.feed.end.title" = "End of this section";
+
+"motivation.feed.end.message" = "Sorry, there is nothing more to show. You reached the bottom of this section. Try changing the tabs/section.";
+
+"motivation.about.disclaimer" = "Quotes and wallpapers are provided by public APIs (Quotable, ZenQuotes, AdviceSlip, and Picsum). All content is owned by their respective authors and creators.";
+
+"motivation.profile.app_information" = "App Information";
+
+"motivation.profile.version" = "Version";
+
+"motivation.profile.disclaimer" = "Disclaimer";
+
+"motivation.profile.connect" = "Connect";
+
+"motivation.profile.read_more" = "Read More";
+
+"motivation.profile.show_less" = "Show Less";
+
+"motivation.profile.link_hint" = "Double tap to open in browser";
+
+"motivation.profile.link_error" = "Unable to Open Link";
+
+"motivation.error.retry_later" = "Please try again later.";
+
+"motivation.error.refresh" = "Could not refresh at the moment.";
+
+"motivation.error.timeout" = "Request timed out. Please try again.";

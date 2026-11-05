@@ -257,4 +257,72 @@ public struct MotivationStrings: Sendable {
         provider.string("motivation.category.growth")
     }
 
+    public var refreshFailed: String {
+        provider.string("motivation.refresh.failed")
+    }
+
+    public var feedTopTitle: String {
+        provider.string("motivation.feed.top.title")
+    }
+
+    public var feedTopMessage: String {
+        provider.string("motivation.feed.top.message")
+    }
+
+    public var feedEndTitle: String {
+        provider.string("motivation.feed.end.title")
+    }
+
+    public var feedEndMessage: String {
+        provider.string("motivation.feed.end.message")
+    }
+
+    public var aboutDisclaimer: String {
+        provider.string("motivation.about.disclaimer")
+    }
+
+    public var profileAppInformation: String {
+        provider.string("motivation.profile.app_information")
+    }
+
+    public var profileVersion: String {
+        provider.string("motivation.profile.version")
+    }
+
+    public var profileDisclaimer: String {
+        provider.string("motivation.profile.disclaimer")
+    }
+
+    public var profileConnect: String {
+        provider.string("motivation.profile.connect")
+    }
+
+    public var profileReadMore: String {
+        provider.string("motivation.profile.read_more")
+    }
+
+    public var profileShowLess: String {
+        provider.string("motivation.profile.show_less")
+    }
+
+    public var profileLinkHint: String {
+        provider.string("motivation.profile.link_hint")
+    }
+
+    public var profileLinkError: String {
+        provider.string("motivation.profile.link_error")
+    }
+
+    public var errorRetryLater: String {
+        provider.string("motivation.error.retry_later")
+    }
+
+    public var errorRefresh: String {
+        provider.string("motivation.error.refresh")
+    }
+
+    public var errorTimeout: String {
+        provider.string("motivation.error.timeout")
+    }
+
 }

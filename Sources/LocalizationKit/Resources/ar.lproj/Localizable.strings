@@ -748,3 +748,37 @@
 "motivation.category.focus" = "تركيز";
 
 "motivation.category.growth" = "نمو";
+
+"motivation.refresh.failed" = "فشل التحديث";
+
+"motivation.feed.top.title" = "بداية المحتوى";
+
+"motivation.feed.top.message" = "أنت في بداية المحتوى. حاول التمرير لأسفل.";
+
+"motivation.feed.end.title" = "نهاية هذا القسم";
+
+"motivation.feed.end.message" = "لقد وصلت إلى نهاية هذا القسم. جرّب تغيير علامة التبويب أو القسم.";
+
+"motivation.about.disclaimer" = "تُقدَّم الاقتباسات والخلفيات عبر واجهات برمجة عامة (Quotable وZenQuotes وAdviceSlip وPicsum). تعود ملكية المحتوى إلى مؤلفيه ومنشئيه.";
+
+"motivation.profile.app_information" = "معلومات التطبيق";
+
+"motivation.profile.version" = "الإصدار";
+
+"motivation.profile.disclaimer" = "إخلاء المسؤولية";
+
+"motivation.profile.connect" = "تواصل";
+
+"motivation.profile.read_more" = "قراءة المزيد";
+
+"motivation.profile.show_less" = "عرض أقل";
+
+"motivation.profile.link_hint" = "اضغط مرتين للفتح في المتصفح";
+
+"motivation.profile.link_error" = "تعذر فتح الرابط";
+
+"motivation.error.retry_later" = "يرجى المحاولة لاحقًا.";
+
+"motivation.error.refresh" = "تعذر التحديث حاليًا.";
+
+"motivation.error.timeout" = "انتهت مهلة الطلب. يرجى المحاولة مجددًا.";
