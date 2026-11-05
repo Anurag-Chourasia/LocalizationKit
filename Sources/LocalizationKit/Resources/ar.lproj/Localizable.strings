@@ -740,3 +740,53 @@
 "channel.developer.haptics" = "استجابة لمسية";
 
 "channel.developer.logo_preview" = "معاينة الشعار ومشاركته";
+
+"motivation.connectivity.connected" = "متصل";
+
+"motivation.connectivity.offline" = "لا يوجد اتصال بالإنترنت";
+
+"motivation.category.focus" = "تركيز";
+
+"motivation.category.growth" = "نمو";
+
+"motivation.refresh.failed" = "فشل التحديث";
+
+"motivation.feed.top.title" = "بداية المحتوى";
+
+"motivation.feed.top.message" = "أنت في بداية المحتوى. حاول التمرير لأسفل.";
+
+"motivation.feed.end.title" = "نهاية هذا القسم";
+
+"motivation.feed.end.message" = "لقد وصلت إلى نهاية هذا القسم. جرّب تغيير علامة التبويب أو القسم.";
+
+"motivation.about.disclaimer" = "تُقدَّم الاقتباسات والخلفيات عبر واجهات برمجة عامة (Quotable وZenQuotes وAdviceSlip وPicsum). تعود ملكية المحتوى إلى مؤلفيه ومنشئيه.";
+
+"motivation.profile.app_information" = "معلومات التطبيق";
+
+"motivation.profile.version" = "الإصدار";
+
+"motivation.profile.disclaimer" = "إخلاء المسؤولية";
+
+"motivation.profile.connect" = "تواصل";
+
+"motivation.profile.read_more" = "قراءة المزيد";
+
+"motivation.profile.show_less" = "عرض أقل";
+
+"motivation.profile.link_hint" = "اضغط مرتين للفتح في المتصفح";
+
+"motivation.profile.link_error" = "تعذر فتح الرابط";
+
+"motivation.error.retry_later" = "يرجى المحاولة لاحقًا.";
+
+"motivation.error.refresh" = "تعذر التحديث حاليًا.";
+
+"motivation.error.timeout" = "انتهت مهلة الطلب. يرجى المحاولة مجددًا.";
+
+"showbook.search.no_matches" = "لا توجد نتائج لـ «%@». تحقق من الإملاء أو جرّب عنوانًا آخر.";
+
+"showbook.details.preview_hint" = "اضغط لعرض التفاصيل. اضغط مطولًا لمعاينة الغلاف.";
+
+"channel.filter.hide_unavailable" = "إخفاء القنوات التي لا تتوفر لها روابط بث";
+
+"motivation.share.image_preparing" = "ما زالت الصورة قيد التحضير. يرجى الضغط على حفظ مجددًا.";
