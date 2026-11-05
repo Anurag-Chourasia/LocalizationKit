@@ -536,3 +536,5 @@
 "showbook.details.preview_hint" = "Tap for details. Hold to preview the cover.";
 
 "channel.filter.hide_unavailable" = "Hide channels without streams";
+
+"motivation.share.image_preparing" = "Image is still preparing. Please tap Save again.";

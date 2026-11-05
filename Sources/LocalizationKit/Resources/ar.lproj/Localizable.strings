@@ -788,3 +788,5 @@
 "showbook.details.preview_hint" = "اضغط لعرض التفاصيل. اضغط مطولًا لمعاينة الغلاف.";
 
 "channel.filter.hide_unavailable" = "إخفاء القنوات التي لا تتوفر لها روابط بث";
+
+"motivation.share.image_preparing" = "ما زالت الصورة قيد التحضير. يرجى الضغط على حفظ مجددًا.";

@@ -325,4 +325,8 @@ public struct MotivationStrings: Sendable {
         provider.string("motivation.error.timeout")
     }
 
+    public var shareImagePreparing: String {
+        provider.string("motivation.share.image_preparing")
+    }
+
 }

@@ -788,3 +788,5 @@
 "showbook.details.preview_hint" = "Touchez pour les détails. Maintenez pour voir la couverture.";
 
 "channel.filter.hide_unavailable" = "Masquer les chaînes sans flux";
+
+"motivation.share.image_preparing" = "L’image est en cours de préparation. Touchez à nouveau Enregistrer.";
