@@ -283,7 +283,7 @@
 
 "about.disclaimer.title" = "Avis de non-responsabilité";
 
-"about.disclaimer.text" = "My TV est une application de démonstration créée à des fins éducatives uniquement.";
+"about.disclaimer.text" = "My TV est une application de démonstration conçue uniquement à des fins pédagogiques.\\n\\nCette application n’héberge, ne diffuse et ne redistribue aucun contenu multimédia. Toutes les métadonnées des chaînes IPTV proviennent du projet open source iptv-org.\\n\\nLa disponibilité, la légalité et les droits d’utilisation des contenus relèvent exclusivement de leurs fournisseurs respectifs.\\n\\nSource :\\nhttps://github.com/iptv-org\\n\\n[Politique de confidentialité](https://github.com/Anurag-Chourasia/myTV/blob/main/Docs/PrivacyInventory.md) • [Assistance](mailto:anuragchourasiaios@gmail.com)";
 
 "common.yes" = "Oui";
 
