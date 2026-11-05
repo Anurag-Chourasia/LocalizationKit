@@ -530,3 +530,9 @@
 "motivation.error.refresh" = "Could not refresh at the moment.";
 
 "motivation.error.timeout" = "Request timed out. Please try again.";
+
+"showbook.search.no_matches" = "No matches for “%@”. Check the spelling or try another book title.";
+
+"showbook.details.preview_hint" = "Tap for details. Hold to preview the cover.";
+
+"channel.filter.hide_unavailable" = "Hide channels without streams";

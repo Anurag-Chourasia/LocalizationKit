@@ -782,3 +782,9 @@
 "motivation.error.refresh" = "تعذر التحديث حاليًا.";
 
 "motivation.error.timeout" = "انتهت مهلة الطلب. يرجى المحاولة مجددًا.";
+
+"showbook.search.no_matches" = "لا توجد نتائج لـ «%@». تحقق من الإملاء أو جرّب عنوانًا آخر.";
+
+"showbook.details.preview_hint" = "اضغط لعرض التفاصيل. اضغط مطولًا لمعاينة الغلاف.";
+
+"channel.filter.hide_unavailable" = "إخفاء القنوات التي لا تتوفر لها روابط بث";

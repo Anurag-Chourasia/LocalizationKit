@@ -782,3 +782,9 @@
 "motivation.error.refresh" = "Actualisation impossible pour le moment.";
 
 "motivation.error.timeout" = "Le délai de la requête est dépassé. Réessayez.";
+
+"showbook.search.no_matches" = "Aucun résultat pour « %@ ». Vérifiez l’orthographe ou essayez un autre titre.";
+
+"showbook.details.preview_hint" = "Touchez pour les détails. Maintenez pour voir la couverture.";
+
+"channel.filter.hide_unavailable" = "Masquer les chaînes sans flux";

@@ -465,4 +465,12 @@ public struct ShowBookStrings: Sendable {
         provider.string("showbook.developer.ratings")
     }
 
+    public var searchNoMatches: String {
+        provider.string("showbook.search.no_matches")
+    }
+
+    public var detailsPreviewHint: String {
+        provider.string("showbook.details.preview_hint")
+    }
+
 }

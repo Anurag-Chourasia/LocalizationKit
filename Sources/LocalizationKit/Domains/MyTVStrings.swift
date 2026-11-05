@@ -405,4 +405,8 @@ public struct MyTVStrings: Sendable {
         provider.string("channel.developer.logo_preview")
     }
 
+    public var channelFilterHideUnavailable: String {
+        provider.string("channel.filter.hide_unavailable")
+    }
+
 }
