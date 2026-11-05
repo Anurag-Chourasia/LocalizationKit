@@ -712,3 +712,31 @@
 "showbook.error.details_failed" = "Impossible de charger les détails. Vérifiez votre connexion et réessayez.";
 
 "showbook.error.category_failed" = "Impossible de charger cette catégorie. Vérifiez votre connexion et réessayez.";
+
+"motivation.theme.default" = "Par défaut";
+
+"motivation.theme.ocean" = "Océan";
+
+"motivation.theme.mint" = "Menthe";
+
+"motivation.theme.sunset" = "Coucher de soleil";
+
+"motivation.theme.menu" = "Accent : %@";
+
+"motivation.ratio.fullscreen" = "Plein écran";
+
+"motivation.category.inspiration" = "Inspiration";
+
+"motivation.category.wisdom" = "Sagesse";
+
+"motivation.category.success" = "Réussite";
+
+"motivation.category.happiness" = "Bonheur";
+
+"motivation.category.life" = "Vie";
+
+"showbook.developer.ratings" = "Évaluations";
+
+"channel.developer.haptics" = "Retour haptique";
+
+"channel.developer.logo_preview" = "Aperçu et partage du logo";

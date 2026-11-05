@@ -712,3 +712,31 @@
 "showbook.error.details_failed" = "تعذر تحميل التفاصيل. تحقق من اتصالك وحاول مجددًا.";
 
 "showbook.error.category_failed" = "تعذر تحميل هذه الفئة. تحقق من اتصالك وحاول مجددًا.";
+
+"motivation.theme.default" = "افتراضي";
+
+"motivation.theme.ocean" = "المحيط";
+
+"motivation.theme.mint" = "النعناع";
+
+"motivation.theme.sunset" = "الغروب";
+
+"motivation.theme.menu" = "اللون المميز: %@";
+
+"motivation.ratio.fullscreen" = "ملء الشاشة";
+
+"motivation.category.inspiration" = "إلهام";
+
+"motivation.category.wisdom" = "حكمة";
+
+"motivation.category.success" = "نجاح";
+
+"motivation.category.happiness" = "سعادة";
+
+"motivation.category.life" = "حياة";
+
+"showbook.developer.ratings" = "التقييمات";
+
+"channel.developer.haptics" = "استجابة لمسية";
+
+"channel.developer.logo_preview" = "معاينة الشعار ومشاركته";

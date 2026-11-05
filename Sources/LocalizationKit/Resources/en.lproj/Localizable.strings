@@ -460,3 +460,31 @@
 "showbook.error.details_failed" = "Unable to load details. Check your connection and retry.";
 
 "showbook.error.category_failed" = "Couldn’t load this category. Check your connection and try again.";
+
+"motivation.theme.default" = "Default";
+
+"motivation.theme.ocean" = "Ocean";
+
+"motivation.theme.mint" = "Mint";
+
+"motivation.theme.sunset" = "Sunset";
+
+"motivation.theme.menu" = "Accent: %@";
+
+"motivation.ratio.fullscreen" = "Fullscreen";
+
+"motivation.category.inspiration" = "Inspiration";
+
+"motivation.category.wisdom" = "Wisdom";
+
+"motivation.category.success" = "Success";
+
+"motivation.category.happiness" = "Happiness";
+
+"motivation.category.life" = "Life";
+
+"showbook.developer.ratings" = "Ratings";
+
+"channel.developer.haptics" = "Haptic feedback";
+
+"channel.developer.logo_preview" = "Logo preview and sharing";

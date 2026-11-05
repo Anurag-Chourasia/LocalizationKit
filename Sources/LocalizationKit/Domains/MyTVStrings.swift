@@ -397,4 +397,12 @@ public struct MyTVStrings: Sendable {
         provider.string("channel.developer.privacy")
     }
 
+    public var channelDeveloperHaptics: String {
+        provider.string("channel.developer.haptics")
+    }
+
+    public var channelDeveloperLogoPreview: String {
+        provider.string("channel.developer.logo_preview")
+    }
+
 }
