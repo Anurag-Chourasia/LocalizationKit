@@ -136,3 +136,9 @@ Every pull request and merge to `main` is gated by automated CI workflows:
    - Pinned Xcode 27.0 toolchain with complete strict concurrency (`-strict-concurrency=complete`) and `-warnings-as-errors`.
    - Comprehensive test suite validating bundle location, locale fallbacks, pluralization, and string interpolation.
    - iOS Simulator product verification via `xcodebuild`.
+
+## Translation and generation gate
+
+Add each new key explicitly to English, French and Arabic resources before running `python3 Scripts/generate-localization.py`. The generator synchronizes ordering and emits Swift APIs; it does not translate text. Missing translations now fail generation instead of silently copying English. Run `python3 Scripts/test_generate_localization.py` to verify the missing-translation and public-API regressions. CI also checks that generation leaves committed sources unchanged.
+
+The shared controller starts with the device locale; explicitly constructed controllers still accept deterministic locales for tests. User-generated content, transport keys, persistent sort IDs and accessibility identifier values are not translated.

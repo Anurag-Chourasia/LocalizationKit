@@ -139,7 +139,7 @@
 
 "motivation.share.save_quote_gradient" = "Enregistrer la citation (dégradé noir)";
 
-"motivation.share.saving" = "Saving...";
+"motivation.share.saving" = "Enregistrement…";
 
 "motivation.category.random" = "Aléatoire";
 
@@ -460,43 +460,255 @@
 
 /* Developer Settings */
 "developer.title" = "Paramètres de développeur";
+
 "developer.subtitle.motivation" = "Configurez l'exécution, le cache et les fonctionnalités de Motivation Daily. Secouez l'appareil pour rouvrir.";
+
 "developer.subtitle.mytv" = "Configurez l'exécution, le cache et les fonctionnalités de MyTV. Secouez l'appareil pour rouvrir.";
+
 "developer.subtitle.showbook" = "Configurez l'exécution, le cache et les fonctionnalités de ShowBook. Secouez l'appareil pour rouvrir.";
+
 "developer.quick_presets" = "Préréglages rapides";
+
 "developer.preset.showcase" = "Démonstration (peuplé)";
+
 "developer.preset.empty" = "État vide (zéro résultat)";
+
 "developer.preset.offline" = "Résilience hors ligne";
+
 "developer.preset.live_feed" = "Flux en direct";
+
 "developer.preset.live_directory" = "Répertoire en direct";
+
 "developer.preset.live_library" = "Bibliothèque en direct";
+
 "developer.cache_and_offline" = "Cache et stockage hors ligne";
+
 "developer.disk_cache" = "Cache disque";
+
 "developer.checking" = "Vérification en cours...";
+
 "developer.purge_cache" = "Vider le cache";
+
 "developer.purge_quote_cache" = "Vider le cache de citations";
+
 "developer.purge_channel_cache" = "Vider le cache de chaînes";
+
 "developer.purge_catalog_cache" = "Vider le cache du catalogue";
+
 "developer.environment" = "Environnement";
+
 "developer.data_source" = "Source de données";
+
 "developer.scenario" = "Scénario";
+
 "developer.scenario.success" = "Succès";
+
 "developer.scenario.empty" = "Résultats vides";
+
 "developer.scenario.offline" = "Erreur hors ligne";
+
 "developer.feature_flags" = "Options de fonctionnalité";
+
 "developer.authentication" = "Authentification · AuthKit";
+
 "developer.debug_logs" = "Journaux de débogage";
+
 "developer.http_logs" = "Journaux HTTP dans la console Xcode";
+
 "developer.version_simulation" = "Simulation de version";
+
 "developer.installed_version" = "Version installée";
+
 "developer.installed_build" = "Build installé";
+
 "developer.simulated_version" = "Version simulée";
+
 "developer.simulated_build" = "Build simulé";
+
 "developer.privacy_support" = "Confidentialité et support";
+
 "developer.privacy_policy" = "Politique de confidentialité";
+
 "developer.support" = "Support développeur";
+
 "developer.reset_settings" = "Réinitialiser les paramètres développeur";
+
 "developer.theme_and_display" = "Thème et affichage";
+
 "developer.simulate_offline" = "Simuler le mode hors ligne";
+
 "developer.close_profile" = "Fermer le profil développeur";
+
 "developer.open_app" = "Ouvrir l'application";
+
+"showbook.loading.edition" = "Chargement de l’édition…";
+
+"showbook.loading.cover" = "Chargement de la couverture…";
+
+"showbook.details.cover_preview" = "Aperçu de la couverture";
+
+"showbook.details.book_cover" = "Couverture du livre";
+
+"showbook.details.not_available" = "Indisponible";
+
+"showbook.details.share_failed" = "Impossible de partager la couverture";
+
+"showbook.welcome.title" = "Bienvenue";
+
+"showbook.auth.login_welcome" = "Bienvenue,\nconnectez-vous pour continuer";
+
+"showbook.auth.signup_welcome" = "Bienvenue,\ninscrivez-vous pour continuer";
+
+"showbook.auth.valid_email" = "Une adresse e-mail valide est requise";
+
+"showbook.auth.uppercase" = "Doit contenir une majuscule";
+
+"showbook.auth.lowercase" = "Doit contenir une minuscule";
+
+"showbook.auth.special" = "Doit contenir un caractère spécial";
+
+"showbook.auth.number" = "Doit contenir un chiffre";
+
+"showbook.auth.length" = "Au moins 8 caractères";
+
+"showbook.loading.library" = "Ouverture de la bibliothèque";
+
+"showbook.country.select" = "Sélectionner un élément";
+
+"showbook.discover.finding" = "Recherche de livres…";
+
+"showbook.discover.category" = "Catégorie";
+
+"showbook.action.clear" = "Effacer";
+
+"showbook.action.retry" = "Réessayer";
+
+"showbook.alert.error" = "Erreur";
+
+"showbook.action.yes" = "Oui";
+
+"showbook.appearance.system" = "Système";
+
+"showbook.layout.readability" = "La présentation en liste garde les détails lisibles à cette taille de texte.";
+
+"showbook.details.no_author" = "Auteur inconnu";
+
+"showbook.details.opens" = "Ouvre les détails du livre";
+
+"showbook.details.for" = "Détails de %@";
+
+"showbook.details.ratings" = "Moyenne : %@ · %@ évaluations";
+
+"showbook.discover.cached" = "Titres enregistrés · %@. Une connexion peut être nécessaire pour les couvertures.";
+
+"showbook.discover.sort_title" = "Titre";
+
+"showbook.discover.sort_average" = "Moyenne";
+
+"showbook.discover.sort_hits" = "Popularité";
+
+"showbook.category.fiction" = "Fiction";
+
+"showbook.category.mystery" = "Mystère";
+
+"showbook.category.science" = "Sciences";
+
+"showbook.category.history" = "Histoire";
+
+"showbook.layout.list_title" = "Présentation en liste";
+
+"channel.streams.unavailable" = "Aucun flux disponible";
+
+"channel.logo.preview" = "Afficher le logo";
+
+"channel.logo.unavailable" = "Logo indisponible";
+
+"channel.logo.loading" = "Chargement du logo…";
+
+"channel.logo.preview_title" = "Aperçu du logo";
+
+"channel.logo.close" = "Fermer l’aperçu du logo";
+
+"channel.logo.share" = "Partager le logo";
+
+"channel.logo.share_failed" = "Impossible de partager le logo";
+
+"stream.player.close" = "Fermer le lecteur";
+
+"motivation.author.unknown" = "Inconnu";
+
+"developer.source.stub" = "Simulation · données locales";
+
+"developer.release_ignores" = "Les versions de distribution ignorent ce réglage.";
+
+"channel.developer.live" = "En direct · annuaire IPTV";
+
+"channel.developer.stub_note" = "Le mode simulation utilise des chaînes locales sans requêtes d’annuaire ni de lecture. Les favoris restent sur cet appareil.";
+
+"channel.developer.auth_note" = "Nouvelle fonction, désactivée par défaut. Si elle est activée, Ouvrir MyTV affiche la connexion avant le catalogue. Appliquez les réglages pour activer les changements ; la désactivation conserve la session enregistrée.";
+
+"channel.developer.logs_note" = "Requêtes et réponses d’annuaire expurgées. Les réponses volumineuses peuvent ralentir le débogage. Ces journaux sont désactivés en distribution.";
+
+"channel.developer.layout" = "Présentation des chaînes";
+
+"channel.developer.version_note" = "Modifie uniquement la version affichée dans la présentation du développeur.";
+
+"channel.developer.privacy" = "MyTV enregistre les chaînes favorites sur votre appareil. La lecture est directe et sans authentification. Aucune donnée personnelle n’est suivie ni vendue à des tiers.";
+
+"motivation.developer.live" = "En direct · Quotable et ZenQuotes";
+
+"motivation.developer.stub_note" = "Le mode simulation utilise des citations et fonds d’écran locaux sans requêtes réseau distantes.";
+
+"motivation.developer.auth_note" = "Nouvelle fonction, désactivée par défaut. Activez-la pour exiger la connexion avant le fil. Appliquez les réglages pour activer les changements ; la désactivation conserve la session.";
+
+"motivation.developer.privacy" = "Motivation Daily stocke les citations favorites et les réglages sur votre appareil. Les citations et fonds d’écran sont chargés sans authentification. Aucune donnée personnelle n’est suivie ni vendue à des tiers.";
+
+"showbook.developer.auth_note" = "Nouvelle fonction, désactivée par défaut. Activez-la pour la connexion cloud. Appliquez les réglages pour activer les changements ; la désactivation conserve la session cloud.";
+
+"showbook.developer.logs_note" = "Contenu intégral des requêtes et réponses, avec données sensibles masquées. Les journaux volumineux peuvent ralentir le débogage. Désactivé en distribution.";
+
+"showbook.developer.live" = "En direct · Open Library";
+
+"showbook.developer.stub_note" = "Le mode direct utilise les API de production. La simulation remplace les réponses API et désactive le chargement distant des couvertures. Les comptes et favoris locaux restent sur cet appareil.";
+
+"showbook.developer.layout" = "Présentation de la découverte";
+
+"showbook.developer.layout_a" = "A · Liste";
+
+"showbook.developer.layout_b" = "B · Grille";
+
+"showbook.developer.experiment_note" = "Réglage d’expérience locale pour les tests visuels. Aucune affectation distante, analyse ou résultat d’expérience n’est collecté.";
+
+"showbook.developer.experiment" = "Tests A/B";
+
+"showbook.developer.version_note" = "Remplace la version affichée dans la présentation du développeur. Le paquet signé et la version App Store restent inchangés ; modifiez-les dans Xcode.";
+
+"showbook.developer.privacy" = "ShowBook stocke les favoris sur l’appareil ou de façon sécurisée dans Supabase lorsque l’authentification cloud est activée. Aucune donnée personnelle n’est suivie ni vendue à des tiers.";
+
+"showbook.error.empty_fields" = "Les champs ne peuvent pas être vides";
+
+"showbook.error.invalid_email" = "Saisissez une adresse e-mail valide";
+
+"showbook.error.login_password" = "Le mot de passe doit contenir au moins 8 caractères, dont une lettre, un chiffre et un caractère spécial comme @ ou #";
+
+"showbook.error.signup_password" = "Le mot de passe doit contenir au moins 8 caractères, dont une lettre, un chiffre et un caractère spécial comme @ ou #";
+
+"showbook.error.save_login" = "Impossible d’enregistrer la connexion. Réessayez.";
+
+"showbook.error.save_account" = "Impossible d’enregistrer le compte. Réessayez.";
+
+"showbook.error.unexpected" = "Erreur inattendue";
+
+"showbook.error.countries" = "Aucun pays disponible";
+
+"showbook.error.not_found" = "Cette fiche n’est plus disponible sur Open Library.";
+
+"showbook.error.busy" = "Open Library est occupé. Patientez un instant et réessayez.";
+
+"showbook.error.record_failed" = "Open Library n’a pas pu charger cette fiche. Réessayez.";
+
+"showbook.error.unreadable" = "Impossible de lire cette fiche. Réessayez plus tard.";
+
+"showbook.error.details_failed" = "Impossible de charger les détails. Vérifiez votre connexion et réessayez.";
+
+"showbook.error.category_failed" = "Impossible de charger cette catégorie. Vérifiez votre connexion et réessayez.";

@@ -10,15 +10,20 @@ public struct LocalizedContext<Domain: LocalizationDomain>: Sendable {
 
     public init(provider: LocalizationProviding) {
         self.provider = provider
+        let strings: any Sendable
         if Domain.self == MotivationDomain.self {
-            self.domain = MotivationStrings(provider: provider) as! Domain.Strings
+            strings = MotivationStrings(provider: provider)
         } else if Domain.self == MyTVDomain.self {
-            self.domain = MyTVStrings(provider: provider) as! Domain.Strings
+            strings = MyTVStrings(provider: provider)
         } else if Domain.self == ShowBookDomain.self {
-            self.domain = ShowBookStrings(provider: provider) as! Domain.Strings
+            strings = ShowBookStrings(provider: provider)
         } else {
             fatalError("Unsupported LocalizationDomain: \(Domain.self)")
         }
+        guard let typedStrings = strings as? Domain.Strings else {
+            fatalError("Invalid strings type for LocalizationDomain: \(Domain.self)")
+        }
+        self.domain = typedStrings
     }
 
     public var common: CommonStrings {
@@ -109,8 +114,6 @@ public struct CommonStrings: Sendable {
     public var showcaseDemoA11y: String { provider.string("common.showcase.demo.a11y") }
     public var showcaseDemoTitle: String { provider.string("common.showcase.demo.title") }
     public var showcaseDemoTapForControls: String { provider.string("common.showcase.demo.tap_for_controls") }
-
-    // Developer & Diagnostics Common Strings
     public var developerSettingsTitle: String { provider.string("developer.title") }
     public var developerSettingsSubtitleMotivation: String { provider.string("developer.subtitle.motivation") }
     public var developerSettingsSubtitleMyTV: String { provider.string("developer.subtitle.mytv") }
@@ -152,6 +155,8 @@ public struct CommonStrings: Sendable {
     public var developerSimulateOffline: String { provider.string("developer.simulate_offline") }
     public var developerCloseProfile: String { provider.string("developer.close_profile") }
     public var developerOpenApp: String { provider.string("developer.open_app") }
+    public var developerSourceStub: String { provider.string("developer.source.stub") }
+    public var developerReleaseIgnores: String { provider.string("developer.release_ignores") }
 }
 
 // MARK: - SwiftUI KeyPath Text Initializers
@@ -197,20 +202,8 @@ extension Button where Label == Text {
         }
     }
 
-    public init(_ keyPath: KeyPath<CommonStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
-        self.init(role: role, action: action) {
-            Text(keyPath)
-        }
-    }
-
     public init(_ keyPath: KeyPath<MotivationStrings, String>, action: @escaping () -> Void) {
         self.init(action: action) {
-            Text(keyPath)
-        }
-    }
-
-    public init(_ keyPath: KeyPath<MotivationStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
-        self.init(role: role, action: action) {
             Text(keyPath)
         }
     }
@@ -221,38 +214,10 @@ extension Button where Label == Text {
         }
     }
 
-    public init(_ keyPath: KeyPath<MyTVStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
-        self.init(role: role, action: action) {
-            Text(keyPath)
-        }
-    }
-
     public init(_ keyPath: KeyPath<ShowBookStrings, String>, action: @escaping () -> Void) {
         self.init(action: action) {
             Text(keyPath)
         }
-    }
-
-    public init(_ keyPath: KeyPath<ShowBookStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
-        self.init(role: role, action: action) {
-            Text(keyPath)
-        }
-    }
-}
-
-// MARK: - SwiftUI KeyPath Alert.Button Initializers
-
-extension Alert.Button {
-    public static func `default`(_ keyPath: KeyPath<CommonStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .default(Text(keyPath), action: action)
-    }
-
-    public static func cancel(_ keyPath: KeyPath<CommonStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .cancel(Text(keyPath), action: action)
-    }
-
-    public static func destructive(_ keyPath: KeyPath<CommonStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
-        .destructive(Text(keyPath), action: action)
     }
 }
 
@@ -408,5 +373,36 @@ extension View {
                 self
             }
         }
+    }
+}
+extension Button where Label == Text {
+    public init(_ keyPath: KeyPath<CommonStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
+        self.init(role: role, action: action) { Text(keyPath) }
+    }
+}
+extension Button where Label == Text {
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
+        self.init(role: role, action: action) { Text(keyPath) }
+    }
+}
+extension Button where Label == Text {
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
+        self.init(role: role, action: action) { Text(keyPath) }
+    }
+}
+extension Button where Label == Text {
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
+        self.init(role: role, action: action) { Text(keyPath) }
+    }
+}
+extension Alert.Button {
+    public static func `default`(_ keyPath: KeyPath<CommonStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .default(Text(keyPath), action: action)
+    }
+    public static func `cancel`(_ keyPath: KeyPath<CommonStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .cancel(Text(keyPath), action: action)
+    }
+    public static func `destructive`(_ keyPath: KeyPath<CommonStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .destructive(Text(keyPath), action: action)
     }
 }

@@ -139,7 +139,7 @@
 
 "motivation.share.save_quote_gradient" = "حفظ الاقتباس (تدرج أسود)";
 
-"motivation.share.saving" = "Saving...";
+"motivation.share.saving" = "جارٍ الحفظ…";
 
 "motivation.category.random" = "عشوائي";
 
@@ -460,43 +460,255 @@
 
 /* Developer Settings */
 "developer.title" = "إعدادات المطور";
+
 "developer.subtitle.motivation" = "قم بتهيئة بيئة تشغيل وتخزين وميزات Motivation Daily. هز الجهاز لإعادة الفتح.";
+
 "developer.subtitle.mytv" = "قم بتهيئة بيئة تشغيل وتخزين وميزات MyTV. هز الجهاز لإعادة الفتح.";
+
 "developer.subtitle.showbook" = "قم بتهيئة بيئة تشغيل وتخزين وميزات ShowBook. هز الجهاز لإعادة الفتح.";
+
 "developer.quick_presets" = "الإعدادات المسبقة السريعة";
+
 "developer.preset.showcase" = "عرض توضيحي (مملوء)";
+
 "developer.preset.empty" = "حالة فارغة (بدون نتائج)";
+
 "developer.preset.offline" = "المرونة دون اتصال";
+
 "developer.preset.live_feed" = "موجز مباشر";
+
 "developer.preset.live_directory" = "دليل مباشر";
+
 "developer.preset.live_library" = "مكتبة مباشرة";
+
 "developer.cache_and_offline" = "ذاكرة التخزين المؤقت والتخزين دون اتصال";
+
 "developer.disk_cache" = "ذاكرة التخزين المؤقت على القرص";
+
 "developer.checking" = "جارٍ التحقق...";
+
 "developer.purge_cache" = "مسح ذاكرة التخزين المؤقت";
+
 "developer.purge_quote_cache" = "مسح ذاكرة التخزين المؤقت للاقتباسات";
+
 "developer.purge_channel_cache" = "مسح ذاكرة التخزين المؤقت للقنوات";
+
 "developer.purge_catalog_cache" = "مسح ذاكرة التخزين المؤقت للكتالوج";
+
 "developer.environment" = "البيئة";
+
 "developer.data_source" = "مصدر البيانات";
+
 "developer.scenario" = "السيناريو";
+
 "developer.scenario.success" = "نجاح";
+
 "developer.scenario.empty" = "نتائج فارغة";
+
 "developer.scenario.offline" = "خطأ دون اتصال";
+
 "developer.feature_flags" = "ميزات تجريبية";
+
 "developer.authentication" = "المصادقة · AuthKit";
+
 "developer.debug_logs" = "سجلات تصحيح الأخطاء";
+
 "developer.http_logs" = "سجلات HTTP في وحدة تحكم Xcode";
+
 "developer.version_simulation" = "محاكاة الإصدار";
+
 "developer.installed_version" = "الإصدار المثبت";
+
 "developer.installed_build" = "رقم البناء المثبت";
+
 "developer.simulated_version" = "الإصدار المحاكى";
+
 "developer.simulated_build" = "رقم البناء المحاكى";
+
 "developer.privacy_support" = "الخصوصية والدعم";
+
 "developer.privacy_policy" = "سياسة الخصوصية";
+
 "developer.support" = "دعم المطور";
+
 "developer.reset_settings" = "إعادة ضبط إعدادات المطور";
+
 "developer.theme_and_display" = "المظهر والعرض";
+
 "developer.simulate_offline" = "محاكاة وضع عدم الاتصال";
+
 "developer.close_profile" = "إغلاق ملف المطور الشخصي";
+
 "developer.open_app" = "فتح التطبيق";
+
+"showbook.loading.edition" = "جارٍ تحميل الطبعة…";
+
+"showbook.loading.cover" = "جارٍ تحميل الغلاف…";
+
+"showbook.details.cover_preview" = "معاينة الغلاف";
+
+"showbook.details.book_cover" = "غلاف الكتاب";
+
+"showbook.details.not_available" = "غير متاح";
+
+"showbook.details.share_failed" = "تعذرت مشاركة الغلاف";
+
+"showbook.welcome.title" = "مرحبًا";
+
+"showbook.auth.login_welcome" = "مرحبًا،\nسجّل الدخول للمتابعة";
+
+"showbook.auth.signup_welcome" = "مرحبًا،\nأنشئ حسابًا للمتابعة";
+
+"showbook.auth.valid_email" = "يجب إدخال بريد إلكتروني صالح";
+
+"showbook.auth.uppercase" = "يجب أن تحتوي على حرف كبير";
+
+"showbook.auth.lowercase" = "يجب أن تحتوي على حرف صغير";
+
+"showbook.auth.special" = "يجب أن تحتوي على رمز خاص";
+
+"showbook.auth.number" = "يجب أن تحتوي على رقم";
+
+"showbook.auth.length" = "ثمانية أحرف على الأقل";
+
+"showbook.loading.library" = "جارٍ فتح المكتبة";
+
+"showbook.country.select" = "اختر عنصرًا";
+
+"showbook.discover.finding" = "جارٍ البحث عن الكتب…";
+
+"showbook.discover.category" = "الفئة";
+
+"showbook.action.clear" = "مسح";
+
+"showbook.action.retry" = "إعادة المحاولة";
+
+"showbook.alert.error" = "خطأ";
+
+"showbook.action.yes" = "نعم";
+
+"showbook.appearance.system" = "النظام";
+
+"showbook.layout.readability" = "يحافظ عرض القائمة على وضوح تفاصيل الكتب بحجم النص هذا.";
+
+"showbook.details.no_author" = "مؤلف غير معروف";
+
+"showbook.details.opens" = "يفتح تفاصيل الكتاب";
+
+"showbook.details.for" = "تفاصيل %@";
+
+"showbook.details.ratings" = "متوسط %@ · %@ تقييمات";
+
+"showbook.discover.cached" = "عناوين محفوظة · %@. قد يتطلب عرض الأغلفة اتصالًا.";
+
+"showbook.discover.sort_title" = "العنوان";
+
+"showbook.discover.sort_average" = "المتوسط";
+
+"showbook.discover.sort_hits" = "الشعبية";
+
+"showbook.category.fiction" = "خيال";
+
+"showbook.category.mystery" = "غموض";
+
+"showbook.category.science" = "علوم";
+
+"showbook.category.history" = "تاريخ";
+
+"showbook.layout.list_title" = "عرض القائمة";
+
+"channel.streams.unavailable" = "لا توجد بثوث متاحة";
+
+"channel.logo.preview" = "معاينة الشعار";
+
+"channel.logo.unavailable" = "الشعار غير متاح";
+
+"channel.logo.loading" = "جارٍ تحميل الشعار…";
+
+"channel.logo.preview_title" = "معاينة الشعار";
+
+"channel.logo.close" = "إغلاق معاينة الشعار";
+
+"channel.logo.share" = "مشاركة الشعار";
+
+"channel.logo.share_failed" = "تعذرت مشاركة الشعار";
+
+"stream.player.close" = "إغلاق المشغّل";
+
+"motivation.author.unknown" = "غير معروف";
+
+"developer.source.stub" = "محاكاة · بيانات محلية";
+
+"developer.release_ignores" = "تتجاهل إصدارات التوزيع هذا الإعداد.";
+
+"channel.developer.live" = "مباشر · دليل IPTV";
+
+"channel.developer.stub_note" = "يستخدم وضع المحاكاة قنوات محلية دون طلبات دليل أو تشغيل. تبقى المفضلة على هذا الجهاز.";
+
+"channel.developer.auth_note" = "ميزة جديدة، معطلة افتراضيًا. عند تفعيلها، يعرض فتح MyTV تسجيل الدخول قبل دليل القنوات. طبّق الإعدادات لتفعيل التغييرات؛ يؤدي تعطيلها إلى الاحتفاظ بالجلسة المحفوظة.";
+
+"channel.developer.logs_note" = "طلبات الدليل واستجاباته بعد حجب البيانات الحساسة. قد تبطئ الاستجابات الكبيرة تصحيح الأخطاء. لا تُفعّل هذه السجلات في إصدارات التوزيع.";
+
+"channel.developer.layout" = "تخطيط القنوات";
+
+"channel.developer.version_note" = "يغيّر الإصدار المعروض في صفحة المطور فقط.";
+
+"channel.developer.privacy" = "يحفظ MyTV القنوات المفضلة محليًا على جهازك. تشغيل البث مباشر ودون مصادقة. لا تُتتبع البيانات الشخصية ولا تُباع لأطراف ثالثة.";
+
+"motivation.developer.live" = "مباشر · Quotable وZenQuotes";
+
+"motivation.developer.stub_note" = "يستخدم وضع المحاكاة اقتباسات وخلفيات محلية دون طلبات شبكة خارجية.";
+
+"motivation.developer.auth_note" = "ميزة جديدة، معطلة افتراضيًا. فعّلها لطلب تسجيل الدخول قبل عرض المحتوى. طبّق الإعدادات لتفعيل التغييرات؛ يؤدي تعطيلها إلى الاحتفاظ بالجلسة.";
+
+"motivation.developer.privacy" = "يحفظ Motivation Daily الاقتباسات المفضلة والإعدادات محليًا على جهازك. تُجلب الاقتباسات والخلفيات دون مصادقة. لا تُتتبع البيانات الشخصية ولا تُباع لأطراف ثالثة.";
+
+"showbook.developer.auth_note" = "ميزة جديدة، معطلة افتراضيًا. فعّلها لاستخدام تسجيل الدخول السحابي. طبّق الإعدادات لتفعيل التغييرات؛ يؤدي تعطيلها إلى الاحتفاظ بالجلسة السحابية.";
+
+"showbook.developer.logs_note" = "محتويات الطلبات والاستجابات كاملة بعد حجب البيانات الحساسة. قد تبطئ السجلات الكبيرة تصحيح الأخطاء. لا يُفعّل ذلك في إصدارات التوزيع.";
+
+"showbook.developer.live" = "مباشر · Open Library";
+
+"showbook.developer.stub_note" = "يستخدم الوضع المباشر واجهات الإنتاج. تستبدل المحاكاة استجابات الواجهات وتعطّل تحميل الأغلفة عن بُعد. تبقى الحسابات والإشارات المحلية على هذا الجهاز.";
+
+"showbook.developer.layout" = "تخطيط الاستكشاف";
+
+"showbook.developer.layout_a" = "A · قائمة";
+
+"showbook.developer.layout_b" = "B · شبكة";
+
+"showbook.developer.experiment_note" = "تجاوز محلي للتجربة من أجل الاختبارات المرئية. لا تُجمع تعيينات خارجية أو تحليلات أو نتائج تجارب.";
+
+"showbook.developer.experiment" = "اختبارات A/B";
+
+"showbook.developer.version_note" = "يتجاوز الإصدار المعروض في صفحة المطور. تبقى الحزمة الموقّعة وإصدار App Store دون تغيير؛ غيّرهما في Xcode.";
+
+"showbook.developer.privacy" = "يحفظ ShowBook الإشارات محليًا على الجهاز أو بأمان في Supabase عند تفعيل المصادقة السحابية. لا تُتتبع البيانات الشخصية ولا تُباع لأطراف ثالثة.";
+
+"showbook.error.empty_fields" = "لا يمكن ترك الحقول فارغة";
+
+"showbook.error.invalid_email" = "أدخل بريدًا إلكترونيًا صالحًا";
+
+"showbook.error.login_password" = "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل، بما في ذلك حرف ورقم ورمز خاص مثل @ أو #";
+
+"showbook.error.signup_password" = "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل، بما في ذلك حرف ورقم ورمز خاص مثل @ أو #";
+
+"showbook.error.save_login" = "تعذر حفظ تسجيل الدخول. حاول مجددًا.";
+
+"showbook.error.save_account" = "تعذر حفظ الحساب. حاول مجددًا.";
+
+"showbook.error.unexpected" = "خطأ غير متوقع";
+
+"showbook.error.countries" = "لا توجد بلدان متاحة";
+
+"showbook.error.not_found" = "لم يعد هذا السجل متاحًا على Open Library.";
+
+"showbook.error.busy" = "Open Library مشغول. انتظر قليلًا ثم حاول مجددًا.";
+
+"showbook.error.record_failed" = "تعذر على Open Library تحميل هذا السجل. حاول مجددًا.";
+
+"showbook.error.unreadable" = "تعذرت قراءة هذا السجل. حاول لاحقًا.";
+
+"showbook.error.details_failed" = "تعذر تحميل التفاصيل. تحقق من اتصالك وحاول مجددًا.";
+
+"showbook.error.category_failed" = "تعذر تحميل هذه الفئة. تحقق من اتصالك وحاول مجددًا.";

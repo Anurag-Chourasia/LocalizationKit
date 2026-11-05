@@ -59,6 +59,12 @@ jobs:
           echo "SDKROOT=$(xcrun --sdk macosx --show-sdk-path)" >> "$GITHUB_ENV"
           grep -Eq 'Apple Swift version 6\.4([. ]|$)' "$RUNNER_TEMP/swift-version.txt"
 
+      - name: Verify localization generator and translation completeness
+        run: |
+          python3 Scripts/test_generate_localization.py
+          python3 Scripts/generate-localization.py
+          git diff --exit-code -- Sources/LocalizationKit
+
       - name: Validate manifest
         run: xcrun swift package dump-package
 
