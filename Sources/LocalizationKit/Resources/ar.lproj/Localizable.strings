@@ -836,3 +836,51 @@
 "showbook.error.invalid_url" = "عنوان URL غير صالح";
 
 "showbook.error.no_data_received" = "لم يتم استلام أي بيانات";
+
+"auth.unavailable.title" = "تسجيل الدخول غير متاح";
+
+"auth.unavailable.message" = "يرجى المحاولة لاحقًا.";
+
+"auth.unavailable.debug_configuration" = "اضبط عنوان Supabase والمفتاح العام ورابط العودة في إعدادات التطبيق.";
+
+"auth.brand.mytv.subtitle" = "قنواتك. مفضلاتك.";
+
+"auth.brand.showbook.subtitle" = "فصلك القادم يبدأ هنا.";
+
+"auth.brand.motivation_daily.subtitle" = "قليل من الإلهام، كل يوم.";
+
+"auth.provider.continue_with" = "المتابعة باستخدام %@";
+
+"auth.provider.continue_with.apple" = "المتابعة باستخدام Apple";
+
+"auth.provider.continue_with.google" = "المتابعة باستخدام Google";
+
+"auth.provider.continue_with.github" = "المتابعة باستخدام GitHub";
+
+"profile.app_information" = "معلومات التطبيق";
+
+"profile.version" = "الإصدار";
+
+"profile.disclaimer" = "إخلاء المسؤولية";
+
+"profile.social" = "لنتواصل";
+
+"profile.read_more" = "قراءة المزيد";
+
+"profile.show_less" = "عرض أقل";
+
+"profile.link_hint" = "يفتح رابطًا خارجيًا";
+
+"profile.error_title" = "تعذر فتح الرابط";
+
+"profile.error_message" = "تعذر فتح هذا الرابط. يرجى المحاولة لاحقًا.";
+
+"profile.okay" = "موافق";
+
+"common.layout.title" = "التخطيط";
+
+"common.layout.list" = "قائمة";
+
+"common.layout.grid" = "شبكة";
+
+"showbook.profile.disclaimer" = "تطبيق ShowBook مخصص لاكتشاف الكتب. يتم توفير بيانات الكتب والأغلفة بواسطة Open Library. يعتمد التوفر والدقة على السجلات المصدرية.\n\nالمصدر: https://openlibrary.org\n\n[سياسة الخصوصية](https://github.com/Anurag-Chourasia/ShowBook/blob/main/Docs/PrivacyInventory.md) • [الدعم](mailto:anuragchourasiaios@gmail.com)";

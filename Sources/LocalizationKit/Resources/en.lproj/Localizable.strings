@@ -564,3 +564,31 @@
 
 "showbook.error.invalid_url" = "Invalid URL";
 "showbook.error.no_data_received" = "No data received";
+
+"auth.unavailable.title" = "Sign-in is unavailable";
+"auth.unavailable.message" = "Please try again later.";
+"auth.unavailable.debug_configuration" = "Set the Supabase URL, publishable key and callback in the app configuration.";
+"auth.brand.mytv.subtitle" = "Your channels. Your favourites.";
+"auth.brand.showbook.subtitle" = "Your next chapter starts here.";
+"auth.brand.motivation_daily.subtitle" = "A little inspiration, every day.";
+"auth.provider.continue_with" = "Continue with %@";
+"auth.provider.continue_with.apple" = "Continue with Apple";
+"auth.provider.continue_with.google" = "Continue with Google";
+"auth.provider.continue_with.github" = "Continue with GitHub";
+
+"profile.app_information" = "App Information";
+"profile.version" = "Version";
+"profile.disclaimer" = "Disclaimer";
+"profile.social" = "Let’s Connect";
+"profile.read_more" = "Read more";
+"profile.show_less" = "Show less";
+"profile.link_hint" = "Opens an external link";
+"profile.error_title" = "Unable to open link";
+"profile.error_message" = "This link could not be opened. Please try again later.";
+"profile.okay" = "OK";
+
+"common.layout.title" = "Layout";
+"common.layout.list" = "List";
+"common.layout.grid" = "Grid";
+
+"showbook.profile.disclaimer" = "ShowBook is a book discovery application. Book metadata and covers are provided by Open Library. Availability and accuracy depend on the source records.\n\nSource: https://openlibrary.org\n\n[Privacy Policy](https://github.com/Anurag-Chourasia/ShowBook/blob/main/Docs/PrivacyInventory.md) • [Support](mailto:anuragchourasiaios@gmail.com)";

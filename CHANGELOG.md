@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.0
+
+- Centralize shared UI copy for `AuthKitUI` (sign-in unavailable screen, brand subtitles, provider sign-in buttons), `DeveloperProfileKit` (`profile.*`), and `UIComponentsKit` (`common.layout.*`), plus `ShowBook` profile disclaimer (`showbook.profile.disclaimer`) across `en`, `fr`, and `ar` catalogs (`IOS-59`).
+- Expose `L10n.Profile`, `L10n.Layout`, and new `L10n.Auth` typed accessors.
+
 ## 0.7.0
 
 - Add canonical `en`, `fr`, and `ar` localization catalogs and strongly-typed accessors for semantic `AuthKit` session notices, `Motivation Daily` `AppError` / recovery suggestion states, and `ShowBook` `NetworkClass` semantic errors (`IOS-58`).

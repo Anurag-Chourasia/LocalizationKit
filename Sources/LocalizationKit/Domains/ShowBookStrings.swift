@@ -481,4 +481,8 @@ public struct ShowBookStrings: Sendable {
         provider.string("showbook.error.no_data_received")
     }
 
+    public var profileDisclaimer: String {
+        provider.string("showbook.profile.disclaimer")
+    }
+
 }

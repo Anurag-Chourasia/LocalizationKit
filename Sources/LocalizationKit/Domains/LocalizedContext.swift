@@ -165,6 +165,29 @@ public struct CommonStrings: Sendable {
     public var authNoticeAccountDeleted: String { provider.string("auth.notice.account_deleted") }
     public var authNoticePasswordResetSent: String { provider.string("auth.notice.password_reset_sent") }
     public var authNoticePasswordUpdated: String { provider.string("auth.notice.password_updated") }
+    public var authUnavailableTitle: String { provider.string("auth.unavailable.title") }
+    public var authUnavailableMessage: String { provider.string("auth.unavailable.message") }
+    public var authUnavailableDebugConfiguration: String { provider.string("auth.unavailable.debug_configuration") }
+    public var authBrandMytvSubtitle: String { provider.string("auth.brand.mytv.subtitle") }
+    public var authBrandShowbookSubtitle: String { provider.string("auth.brand.showbook.subtitle") }
+    public var authBrandMotivationDailySubtitle: String { provider.string("auth.brand.motivation_daily.subtitle") }
+    public var authProviderContinueWith: String { provider.string("auth.provider.continue_with") }
+    public var authProviderContinueWithApple: String { provider.string("auth.provider.continue_with.apple") }
+    public var authProviderContinueWithGoogle: String { provider.string("auth.provider.continue_with.google") }
+    public var authProviderContinueWithGithub: String { provider.string("auth.provider.continue_with.github") }
+    public var profileAppInformation: String { provider.string("profile.app_information") }
+    public var profileVersion: String { provider.string("profile.version") }
+    public var profileDisclaimer: String { provider.string("profile.disclaimer") }
+    public var profileSocial: String { provider.string("profile.social") }
+    public var profileReadMore: String { provider.string("profile.read_more") }
+    public var profileShowLess: String { provider.string("profile.show_less") }
+    public var profileLinkHint: String { provider.string("profile.link_hint") }
+    public var profileErrorTitle: String { provider.string("profile.error_title") }
+    public var profileErrorMessage: String { provider.string("profile.error_message") }
+    public var profileOkay: String { provider.string("profile.okay") }
+    public var layoutTitle: String { provider.string("common.layout.title") }
+    public var layoutList: String { provider.string("common.layout.list") }
+    public var layoutGrid: String { provider.string("common.layout.grid") }
 }
 
 // MARK: - SwiftUI KeyPath Text Initializers

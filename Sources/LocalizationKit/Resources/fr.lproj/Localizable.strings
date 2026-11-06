@@ -836,3 +836,51 @@
 "showbook.error.invalid_url" = "URL invalide";
 
 "showbook.error.no_data_received" = "Aucune donnée reçue";
+
+"auth.unavailable.title" = "La connexion est indisponible";
+
+"auth.unavailable.message" = "Veuillez réessayer plus tard.";
+
+"auth.unavailable.debug_configuration" = "Configurez l’URL Supabase, la clé publique et l’URL de rappel dans la configuration de l’application.";
+
+"auth.brand.mytv.subtitle" = "Vos chaînes. Vos favoris.";
+
+"auth.brand.showbook.subtitle" = "Votre prochain chapitre commence ici.";
+
+"auth.brand.motivation_daily.subtitle" = "Un peu d’inspiration, chaque jour.";
+
+"auth.provider.continue_with" = "Continuer avec %@";
+
+"auth.provider.continue_with.apple" = "Continuer avec Apple";
+
+"auth.provider.continue_with.google" = "Continuer avec Google";
+
+"auth.provider.continue_with.github" = "Continuer avec GitHub";
+
+"profile.app_information" = "Informations sur l’application";
+
+"profile.version" = "Version";
+
+"profile.disclaimer" = "Avertissement";
+
+"profile.social" = "Restons en contact";
+
+"profile.read_more" = "En savoir plus";
+
+"profile.show_less" = "Afficher moins";
+
+"profile.link_hint" = "Ouvre un lien externe";
+
+"profile.error_title" = "Impossible d’ouvrir le lien";
+
+"profile.error_message" = "Ce lien n’a pas pu être ouvert. Veuillez réessayer plus tard.";
+
+"profile.okay" = "OK";
+
+"common.layout.title" = "Disposition";
+
+"common.layout.list" = "Liste";
+
+"common.layout.grid" = "Grille";
+
+"showbook.profile.disclaimer" = "ShowBook est une application de découverte de livres. Les métadonnées et couvertures sont fournies par Open Library. La disponibilité et l’exactitude dépendent des enregistrements sources.\n\nSource : https://openlibrary.org\n\n[Politique de confidentialité](https://github.com/Anurag-Chourasia/ShowBook/blob/main/Docs/PrivacyInventory.md) • [Support](mailto:anuragchourasiaios@gmail.com)";

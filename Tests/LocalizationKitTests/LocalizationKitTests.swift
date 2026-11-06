@@ -345,4 +345,42 @@ extension LocalizationKitTests {
             XCTAssertFalse(showBook.domain.errorNoDataReceived.isEmpty)
         }
     }
+
+    func testSharedUICopyProfileAndLayoutStringsAcrossLocales() {
+        for (localeId, expectedUnavailable, expectedProfileTitle, expectedLayoutList) in [
+            ("en", "Sign-in is unavailable", "App Information", "List"),
+            ("fr", "La connexion est indisponible", "Informations sur l’application", "Liste"),
+            ("ar", "تسجيل الدخول غير متاح", "معلومات التطبيق", "قائمة")
+        ] {
+            let controller = LocalizationController(initialLocale: Locale(identifier: localeId))
+            let common = CommonStrings(provider: controller)
+            let showBook = ShowBookStrings(provider: controller)
+
+            XCTAssertEqual(L10n.Auth.unavailableTitle(using: controller), expectedUnavailable)
+            XCTAssertFalse(L10n.Auth.unavailableMessage(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Auth.unavailableDebugConfiguration(using: controller).isEmpty)
+            XCTAssertTrue(L10n.Auth.continueWith(provider: "Apple", using: controller).contains("Apple"))
+            XCTAssertFalse(common.authBrandMytvSubtitle.isEmpty)
+            XCTAssertFalse(common.authBrandShowbookSubtitle.isEmpty)
+            XCTAssertFalse(common.authBrandMotivationDailySubtitle.isEmpty)
+
+            XCTAssertEqual(L10n.Profile.appInformation(using: controller), expectedProfileTitle)
+            XCTAssertFalse(L10n.Profile.version(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Profile.disclaimer(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Profile.social(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Profile.readMore(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Profile.showLess(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Profile.linkHint(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Profile.errorTitle(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Profile.errorMessage(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Profile.okay(using: controller).isEmpty)
+
+            XCTAssertEqual(L10n.Layout.list(using: controller), expectedLayoutList)
+            XCTAssertFalse(L10n.Layout.title(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Layout.grid(using: controller).isEmpty)
+
+            XCTAssertTrue(showBook.profileDisclaimer.contains("https://openlibrary.org"))
+            XCTAssertTrue(showBook.profileDisclaimer.contains("Docs/PrivacyInventory.md"))
+        }
+    }
 }

@@ -93,6 +93,78 @@ public enum L10n {
         public static func passwordUpdatedNotice(using localization: LocalizationProviding) -> String {
             localization.string("auth.notice.password_updated")
         }
+
+        public static func unavailableTitle(using localization: LocalizationProviding) -> String {
+            localization.string("auth.unavailable.title")
+        }
+
+        public static func unavailableMessage(using localization: LocalizationProviding) -> String {
+            localization.string("auth.unavailable.message")
+        }
+
+        public static func unavailableDebugConfiguration(using localization: LocalizationProviding) -> String {
+            localization.string("auth.unavailable.debug_configuration")
+        }
+
+        public static func continueWith(provider: String, using localization: LocalizationProviding) -> String {
+            localization.string("auth.provider.continue_with", arguments: [provider])
+        }
+    }
+
+    public enum Profile {
+        public static func appInformation(using localization: LocalizationProviding) -> String {
+            localization.string("profile.app_information")
+        }
+
+        public static func version(using localization: LocalizationProviding) -> String {
+            localization.string("profile.version")
+        }
+
+        public static func disclaimer(using localization: LocalizationProviding) -> String {
+            localization.string("profile.disclaimer")
+        }
+
+        public static func social(using localization: LocalizationProviding) -> String {
+            localization.string("profile.social")
+        }
+
+        public static func readMore(using localization: LocalizationProviding) -> String {
+            localization.string("profile.read_more")
+        }
+
+        public static func showLess(using localization: LocalizationProviding) -> String {
+            localization.string("profile.show_less")
+        }
+
+        public static func linkHint(using localization: LocalizationProviding) -> String {
+            localization.string("profile.link_hint")
+        }
+
+        public static func errorTitle(using localization: LocalizationProviding) -> String {
+            localization.string("profile.error_title")
+        }
+
+        public static func errorMessage(using localization: LocalizationProviding) -> String {
+            localization.string("profile.error_message")
+        }
+
+        public static func okay(using localization: LocalizationProviding) -> String {
+            localization.string("profile.okay")
+        }
+    }
+
+    public enum Layout {
+        public static func title(using localization: LocalizationProviding) -> String {
+            localization.string("common.layout.title")
+        }
+
+        public static func list(using localization: LocalizationProviding) -> String {
+            localization.string("common.layout.list")
+        }
+
+        public static func grid(using localization: LocalizationProviding) -> String {
+            localization.string("common.layout.grid")
+        }
     }
 
     public enum Account {
