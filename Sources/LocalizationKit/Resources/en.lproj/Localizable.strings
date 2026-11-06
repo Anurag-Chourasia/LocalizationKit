@@ -401,7 +401,7 @@
 
 "channel.developer.version_note" = "Changes only the version displayed in Know Your Developer.";
 
-"channel.developer.privacy" = "MyTV saves favorite channels locally on your device. Stream playback is direct and unauthenticated. No personal data is tracked or sold to third parties.";
+"channel.developer.privacy" = "Favorites stay on this device in separate account stores. Signing out preserves them. Existing unassigned favorites move once to the first signed-in account, with an original backup retained. Signed-out favorites stay separate; clearing downloaded content does not delete favorites.";
 
 "motivation.developer.live" = "Live · Quotable & ZenQuotes";
 
@@ -409,7 +409,7 @@
 
 "motivation.developer.auth_note" = "New feature, off by default. Enable to require sign-in before the feed. Apply settings to activate changes; disabling it preserves the saved session.";
 
-"motivation.developer.privacy" = "Motivation Daily stores favorited quotes and lightweight settings locally on your device. Quote and wallpaper fetching is unauthenticated. No personal data is tracked or sold to third parties.";
+"motivation.developer.privacy" = "Favorites stay on this device in separate account stores. Signing out preserves them. Existing unassigned favorites move once to the first signed-in account, with an original backup retained. Signed-out favorites stay separate; clearing downloaded content does not delete favorites.";
 
 "showbook.developer.auth_note" = "New feature, off by default. Enable to use cloud sign-in. Apply settings to activate changes; disabling it preserves the saved cloud session.";
 

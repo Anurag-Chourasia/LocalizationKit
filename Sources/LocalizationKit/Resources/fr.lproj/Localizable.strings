@@ -653,7 +653,7 @@
 
 "channel.developer.version_note" = "Modifie uniquement la version affichée dans la présentation du développeur.";
 
-"channel.developer.privacy" = "MyTV enregistre les chaînes favorites sur votre appareil. La lecture est directe et sans authentification. Aucune donnée personnelle n’est suivie ni vendue à des tiers.";
+"channel.developer.privacy" = "Les favoris restent sur cet appareil dans des espaces propres à chaque compte. La déconnexion les conserve. Les favoris existants sans propriétaire sont attribués une seule fois au premier compte connecté, avec une sauvegarde originale conservée. Les favoris sans connexion à un compte restent séparés ; vider le contenu téléchargé ne supprime pas les favoris.";
 
 "motivation.developer.live" = "En direct · Quotable et ZenQuotes";
 
@@ -661,7 +661,7 @@
 
 "motivation.developer.auth_note" = "Nouvelle fonction, désactivée par défaut. Activez-la pour exiger la connexion avant le fil. Appliquez les réglages pour activer les changements ; la désactivation conserve la session.";
 
-"motivation.developer.privacy" = "Motivation Daily stocke les citations favorites et les réglages sur votre appareil. Les citations et fonds d’écran sont chargés sans authentification. Aucune donnée personnelle n’est suivie ni vendue à des tiers.";
+"motivation.developer.privacy" = "Les favoris restent sur cet appareil dans des espaces propres à chaque compte. La déconnexion les conserve. Les favoris existants sans propriétaire sont attribués une seule fois au premier compte connecté, avec une sauvegarde originale conservée. Les favoris sans connexion à un compte restent séparés ; vider le contenu téléchargé ne supprime pas les favoris.";
 
 "showbook.developer.auth_note" = "Nouvelle fonction, désactivée par défaut. Activez-la pour la connexion cloud. Appliquez les réglages pour activer les changements ; la désactivation conserve la session cloud.";
 
