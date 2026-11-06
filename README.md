@@ -1,13 +1,13 @@
 # LocalizationKit
 
-Strongly-typed, locale-aware string resolution and dynamic runtime localization for iOS and macOS applications. Built on top of `FoundationKit`.
+Strongly-typed, locale-aware string resolution and dynamic runtime localization for iOS and macOS applications.
 
 ![Platform](https://img.shields.io/badge/Platform-iOS%2016.0%2B%20%7C%20macOS%2014.0%2B-blue)
 ![Swift](https://img.shields.io/badge/Swift-6.0%2B-orange)
 ![Toolchain](https://img.shields.io/badge/Xcode-27.0-purple)
 ![CI](https://img.shields.io/badge/CI-Passing-brightgreen)
 ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.65.1%20Strict-green)
-![Dependencies](https://img.shields.io/badge/Dependencies-FoundationKit-blueviolet)
+![Dependencies](https://img.shields.io/badge/Dependencies-None-blue)
 
 ---
 
@@ -22,7 +22,6 @@ flowchart TD
     Provider --> Strings["Localizable.strings (en / fr / fallback)"]
     Provider --> Plural["Pluralization (zero, one, other)"]
     Provider --> Formatters["LocalizedFormatters (Locale-Aware Interpolation)"]
-    LocalizationKit --> FoundationKit["FoundationKit (Core Primitives)"]
 ```
 
 `LocalizationKit` decouples string catalog lookup from hardcoded strings and provides runtime flexibility:
