@@ -34,6 +34,10 @@ public struct LocalizedContext<Domain: LocalizationDomain>: Sendable {
         provider.string(key)
     }
 
+    public func string(_ key: String, arguments: [CVarArg]) -> String {
+        provider.string(key, arguments: arguments)
+    }
+
     // Direct KeyPath Subscripts: l10n[\.key]
     public subscript(keyPath: KeyPath<Domain.Strings, String>) -> String {
         domain[keyPath: keyPath]
@@ -157,6 +161,10 @@ public struct CommonStrings: Sendable {
     public var developerOpenApp: String { provider.string("developer.open_app") }
     public var developerSourceStub: String { provider.string("developer.source.stub") }
     public var developerReleaseIgnores: String { provider.string("developer.release_ignores") }
+    public var authNoticeConfirmEmail: String { provider.string("auth.notice.confirm_email") }
+    public var authNoticeAccountDeleted: String { provider.string("auth.notice.account_deleted") }
+    public var authNoticePasswordResetSent: String { provider.string("auth.notice.password_reset_sent") }
+    public var authNoticePasswordUpdated: String { provider.string("auth.notice.password_updated") }
 }
 
 // MARK: - SwiftUI KeyPath Text Initializers

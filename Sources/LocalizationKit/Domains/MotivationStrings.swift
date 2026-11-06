@@ -329,4 +329,72 @@ public struct MotivationStrings: Sendable {
         provider.string("motivation.share.image_preparing")
     }
 
+    public var errorInvalidUrl: String {
+        provider.string("motivation.error.invalid_url")
+    }
+
+    public var errorBlocked: String {
+        provider.string("motivation.error.blocked")
+    }
+
+    public var errorNotFound: String {
+        provider.string("motivation.error.not_found")
+    }
+
+    public var errorRateLimited: String {
+        provider.string("motivation.error.rate_limited")
+    }
+
+    public var errorServerUnavailable: String {
+        provider.string("motivation.error.server_unavailable")
+    }
+
+    public var errorNetworkStatus: String {
+        provider.string("motivation.error.network_status")
+    }
+
+    public var errorInvalidResponse: String {
+        provider.string("motivation.error.invalid_response")
+    }
+
+    public var errorImageLoadFailed: String {
+        provider.string("motivation.error.image_load_failed")
+    }
+
+    public var errorDecoding: String {
+        provider.string("motivation.error.decoding")
+    }
+
+    public var errorStorage: String {
+        provider.string("motivation.error.storage")
+    }
+
+    public var errorImageNotReady: String {
+        provider.string("motivation.error.image_not_ready")
+    }
+
+    public var errorEmptyResponse: String {
+        provider.string("motivation.error.empty_response")
+    }
+
+    public var recoveryRateLimited: String {
+        provider.string("motivation.recovery.rate_limited")
+    }
+
+    public var recoveryServerUnavailable: String {
+        provider.string("motivation.recovery.server_unavailable")
+    }
+
+    public var recoveryNetwork: String {
+        provider.string("motivation.recovery.network")
+    }
+
+    public var recoveryRefresh: String {
+        provider.string("motivation.recovery.refresh")
+    }
+
+    public var recoveryStorage: String {
+        provider.string("motivation.recovery.storage")
+    }
+
 }

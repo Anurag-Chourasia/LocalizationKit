@@ -473,4 +473,12 @@ public struct ShowBookStrings: Sendable {
         provider.string("showbook.details.preview_hint")
     }
 
+    public var errorInvalidUrl: String {
+        provider.string("showbook.error.invalid_url")
+    }
+
+    public var errorNoDataReceived: String {
+        provider.string("showbook.error.no_data_received")
+    }
+
 }

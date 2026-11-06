@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.7.0
+
+- Add canonical `en`, `fr`, and `ar` localization catalogs and strongly-typed accessors for semantic `AuthKit` session notices, `Motivation Daily` `AppError` / recovery suggestion states, and `ShowBook` `NetworkClass` semantic errors (`IOS-58`).
+- Expose `LocalizedContext.string(_:arguments:)` for locale-aware parameter formatting across domain contexts.
+
 ## 0.6.5
 
 - Standardize `Scripts/generate-localization.py` as the single canonical localization code generator and retire the redundant `swiftgen.yml` configuration.

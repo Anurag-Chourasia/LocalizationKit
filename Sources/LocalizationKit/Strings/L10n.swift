@@ -77,6 +77,22 @@ public enum L10n {
         public static func resetEmailSent(using localization: LocalizationProviding) -> String {
             localization.string("auth.instruction.reset_email_sent")
         }
+
+        public static func confirmEmailNotice(using localization: LocalizationProviding) -> String {
+            localization.string("auth.notice.confirm_email")
+        }
+
+        public static func accountDeletedNotice(using localization: LocalizationProviding) -> String {
+            localization.string("auth.notice.account_deleted")
+        }
+
+        public static func passwordResetSentNotice(using localization: LocalizationProviding) -> String {
+            localization.string("auth.notice.password_reset_sent")
+        }
+
+        public static func passwordUpdatedNotice(using localization: LocalizationProviding) -> String {
+            localization.string("auth.notice.password_updated")
+        }
     }
 
     public enum Account {

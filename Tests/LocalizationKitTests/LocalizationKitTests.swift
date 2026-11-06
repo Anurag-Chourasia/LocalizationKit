@@ -307,4 +307,42 @@ extension LocalizationKitTests {
         XCTAssertEqual(motivation.domain.imageNotAvailable, "الصورة غير متوفرة")
         XCTAssertEqual(motivation.common.share, "مشاركة")
     }
+
+    func testSemanticErrorsAndAuthNoticesAcrossLocales() {
+        for (localeId, expectedConfirm, expectedStatus, expectedShowBookURL) in [
+            ("en", "Check your email to confirm your account.", "Network error (status: 503).", "Invalid URL"),
+            ("fr", "Consultez vos e-mails pour confirmer votre compte.", "Erreur réseau (statut : 503).", "URL invalide"),
+            ("ar", "تحقق من بريدك الإلكتروني لتأكيد حسابك.", "خطأ في الشبكة (الحالة: 503).", "عنوان URL غير صالح")
+        ] {
+            let controller = LocalizationController(initialLocale: Locale(identifier: localeId))
+            let motivation = LocalizedContext<MotivationDomain>(provider: controller)
+            let showBook = LocalizedContext<ShowBookDomain>(provider: controller)
+
+            XCTAssertEqual(L10n.Auth.confirmEmailNotice(using: controller), expectedConfirm)
+            XCTAssertFalse(L10n.Auth.accountDeletedNotice(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Auth.passwordResetSentNotice(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Auth.passwordUpdatedNotice(using: controller).isEmpty)
+
+            XCTAssertEqual(motivation.string("motivation.error.network_status", arguments: [503]), expectedStatus)
+            XCTAssertFalse(motivation.domain.errorInvalidUrl.isEmpty)
+            XCTAssertFalse(motivation.domain.errorBlocked.isEmpty)
+            XCTAssertFalse(motivation.domain.errorNotFound.isEmpty)
+            XCTAssertFalse(motivation.domain.errorRateLimited.isEmpty)
+            XCTAssertFalse(motivation.domain.errorServerUnavailable.isEmpty)
+            XCTAssertFalse(motivation.domain.errorInvalidResponse.isEmpty)
+            XCTAssertFalse(motivation.domain.errorImageLoadFailed.isEmpty)
+            XCTAssertFalse(motivation.domain.errorDecoding.isEmpty)
+            XCTAssertFalse(motivation.domain.errorStorage.isEmpty)
+            XCTAssertFalse(motivation.domain.errorImageNotReady.isEmpty)
+            XCTAssertFalse(motivation.domain.errorEmptyResponse.isEmpty)
+            XCTAssertFalse(motivation.domain.recoveryRateLimited.isEmpty)
+            XCTAssertFalse(motivation.domain.recoveryServerUnavailable.isEmpty)
+            XCTAssertFalse(motivation.domain.recoveryNetwork.isEmpty)
+            XCTAssertFalse(motivation.domain.recoveryRefresh.isEmpty)
+            XCTAssertFalse(motivation.domain.recoveryStorage.isEmpty)
+
+            XCTAssertEqual(showBook.domain.errorInvalidUrl, expectedShowBookURL)
+            XCTAssertFalse(showBook.domain.errorNoDataReceived.isEmpty)
+        }
+    }
 }

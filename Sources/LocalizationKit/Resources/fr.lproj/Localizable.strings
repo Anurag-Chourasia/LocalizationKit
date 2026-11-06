@@ -790,3 +790,49 @@
 "channel.filter.hide_unavailable" = "Masquer les chaînes sans flux";
 
 "motivation.share.image_preparing" = "L’image est en cours de préparation. Touchez à nouveau Enregistrer.";
+
+"auth.notice.confirm_email" = "Consultez vos e-mails pour confirmer votre compte.";
+
+"auth.notice.account_deleted" = "Votre compte et les données cloud associées ont été supprimés.";
+
+"auth.notice.password_reset_sent" = "Si un compte existe, un lien de réinitialisation vous sera envoyé par e-mail.";
+
+"auth.notice.password_updated" = "Votre mot de passe a été mis à jour.";
+
+"motivation.error.invalid_url" = "L’URL de la requête est invalide.";
+
+"motivation.error.blocked" = "Requête bloquée par le serveur.";
+
+"motivation.error.not_found" = "La ressource demandée est introuvable.";
+
+"motivation.error.rate_limited" = "Trop de requêtes pour le moment. Patientez un instant et réessayez.";
+
+"motivation.error.server_unavailable" = "Le serveur est temporairement indisponible. Veuillez réessayer.";
+
+"motivation.error.network_status" = "Erreur réseau (statut : %d).";
+
+"motivation.error.invalid_response" = "Réponse invalide.";
+
+"motivation.error.image_load_failed" = "Échec du chargement de l’image.";
+
+"motivation.error.decoding" = "L’analyse de la réponse a échoué.";
+
+"motivation.error.storage" = "Erreur de stockage.";
+
+"motivation.error.image_not_ready" = "L’image n’est pas encore prête. Veuillez réessayer d’enregistrer.";
+
+"motivation.error.empty_response" = "Aucune donnée reçue du serveur.";
+
+"motivation.recovery.rate_limited" = "Réessayez dans quelques secondes.";
+
+"motivation.recovery.server_unavailable" = "Veuillez réessayer dans un instant.";
+
+"motivation.recovery.network" = "Vérifiez votre connexion réseau et réessayez.";
+
+"motivation.recovery.refresh" = "Veuillez actualiser à nouveau.";
+
+"motivation.recovery.storage" = "Redémarrez l’application et réessayez.";
+
+"showbook.error.invalid_url" = "URL invalide";
+
+"showbook.error.no_data_received" = "Aucune donnée reçue";

@@ -790,3 +790,49 @@
 "channel.filter.hide_unavailable" = "إخفاء القنوات التي لا تتوفر لها روابط بث";
 
 "motivation.share.image_preparing" = "ما زالت الصورة قيد التحضير. يرجى الضغط على حفظ مجددًا.";
+
+"auth.notice.confirm_email" = "تحقق من بريدك الإلكتروني لتأكيد حسابك.";
+
+"auth.notice.account_deleted" = "تم حذف حسابك والبيانات السحابية المرتبطة به.";
+
+"auth.notice.password_reset_sent" = "إذا كان الحساب موجودًا، فسيتم إرسال رابط إعادة التعيين إلى بريدك الإلكتروني.";
+
+"auth.notice.password_updated" = "تم تحديث كلمة المرور الخاصة بك.";
+
+"motivation.error.invalid_url" = "عنوان URL للطلب غير صالح.";
+
+"motivation.error.blocked" = "تم حظر الطلب من قِبل الخادم.";
+
+"motivation.error.not_found" = "لم يتم العثور على المورد المطلوب.";
+
+"motivation.error.rate_limited" = "طلبات كثيرة جدًا حاليًا. يرجى الانتظار قليلًا والمحاولة مجددًا.";
+
+"motivation.error.server_unavailable" = "الخادم غير متاح مؤقتًا. يرجى المحاولة مجددًا.";
+
+"motivation.error.network_status" = "خطأ في الشبكة (الحالة: %d).";
+
+"motivation.error.invalid_response" = "استجابة غير صالحة.";
+
+"motivation.error.image_load_failed" = "فشل تحميل الصورة.";
+
+"motivation.error.decoding" = "فشل تحليل الاستجابة.";
+
+"motivation.error.storage" = "خطأ في التخزين.";
+
+"motivation.error.image_not_ready" = "الصورة ليست جاهزة بعد. يرجى محاولة الحفظ مجددًا.";
+
+"motivation.error.empty_response" = "لم يتم استلام أي بيانات من الخادم.";
+
+"motivation.recovery.rate_limited" = "حاول مجددًا بعد بضع ثوانٍ.";
+
+"motivation.recovery.server_unavailable" = "يرجى إعادة المحاولة بعد قليل.";
+
+"motivation.recovery.network" = "تحقق من اتصالك بالشبكة وأعد المحاولة.";
+
+"motivation.recovery.refresh" = "يرجى التحديث مجددًا.";
+
+"motivation.recovery.storage" = "أعد تشغيل التطبيق وحاول مجددًا.";
+
+"showbook.error.invalid_url" = "عنوان URL غير صالح";
+
+"showbook.error.no_data_received" = "لم يتم استلام أي بيانات";

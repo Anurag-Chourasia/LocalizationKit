@@ -538,3 +538,29 @@
 "channel.filter.hide_unavailable" = "Hide channels without streams";
 
 "motivation.share.image_preparing" = "Image is still preparing. Please tap Save again.";
+
+"auth.notice.confirm_email" = "Check your email to confirm your account.";
+"auth.notice.account_deleted" = "Your account and associated cloud data have been deleted.";
+"auth.notice.password_reset_sent" = "If an account exists, a reset link will be sent to your email.";
+"auth.notice.password_updated" = "Your password has been updated.";
+
+"motivation.error.invalid_url" = "The request URL is invalid.";
+"motivation.error.blocked" = "Request blocked by the server.";
+"motivation.error.not_found" = "Requested resource was not found.";
+"motivation.error.rate_limited" = "Too many requests right now. Please wait a moment and try again.";
+"motivation.error.server_unavailable" = "Server is temporarily unavailable. Please try again.";
+"motivation.error.network_status" = "Network error (status: %d).";
+"motivation.error.invalid_response" = "Invalid response.";
+"motivation.error.image_load_failed" = "Image load failed.";
+"motivation.error.decoding" = "Response parsing failed.";
+"motivation.error.storage" = "Storage error.";
+"motivation.error.image_not_ready" = "Image is not ready yet. Please try saving again.";
+"motivation.error.empty_response" = "No data received from the server.";
+"motivation.recovery.rate_limited" = "Try again in a few seconds.";
+"motivation.recovery.server_unavailable" = "Please retry shortly.";
+"motivation.recovery.network" = "Check your network connection and retry.";
+"motivation.recovery.refresh" = "Please refresh again.";
+"motivation.recovery.storage" = "Restart the app and try again.";
+
+"showbook.error.invalid_url" = "Invalid URL";
+"showbook.error.no_data_received" = "No data received";
