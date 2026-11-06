@@ -1,143 +1,212 @@
 # LocalizationKit
 
-Strongly-typed, locale-aware string resolution and dynamic runtime localization for iOS and macOS applications.
+Strongly typed, locale-aware string resolution, dynamic runtime language switching, and String Catalog (.xcstrings) integration for multi-app Swift ecosystems.
 
 ![Platform](https://img.shields.io/badge/Platform-iOS%2016.0%2B%20%7C%20macOS%2014.0%2B-blue)
 ![Swift](https://img.shields.io/badge/Swift-6.0%2B-orange)
-![Toolchain](https://img.shields.io/badge/Xcode-27.0-purple)
+![Toolchain](https://img.shields.io/badge/Xcode-27.1-purple)
 ![CI](https://img.shields.io/badge/CI-Passing-brightgreen)
 ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.65.1%20Strict-green)
-![Dependencies](https://img.shields.io/badge/Dependencies-None-blue)
+![Version](https://img.shields.io/badge/Release-v0.8.1-blueviolet)
+![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(Pure%20Foundation)-success)
+![Languages](https://img.shields.io/badge/Languages-en%20%7C%20fr%20%7C%20ar-informational)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 
-## Architecture
+## 1. Executive Summary & Purpose
+
+`LocalizationKit` provides compile-time string safety, multi-language localization, and runtime language selection without requiring an application process restart. It acts as the centralized copy engine across **ShowBook**, **myTV**, and **Motivation Daily**.
+
+### Key Engineering Objectives:
+- **Compile-Time Key Safety**: `L10n` accessors eliminate fragile string literals (`NSLocalizedString("...", ...)`), turning missing translation keys into compiler errors.
+- **Dynamic In-App Language Switching**: `LocalizationController` allows users to toggle languages (English, French, Arabic) within the app settings, updating all active SwiftUI views instantly.
+- **Pure Domain & Zero Visual Coupling**: Pure Swift and Foundation implementation; contains zero UI imports (`UIKit` / `SwiftUI`), allowing it to be safely consumed inside domain layers and use cases.
+- **Pluralization & Semantic Error Copy**: Full support for plural rules (`zero`, `one`, `other`), localized network error recovery suggestions, and RTL (Right-to-Left) script direction.
+
+---
+
+## 2. Architecture & Design Principles
 
 ```mermaid
 flowchart TD
-    Consumer["Views & ViewModels (ShowBook / MyTV)"] -->|Requests Translated String| L10n["L10n (Typed Accessor)"]
-    L10n --> Controller["LocalizationController (Runtime Locale Switcher)"]
-    Controller --> Provider["LocalizationProviding Protocol"]
-    Provider --> Bundle["BundleLocator (Resolves Package / App Bundles)"]
-    Provider --> Strings["Localizable.strings (en / fr / fallback)"]
-    Provider --> Plural["Pluralization (zero, one, other)"]
+    Consumer["Views, ViewModels & Use Cases"] -->|Typed Key Lookup| L10n["L10n (Type-Safe Enum)"]
+    L10n --> Controller["LocalizationController (Runtime Locale State)"]
+    Controller --> Provider["LocalizationProviding (Protocol Boundary)"]
+    Provider --> Bundle["BundleLocator (SPM & Framework Bundle Resolution)"]
+    Provider --> Catalogs["String Catalogs (.xcstrings: en, fr, ar)"]
+    Provider --> Plural["Pluralization Engine (zero, one, other)"]
     Provider --> Formatters["LocalizedFormatters (Locale-Aware Interpolation)"]
 ```
 
-`LocalizationKit` decouples string catalog lookup from hardcoded strings and provides runtime flexibility:
-
-1. **Strongly-Typed Key Safety**:
-   - `L10n`: Centralized enum/namespace preventing typos and missing key crashes at runtime.
-2. **Dynamic Runtime Locale Switching**:
-   - `LocalizationController`: Allows users to switch the app's active locale (e.g. English, French, Spanish) on the fly without restarting the app or terminating the process.
-3. **Multi-tier Fallback Strategy**:
-   - Automatically resolves missing translations by falling back to the base language (English) and finally returning the raw key if no string file contains it.
-4. **Bundle Agnostic**:
-   - `BundleLocator` correctly locates resource bundles inside SwiftPM modules, nested frameworks, and main app bundles.
-5. **Pluralization & Formatting**:
-   - `Pluralization`: Implements deterministic plural rules (`zero`, `one`, `other`) for count-based strings.
-   - `LocalizedFormatters`: Provides locale-aware argument interpolation.
+### Architectural Tenets:
+1. **Zero External Dependencies (IOS-68)**: Operates strictly on Apple's `Foundation`. Does not couple to external networking, storage, or UI libraries.
+2. **Deterministic Fallback Hierarchy**: Resolves translations through active user locale -> base language (English) -> raw key string fallback, preventing unrendered text or application crashes.
+3. **Bundle Independence**: Automatically resolves whether resources live inside the main application bundle, a test bundle, or an embedded Swift Package resource bundle.
 
 ---
 
-## Use Cases
+## 3. Dependency Graph & Consumer Matrix
 
-- **In-App Language Selection**: Empower users to choose their preferred app language inside application settings without altering the system-wide iOS language.
-- **Type-Safe String Resolution**: Replace raw, fragile string literals (`NSLocalizedString("some_key", ...)`) with autocompleted, compiler-verified accessors.
-- **Cross-Package Localization Sharing**: Share common localization resources (e.g., "Cancel", "Done", "Error", "Retry") across multiple modular packages.
-- **Plural-Aware Text Rendering**: Render grammatically accurate text for dynamic numbers (e.g., "0 items", "1 item", "5 items").
+| Direction | Package / Project | Responsibility |
+|---|---|---|
+| **Upstream Dependencies** | *None* | Zero third-party or internal dependencies. Pure Apple `Foundation`. |
+| **Downstream Consumers** | **UIComponentsKit** | Reusable controls (menus, banners, buttons) consume common action labels. |
+| | **AuthKit & AuthKitUI** | Authentication notices, password requirements, and session error alerts. |
+| | **DeveloperProfileKit** | Biography headers, social link labels, and version disclaimer strings. |
+| | **ShowBook** | Book search prompts, catalog filters, reading lists, and Core Data error copy. |
+| | **myTV** | Channel directory categories, stream status alerts, and player controls. |
+| | **Motivation Daily** | Category titles, share studio actions, and favorite quote persistence alerts. |
 
 ---
 
-## Practical Code Examples
+## 4. API Contracts & Practical Code Examples
 
-### 1. Basic Typed String Resolution
-
+### 1. Type-Safe Localized String Resolution
 ```swift
 import SwiftUI
 import LocalizationKit
 
-struct SettingsView: View {
+struct ErrorBannerView: View {
+    let error: LocalizedError
+
     var body: some View {
-        VStack(spacing: 12) {
-            Text(L10n.string(forKey: "settings.title"))
+        VStack(alignment: .leading, spacing: 4) {
+            Text(L10n.Common.errorTitle.localized)
                 .font(.headline)
-            Text(L10n.string(forKey: "settings.subtitle"))
-                .foregroundColor(.secondary)
+            Text(error.localizedDescription)
+                .font(.subheadline)
+            Text(L10n.Common.retryAction.localized)
+                .font(.caption)
         }
     }
 }
 ```
 
-### 2. Runtime Language Switching
-
+### 2. Plural-Aware Count Formatting
 ```swift
 import LocalizationKit
 
-let controller = LocalizationController.shared
-
-// Switch application language to French dynamically
-controller.setLocale(Locale(identifier: "fr"))
-
-let welcomeMessage = controller.localizedString(forKey: "welcome.message")
-print(welcomeMessage) // Outputs French translation
-
-// Switch back to English
-controller.setLocale(Locale(identifier: "en"))
+// Automatically formats grammatically correct strings:
+// "0 books found", "1 book found", "42 books found"
+let message = L10n.Catalog.booksCount(42).localized
 ```
 
-### 3. Pluralization & Parameter Interpolation
-
+### 3. Dynamic Runtime Language Switching
 ```swift
+import SwiftUI
 import LocalizationKit
 
-let count = 3
-let pluralizedTemplate = Pluralization.pluralKey(for: "books.count", count: count)
-// Resolves to "books.count.other"
+struct LanguagePickerView: View {
+    @ObservedObject var controller = LocalizationController.shared
 
-let formattedString = LocalizedFormatters.format(
-    template: L10n.string(forKey: pluralizedTemplate),
-    arguments: [count]
-)
-// Result: "3 books found"
+    var body: some View {
+        Picker("Language", selection: $controller.currentLocale) {
+            Text("English").tag(Locale(identifier: "en"))
+            Text("Français").tag(Locale(identifier: "fr"))
+            Text("العربية").tag(Locale(identifier: "ar"))
+        }
+        .pickerStyle(.segmented)
+    }
+}
 ```
 
 ---
 
-## Release Version Controlling
+## 5. Verification & Testing
 
-`LocalizationKit` adheres strictly to [Semantic Versioning (SemVer 2.0.0)](https://semver.org/spec/v2.0.0.html):
+```sh
+# Run string catalog resolution, pluralization, and RTL tests
+swift test
 
-| Release Level | Criteria | Example Tag |
-| :--- | :--- | :--- |
-| **MAJOR** (`X.0.0`) | Breaking changes to localization provider APIs | `v1.0.0` |
-| **MINOR** (`0.X.0`) | New locale support, additional formatters, enhanced pluralization | `v0.2.0` |
-| **PATCH** (`0.1.X`) | Translation bug fixes, strings corrections, bundle resolution fixes | `v0.1.1` |
-
-- **Changelog**: All release changes are tracked in [CHANGELOG.md](CHANGELOG.md).
-- **Tag Standard**: Release tags are formatted as `vX.Y.Z` and validated via `bash Scripts/verify-release-version.sh`.
-- **SPM Integration**:
-  ```swift
-  .package(url: "https://github.com/Anurag-Chourasia/LocalizationKit.git", from: "0.1.0")
-  ```
+# Validate that no UI frameworks are imported in LocalizationKit
+python3 /path/to/UIComponentsKit/Scripts/check_architecture.py --workspace-root /path/to/Projects
+```
 
 ---
 
-## Quality & CI Verification
+## 6. End-to-End Ecosystem Connectivity
 
-Every pull request and merge to `main` is gated by automated CI workflows:
+```mermaid
+graph TD
+    subgraph CoreServices ["Shared Core Services (SPMs)"]
+        FoundationKit["FoundationKit<br/>(System Clock, Unified Logging, Thread Safety)"]
+        LocalisationKit["LocalisationKit<br/>(Typed Strings, Pluralization, String Catalogs)"]
+        DesignTokensKit["DesignTokensKit<br/>(BrandPalettes, ColorTheme, Typography, Metrics, SF Symbols)"]
+        CommonNetworkingKit["CommonNetworkingKit<br/>(HTTPClient, URLSession, RequestBuilder, Interceptors)"]
+        AppStubData["AppStubData<br/>(Synthetic Fixtures, Offline Catalogs, Test Scenarios)"]
+    end
 
-1. **SwiftLint Gate**:
-   - Enforces the organization's pinned 24-rule quality policy (`.swiftlint.yml`, SwiftLint 0.65.1).
-   - Strict mode enabled (`--strict`, no warnings permitted).
-   - Run locally: `bash Scripts/lint.sh`.
-2. **Build and Test Gate**:
-   - Pinned Xcode 27.0 toolchain with complete strict concurrency (`-strict-concurrency=complete`) and `-warnings-as-errors`.
-   - Comprehensive test suite validating bundle location, locale fallbacks, pluralization, and string interpolation.
-   - iOS Simulator product verification via `xcodebuild`.
+    subgraph UIServices ["Shared Presentation & Auth (SPMs)"]
+        UIComponentsKit["UIComponentsKit<br/>(CatalogTile, SurfaceCard, StateMessage, Recipes)"]
+        AuthKit["AuthKit & AuthKitUI<br/>(SessionManager, AppAuthGate, AccountToolbarItem)"]
+        DeveloperProfileKit["DeveloperProfileKit<br/>(DeveloperProfileView, Runtime Overlays)"]
+        SnapshotTestingKit["SnapshotTestingKit<br/>(Subpixel Comparison, Golden Baseline Engine)"]
+    end
 
-## Translation and generation gate
+    subgraph HostApps ["Host Applications"]
+        ShowBook["ShowBook<br/>(Book Discovery, Core Data Persistence, Open Library)"]
+        MyTV["myTV<br/>(IPTV Browser, AVPlayer Lifecycle, Directory Cache)"]
+        MotivationDaily["Motivation Daily<br/>(Card Feed, Quote Persistence, Image Export Studio)"]
+    end
 
-`Scripts/generate-localization.py` is the single canonical localization generator for `LocalizationKit` and all client apps (`ShowBook`, `MyTV`, and `Motivation Daily`). Add each new key explicitly to English (`en.lproj`), French (`fr.lproj`), and Arabic (`ar.lproj`) resources before running `python3 Scripts/generate-localization.py`. The generator deterministically synchronizes locale ordering and emits `MotivationStrings.swift`, `MyTVStrings.swift`, `ShowBookStrings.swift`, `LocalizedContext.swift`, and `GeneratedStrings.swift`; it does not translate text. Missing translations fail generation without modifying locale files. Run `python3 Scripts/test_generate_localization.py` to verify the missing-translation, single-generator ownership, and public-API regressions. CI also checks that generation leaves committed sources unchanged.
+    subgraph QualityGates ["CI/CD Automation & Tooling"]
+        ArchitectureGuard["check_architecture.py<br/>(Boundary Enforcement, Zero Token Leakage)"]
+        SnapshotVerifier["verify-snapshot-baselines.py<br/>(Visual Regression Gate)"]
+        GHActions["GitHub Actions CI<br/>(Fast Lane, Smoke Lane, Release Build Verification)"]
+    end
 
-The shared controller starts with the device locale; explicitly constructed controllers still accept deterministic locales for tests. User-generated content, transport keys, persistent sort IDs and accessibility identifier values are not translated.
+    %% Dependencies between Shared SPMs
+    DesignTokensKit --> UIComponentsKit
+    LocalisationKit --> UIComponentsKit
+    DesignTokensKit --> AuthKit
+    UIComponentsKit --> AuthKit
+    FoundationKit --> CommonNetworkingKit
+    DesignTokensKit --> DeveloperProfileKit
+    UIComponentsKit --> DeveloperProfileKit
+    LocalisationKit --> DeveloperProfileKit
+
+    %% Dependencies from Host Apps to Shared SPMs
+    DesignTokensKit --> ShowBook
+    UIComponentsKit --> ShowBook
+    AuthKit --> ShowBook
+    CommonNetworkingKit --> ShowBook
+    DeveloperProfileKit --> ShowBook
+    AppStubData --> ShowBook
+
+    DesignTokensKit --> MyTV
+    UIComponentsKit --> MyTV
+    AuthKit --> MyTV
+    CommonNetworkingKit --> MyTV
+    DeveloperProfileKit --> MyTV
+    AppStubData --> MyTV
+
+    DesignTokensKit --> MotivationDaily
+    UIComponentsKit --> MotivationDaily
+    AuthKit --> MotivationDaily
+    CommonNetworkingKit --> MotivationDaily
+    DeveloperProfileKit --> MotivationDaily
+    AppStubData --> MotivationDaily
+
+    %% Testing & Verification Linkage
+    SnapshotTestingKit -.-> ShowBook
+    SnapshotTestingKit -.-> MyTV
+    SnapshotTestingKit -.-> MotivationDaily
+
+    ArchitectureGuard --> HostApps
+    ArchitectureGuard --> CoreServices
+    ArchitectureGuard --> UIServices
+    SnapshotVerifier --> SnapshotTestingKit
+    GHActions --> HostApps
+    GHActions --> UIServices
+    GHActions --> CoreServices
+```
+
+---
+
+## 7. Canonical Notion Dashboards & Governance Links
+
+- [iOS Portfolio — Engineering Tickets Dashboard](https://app.notion.com/p/c20d7f4b133b44499c8ac0b4d5f6249e?pvs=204)
+- [iOS Portfolio — Master Document](https://app.notion.com/p/40ffa5f855b98192ad2ede66a5d36fe7)
+- [Architecture Boundary Validator (`check_architecture.py`)](file:///Users/anuragchourasia/Desktop/Projects/UIComponentsKit/Scripts/check_architecture.py)
+- [Release & Gate Policy Documentation (`Docs/MASTER.md`)](file:///Users/anuragchourasia/Desktop/Projects/Docs/MASTER.md)
