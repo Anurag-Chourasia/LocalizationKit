@@ -14,18 +14,11 @@ let package = Package(
             targets: ["LocalizationKit"]
         )
     ],
-    dependencies: [
-        .package(
-            url: "https://github.com/Anurag-Chourasia/FoundationKit.git",
-            from: "0.1.0"
-        )
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "LocalizationKit",
-            dependencies: [
-                .product(name: "FoundationKit", package: "FoundationKit")
-            ],
+            dependencies: [],
             resources: [
                 .process("Resources")
             ]
