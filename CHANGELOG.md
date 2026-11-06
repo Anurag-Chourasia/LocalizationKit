@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.5
+
+- Standardize `Scripts/generate-localization.py` as the single canonical localization code generator and retire the redundant `swiftgen.yml` configuration.
+- Generate `Sources/LocalizationKit/Strings/Generated/GeneratedStrings.swift` deterministically from the package's `.lproj` resources (`en`, `fr`, `ar`).
+- Add regression tests verifying deterministic `GeneratedStrings` generation and single-generator ownership.
+
 ## 0.2.0
 
 - Add Arabic (ar) localization and runtime right-to-left (RTL) layout direction detection.

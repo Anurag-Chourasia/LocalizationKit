@@ -21,13 +21,12 @@ Workflow:
        - `Text(\.key)`
        - `Button(\.key) { ... }`
        - `String(\.key)`
-   - Optionally invokes SwiftGen if installed.
+   - Generates GeneratedStrings.swift declaring supported locales deterministically.
 """
 
 import os
 import re
 import sys
-import subprocess
 from pathlib import Path
 
 # Mapping of custom property names when standard camelCase doesn't match existing naming
@@ -676,11 +675,41 @@ def generate_localized_context_file(common_props, output_path: Path):
     os.system(f"xattr -c '{output_path}' 2>/dev/null || true")
 
 
+LOCALE_PRIORITY = {"en": 0, "fr": 1, "ar": 2}
+
+
+def discover_supported_locales(resources_dir: Path) -> list:
+    locales = [
+        lproj.stem
+        for lproj in resources_dir.glob("*.lproj")
+        if (lproj / "Localizable.strings").exists()
+    ]
+    return sorted(locales, key=lambda code: (LOCALE_PRIORITY.get(code, 99), code))
+
+
+def generate_supported_locales_file(resources_dir: Path, output_path: Path):
+    locales = discover_supported_locales(resources_dir)
+    if not locales or locales[0] != "en":
+        raise ValueError("Resources must include at least en.lproj/Localizable.strings")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    rendered_locales = ", ".join(f'"{locale}"' for locale in locales)
+    lines = [
+        "public enum GeneratedStrings {",
+        f"    public static let supportedLocales = [{rendered_locales}]",
+        "}",
+    ]
+    output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    os.system(f"xattr -c '{output_path}' 2>/dev/null || true")
+
+
 def main():
     script_dir = Path(__file__).resolve().parent
     repo_root = script_dir.parent
     resources_dir = repo_root / "Sources" / "LocalizationKit" / "Resources"
     domains_dir = repo_root / "Sources" / "LocalizationKit" / "Domains"
+    generated_strings_path = (
+        repo_root / "Sources" / "LocalizationKit" / "Strings" / "Generated" / "GeneratedStrings.swift"
+    )
 
     en_path = resources_dir / "en.lproj" / "Localizable.strings"
     if not en_path.exists():
@@ -692,7 +721,7 @@ def main():
     print(f"    Found {len(en_entries)} keys in en.lproj")
 
     print("==> 2. Synchronizing other locale files (*.lproj)...")
-    for lproj in resources_dir.glob("*.lproj"):
+    for lproj in sorted(resources_dir.glob("*.lproj"), key=lambda path: path.name):
         if lproj.name == "en.lproj":
             continue
         strings_file = lproj / "Localizable.strings"
@@ -713,20 +742,12 @@ def main():
     generate_domain_file("MyTVStrings", mytv_props, domains_dir / "MyTVStrings.swift")
     generate_domain_file("ShowBookStrings", showbook_props, domains_dir / "ShowBookStrings.swift")
     generate_localized_context_file(common_props, domains_dir / "LocalizedContext.swift")
+    generate_supported_locales_file(resources_dir, generated_strings_path)
     print("    Generated MotivationStrings.swift")
     print("    Generated MyTVStrings.swift")
     print("    Generated ShowBookStrings.swift")
     print("    Generated LocalizedContext.swift")
-
-    # Optional SwiftGen invocation if installed
-    swiftgen_path = subprocess.run(["which", "swiftgen"], capture_output=True, text=True).stdout.strip()
-    if swiftgen_path:
-        print(f"==> 5. SwiftGen detected at {swiftgen_path}. Running swiftgen config...")
-        swiftgen_yml = repo_root / "swiftgen.yml"
-        if swiftgen_yml.exists():
-            subprocess.run(["swiftgen", "config", "run", "--config", str(swiftgen_yml)], cwd=str(repo_root))
-    else:
-        print("==> 5. SwiftGen CLI not installed in PATH (skipping external swiftgen command; Swift code generated directly).")
+    print("    Generated GeneratedStrings.swift")
 
     print("==> Localization code generation & sync completed successfully! ✨")
 

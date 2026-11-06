@@ -33,6 +33,32 @@ class GeneratorRegressionTests(unittest.TestCase):
             ("", "app.ok", "OK"), ("", "app.retry", "Retry"), ("", "app.cancel", "Cancel")])
         self.assertEqual(mytv, [])
 
+    def test_supported_locales_generation_is_deterministic(self):
+        with tempfile.TemporaryDirectory() as directory:
+            resources_dir = Path(directory) / "Resources"
+            for code in ("ar", "fr", "en"):
+                lproj = resources_dir / f"{code}.lproj"
+                lproj.mkdir(parents=True)
+                (lproj / "Localizable.strings").write_text('"common.ok" = "OK";\n', encoding="utf-8")
+
+            output_path = Path(directory) / "GeneratedStrings.swift"
+            generator.generate_supported_locales_file(resources_dir, output_path)
+            first_pass = output_path.read_text(encoding="utf-8")
+            generator.generate_supported_locales_file(resources_dir, output_path)
+            second_pass = output_path.read_text(encoding="utf-8")
+
+            self.assertEqual(first_pass, second_pass)
+            self.assertEqual(
+                first_pass,
+                'public enum GeneratedStrings {\n    public static let supportedLocales = ["en", "fr", "ar"]\n}\n',
+            )
+
+    def test_single_canonical_generator_has_no_swiftgen_configuration(self):
+        repo_root = Path(__file__).resolve().parent.parent
+        self.assertFalse((repo_root / "swiftgen.yml").exists())
+        script_source = (repo_root / "Scripts" / "generate-localization.py").read_text(encoding="utf-8")
+        self.assertNotIn("swiftgen", script_source.lower())
+
 
 if __name__ == "__main__":
     unittest.main()
