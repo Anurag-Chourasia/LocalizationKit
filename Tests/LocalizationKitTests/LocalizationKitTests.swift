@@ -515,4 +515,94 @@ extension LocalizationKitTests {
             .searchable(text: binding, prompt: \.motivationAppName)
             .searchable(text: binding, prompt: \.ok)
     }
+
+    @MainActor
+    func testKeyPathAlertsAndConfirmationDialogs() {
+        var isPresented = false
+        let binding = Binding(get: { isPresented }, set: { isPresented = $0 })
+
+        // Alerts across all domains
+        _ = Text("AlertTest")
+            .alert(\.allChannels, isPresented: binding) {
+                Button(\.ok) {}
+            }
+            .alert(\.allChannels, isPresented: binding, actions: {
+                Button(\.ok) {}
+            }, message: {
+                Text(\.allChannels)
+            })
+            .alert(\.discover, isPresented: binding) {
+                Button(\.ok) {}
+            }
+            .alert(\.discover, isPresented: binding, actions: {
+                Button(\.ok) {}
+            }, message: {
+                Text(\.discover)
+            })
+            .alert(\.motivationAppName, isPresented: binding) {
+                Button(\.ok) {}
+            }
+            .alert(\.motivationAppName, isPresented: binding, actions: {
+                Button(\.ok) {}
+            }, message: {
+                Text(\.motivationAppName)
+            })
+            .alert(\.ok, isPresented: binding) {
+                Button(\.ok) {}
+            }
+            .alert(\.ok, isPresented: binding, actions: {
+                Button(\.ok) {}
+            }, message: {
+                Text(\.ok)
+            })
+
+        // ConfirmationDialogs across all domains
+        _ = Text("DialogTest")
+            .confirmationDialog(\.allChannels, isPresented: binding) {
+                Button(\.ok) {}
+            }
+            .confirmationDialog(\.allChannels, isPresented: binding, actions: {
+                Button(\.ok) {}
+            }, message: {
+                Text(\.allChannels)
+            })
+            .confirmationDialog(\.discover, isPresented: binding) {
+                Button(\.ok) {}
+            }
+            .confirmationDialog(\.discover, isPresented: binding, actions: {
+                Button(\.ok) {}
+            }, message: {
+                Text(\.discover)
+            })
+            .confirmationDialog(\.motivationAppName, isPresented: binding) {
+                Button(\.ok) {}
+            }
+            .confirmationDialog(\.motivationAppName, isPresented: binding, actions: {
+                Button(\.ok) {}
+            }, message: {
+                Text(\.motivationAppName)
+            })
+            .confirmationDialog(\.ok, isPresented: binding) {
+                Button(\.ok) {}
+            }
+            .confirmationDialog(\.ok, isPresented: binding, actions: {
+                Button(\.ok) {}
+            }, message: {
+                Text(\.ok)
+            })
+
+        // Alert.Button across domains
+        _ = Alert.Button.default(\.ok)
+        _ = Alert.Button.cancel(\.ok)
+        _ = Alert.Button.destructive(\.ok)
+        _ = Alert.Button.default(\.allChannels)
+        _ = Alert.Button.cancel(\.allChannels)
+        _ = Alert.Button.destructive(\.allChannels)
+        _ = Alert.Button.default(\.discover)
+        _ = Alert.Button.cancel(\.discover)
+        _ = Alert.Button.destructive(\.discover)
+        _ = Alert.Button.default(\.motivationAppName)
+        _ = Alert.Button.cancel(\.motivationAppName)
+        _ = Alert.Button.destructive(\.motivationAppName)
+    }
 }

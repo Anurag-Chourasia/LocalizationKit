@@ -353,8 +353,8 @@ extension View {
     ) -> some View {
         self.searchable(text: text, prompt: Text(keyPath))
     }
-
     // Alert & Dialog KeyPath Modifiers
+
     public func alert<A: View, M: View>(
         _ titleKeyPath: KeyPath<MotivationStrings, String>,
         isPresented: Binding<Bool>,
@@ -364,13 +364,12 @@ extension View {
         self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions, message: message)
     }
 
-    public func alert<A: View, M: View>(
-        _ titleKeyPath: KeyPath<CommonStrings, String>,
+    public func alert<A: View>(
+        _ titleKeyPath: KeyPath<MotivationStrings, String>,
         isPresented: Binding<Bool>,
-        @ViewBuilder actions: () -> A,
-        @ViewBuilder message: () -> M
+        @ViewBuilder actions: () -> A
     ) -> some View {
-        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions, message: message)
+        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions)
     }
 
     public func confirmationDialog<A: View, M: View>(
@@ -392,6 +391,95 @@ extension View {
         self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions)
     }
 
+    public func alert<A: View, M: View>(
+        _ titleKeyPath: KeyPath<MyTVStrings, String>,
+        isPresented: Binding<Bool>,
+        @ViewBuilder actions: () -> A,
+        @ViewBuilder message: () -> M
+    ) -> some View {
+        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions, message: message)
+    }
+
+    public func alert<A: View>(
+        _ titleKeyPath: KeyPath<MyTVStrings, String>,
+        isPresented: Binding<Bool>,
+        @ViewBuilder actions: () -> A
+    ) -> some View {
+        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions)
+    }
+
+    public func confirmationDialog<A: View, M: View>(
+        _ titleKeyPath: KeyPath<MyTVStrings, String>,
+        isPresented: Binding<Bool>,
+        titleVisibility: Visibility = .automatic,
+        @ViewBuilder actions: () -> A,
+        @ViewBuilder message: () -> M
+    ) -> some View {
+        self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions, message: message)
+    }
+
+    public func confirmationDialog<A: View>(
+        _ titleKeyPath: KeyPath<MyTVStrings, String>,
+        isPresented: Binding<Bool>,
+        titleVisibility: Visibility = .automatic,
+        @ViewBuilder actions: () -> A
+    ) -> some View {
+        self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions)
+    }
+
+    public func alert<A: View, M: View>(
+        _ titleKeyPath: KeyPath<ShowBookStrings, String>,
+        isPresented: Binding<Bool>,
+        @ViewBuilder actions: () -> A,
+        @ViewBuilder message: () -> M
+    ) -> some View {
+        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions, message: message)
+    }
+
+    public func alert<A: View>(
+        _ titleKeyPath: KeyPath<ShowBookStrings, String>,
+        isPresented: Binding<Bool>,
+        @ViewBuilder actions: () -> A
+    ) -> some View {
+        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions)
+    }
+
+    public func confirmationDialog<A: View, M: View>(
+        _ titleKeyPath: KeyPath<ShowBookStrings, String>,
+        isPresented: Binding<Bool>,
+        titleVisibility: Visibility = .automatic,
+        @ViewBuilder actions: () -> A,
+        @ViewBuilder message: () -> M
+    ) -> some View {
+        self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions, message: message)
+    }
+
+    public func confirmationDialog<A: View>(
+        _ titleKeyPath: KeyPath<ShowBookStrings, String>,
+        isPresented: Binding<Bool>,
+        titleVisibility: Visibility = .automatic,
+        @ViewBuilder actions: () -> A
+    ) -> some View {
+        self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions)
+    }
+
+    public func alert<A: View, M: View>(
+        _ titleKeyPath: KeyPath<CommonStrings, String>,
+        isPresented: Binding<Bool>,
+        @ViewBuilder actions: () -> A,
+        @ViewBuilder message: () -> M
+    ) -> some View {
+        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions, message: message)
+    }
+
+    public func alert<A: View>(
+        _ titleKeyPath: KeyPath<CommonStrings, String>,
+        isPresented: Binding<Bool>,
+        @ViewBuilder actions: () -> A
+    ) -> some View {
+        self.alert(Text(titleKeyPath), isPresented: isPresented, actions: actions)
+    }
+
     public func confirmationDialog<A: View, M: View>(
         _ titleKeyPath: KeyPath<CommonStrings, String>,
         isPresented: Binding<Bool>,
@@ -401,6 +489,16 @@ extension View {
     ) -> some View {
         self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions, message: message)
     }
+
+    public func confirmationDialog<A: View>(
+        _ titleKeyPath: KeyPath<CommonStrings, String>,
+        isPresented: Binding<Bool>,
+        titleVisibility: Visibility = .automatic,
+        @ViewBuilder actions: () -> A
+    ) -> some View {
+        self.confirmationDialog(Text(titleKeyPath), isPresented: isPresented, titleVisibility: titleVisibility, actions: actions)
+    }
+
 }
 
 // MARK: - Environment Keys for Scoped Domains
@@ -720,6 +818,39 @@ extension Alert.Button {
         .cancel(Text(keyPath), action: action)
     }
     public static func `destructive`(_ keyPath: KeyPath<CommonStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .destructive(Text(keyPath), action: action)
+    }
+}
+extension Alert.Button {
+    public static func `default`(_ keyPath: KeyPath<MotivationStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .default(Text(keyPath), action: action)
+    }
+    public static func `cancel`(_ keyPath: KeyPath<MotivationStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .cancel(Text(keyPath), action: action)
+    }
+    public static func `destructive`(_ keyPath: KeyPath<MotivationStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .destructive(Text(keyPath), action: action)
+    }
+}
+extension Alert.Button {
+    public static func `default`(_ keyPath: KeyPath<MyTVStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .default(Text(keyPath), action: action)
+    }
+    public static func `cancel`(_ keyPath: KeyPath<MyTVStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .cancel(Text(keyPath), action: action)
+    }
+    public static func `destructive`(_ keyPath: KeyPath<MyTVStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .destructive(Text(keyPath), action: action)
+    }
+}
+extension Alert.Button {
+    public static func `default`(_ keyPath: KeyPath<ShowBookStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .default(Text(keyPath), action: action)
+    }
+    public static func `cancel`(_ keyPath: KeyPath<ShowBookStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
+        .cancel(Text(keyPath), action: action)
+    }
+    public static func `destructive`(_ keyPath: KeyPath<ShowBookStrings, String>, action: (() -> Void)? = nil) -> Alert.Button {
         .destructive(Text(keyPath), action: action)
     }
 }
