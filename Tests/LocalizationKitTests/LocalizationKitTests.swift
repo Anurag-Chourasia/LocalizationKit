@@ -383,4 +383,23 @@ extension LocalizationKitTests {
             XCTAssertTrue(showBook.profileDisclaimer.contains("Docs/PrivacyInventory.md"))
         }
     }
+
+    private struct MockCustomStrings: Sendable {
+        let greeting: String
+    }
+
+    private enum MockCustomDomain: LocalizationDomain {
+        typealias Strings = MockCustomStrings
+        static let domainIdentifier = "mock_custom"
+
+        static func makeStrings(provider: LocalizationProviding) -> MockCustomStrings {
+            MockCustomStrings(greeting: provider.string("common.ok"))
+        }
+    }
+
+    func testCustomDomainCompileTimeMakeStrings() {
+        let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
+        let context = LocalizedContext<MockCustomDomain>(provider: controller)
+        XCTAssertEqual(context.domain.greeting, "OK")
+    }
 }
