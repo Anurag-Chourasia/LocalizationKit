@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.9.0
+
+- Enforce Ecosystem Architectural Governance Specification requirements across all localization interfaces:
+  - KeyPath-first SwiftUI ergonomics: zero raw strings in consumer views; direct KeyPath access for `Text`, `Button`, `LabeledContent`, controls, and accessibility modifiers.
+  - Complete 503-key master catalog across `en`, `fr`, and `ar` with full domain coverage for shared kits (`AuthKitUI`, `DeveloperProfileKit`, `UIComponentsKit`) and host applications (`myTV`, `ShowBook`, `Motivation Daily`).
+  - Added the 5 mandatory ecosystem governance custom SwiftLint rules (`ban_hardcoded_view_strings`, `ban_hardcoded_padding`, `ban_hardcoded_corner_radius`, `ban_direct_supabase_import`, `ban_ui_in_domain_and_data`) with 0 violations.
+  - Achieved strict 100.0% line and region test coverage gate across all package sources (`2141/2141` lines, `811/811` functions).
+  - Verified Swift 6 complete concurrency compliance under `-strict-concurrency=complete -warnings-as-errors`.
+
 ## 0.8.0
 
 - Centralize shared UI copy for `AuthKitUI` (sign-in unavailable screen, brand subtitles, provider sign-in buttons), `DeveloperProfileKit` (`profile.*`), and `UIComponentsKit` (`common.layout.*`), plus `ShowBook` profile disclaimer (`showbook.profile.disclaimer`) across `en`, `fr`, and `ar` catalogs (`IOS-59`).
