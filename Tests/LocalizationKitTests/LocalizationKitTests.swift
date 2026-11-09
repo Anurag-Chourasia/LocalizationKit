@@ -324,7 +324,7 @@ extension LocalizationKitTests {
             XCTAssertFalse(L10n.Auth.passwordResetSentNotice(using: controller).isEmpty)
             XCTAssertFalse(L10n.Auth.passwordUpdatedNotice(using: controller).isEmpty)
 
-            XCTAssertEqual(motivation.string("motivation.error.network_status", arguments: [503]), expectedStatus)
+            XCTAssertEqual(motivation.string(\.errorNetworkStatus, arguments: [503]), expectedStatus)
             XCTAssertFalse(motivation.domain.errorInvalidUrl.isEmpty)
             XCTAssertFalse(motivation.domain.errorBlocked.isEmpty)
             XCTAssertFalse(motivation.domain.errorNotFound.isEmpty)
@@ -604,5 +604,39 @@ extension LocalizationKitTests {
         _ = Alert.Button.default(\.motivationAppName)
         _ = Alert.Button.cancel(\.motivationAppName)
         _ = Alert.Button.destructive(\.motivationAppName)
+    }
+
+    func testFormatArgumentKeyPathAPI() {
+        let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
+        let motivation = LocalizedContext<MotivationDomain>(provider: controller)
+        let showBook = LocalizedContext<ShowBookDomain>(provider: controller)
+
+        // Context-level format-argument calls
+        XCTAssertEqual(motivation.string(\.themeMenu, arguments: ["Emerald"]), "Accent: Emerald")
+        XCTAssertEqual(motivation.string(\.themeMenu, "Emerald"), "Accent: Emerald")
+        XCTAssertEqual(showBook.string(\.detailsFor, arguments: ["Swift 6"]), "Details for Swift 6")
+        XCTAssertEqual(motivation.string(\.welcome, arguments: ["Anurag"]), "Welcome, Anurag!")
+        XCTAssertEqual(motivation.common.string(\.welcome, arguments: ["Anurag"]), "Welcome, Anurag!")
+
+        // String initializers with KeyPath and arguments
+        let motivationStr = String(\.themeMenu, arguments: ["Blue"], in: motivation)
+        XCTAssertEqual(motivationStr, "Accent: Blue")
+
+        let showBookStr = String(\.detailsFor, arguments: ["Algorithms"], in: showBook)
+        XCTAssertEqual(showBookStr, "Details for Algorithms")
+
+        let commonStr = String(\.welcome, arguments: ["Anurag"], in: motivation.common)
+        XCTAssertEqual(commonStr, "Welcome, Anurag!")
+    }
+
+    @MainActor
+    func testTextFormatArgumentInitializers() {
+        let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
+        let motivation = LocalizedContext<MotivationDomain>(provider: controller)
+        let showBook = LocalizedContext<ShowBookDomain>(provider: controller)
+
+        _ = Text(\.themeMenu, arguments: ["Ruby"], in: motivation)
+        _ = Text(\.detailsFor, arguments: ["Book"], in: showBook)
+        _ = Text(\.welcome, arguments: ["User"], in: motivation.common)
     }
 }

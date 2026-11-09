@@ -17,12 +17,32 @@ public struct LocalizedContext<Domain: LocalizationDomain>: Sendable {
         CommonStrings(provider: provider)
     }
 
+    @available(*, deprecated, message: "Use KeyPath subscript or format-argument API instead of raw-string lookup.")
     public func string(_ key: String) -> String {
         provider.string(key)
     }
 
+    @available(*, deprecated, message: "Use KeyPath subscript or format-argument API instead of raw-string lookup.")
     public func string(_ key: String, arguments: [CVarArg]) -> String {
         provider.string(key, arguments: arguments)
+    }
+
+    public func string(_ keyPath: KeyPath<Domain.Strings, String>, arguments: [CVarArg]) -> String {
+        let template = domain[keyPath: keyPath]
+        return LocalizedFormatters.interpolate(template, locale: provider.locale, arguments: arguments)
+    }
+
+    public func string(_ keyPath: KeyPath<CommonStrings, String>, arguments: [CVarArg]) -> String {
+        let template = common[keyPath: keyPath]
+        return LocalizedFormatters.interpolate(template, locale: provider.locale, arguments: arguments)
+    }
+
+    public func string(_ keyPath: KeyPath<Domain.Strings, String>, _ arguments: CVarArg...) -> String {
+        string(keyPath, arguments: arguments)
+    }
+
+    public func string(_ keyPath: KeyPath<CommonStrings, String>, _ arguments: CVarArg...) -> String {
+        string(keyPath, arguments: arguments)
     }
 
     // Direct KeyPath Subscripts: l10n[\.key]
@@ -47,7 +67,7 @@ public struct LocalizedContext<Domain: LocalizationDomain>: Sendable {
 // MARK: - Common Shared Strings
 
 public struct CommonStrings: Sendable {
-    private let provider: LocalizationProviding
+    public let provider: LocalizationProviding
 
     public init(provider: LocalizationProviding) {
         self.provider = provider
@@ -55,6 +75,15 @@ public struct CommonStrings: Sendable {
 
     public static var shared: CommonStrings {
         CommonStrings(provider: LocalizationController.shared)
+    }
+
+    public func string(_ keyPath: KeyPath<CommonStrings, String>, arguments: [CVarArg]) -> String {
+        let template = self[keyPath: keyPath]
+        return LocalizedFormatters.interpolate(template, locale: provider.locale, arguments: arguments)
+    }
+
+    public func string(_ keyPath: KeyPath<CommonStrings, String>, _ arguments: CVarArg...) -> String {
+        string(keyPath, arguments: arguments)
     }
 
     public var ok: String { provider.string("common.ok") }
@@ -209,6 +238,36 @@ extension Text {
     public init<Domain: LocalizationDomain>(_ keyPath: KeyPath<CommonStrings, String>, in l10n: LocalizedContext<Domain>) {
         self.init(l10n[keyPath])
     }
+
+    /// Initialize with a direct Motivation keypath and arguments: `Text(\.welcome, arguments: [name])`
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, arguments: [CVarArg], in context: LocalizedContext<MotivationDomain> = .shared) {
+        self.init(context.string(keyPath, arguments: arguments))
+    }
+
+    /// Initialize with a direct MyTV keypath and arguments
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, arguments: [CVarArg], in context: LocalizedContext<MyTVDomain> = .shared) {
+        self.init(context.string(keyPath, arguments: arguments))
+    }
+
+    /// Initialize with a direct ShowBook keypath and arguments
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, arguments: [CVarArg], in context: LocalizedContext<ShowBookDomain> = .shared) {
+        self.init(context.string(keyPath, arguments: arguments))
+    }
+
+    /// Initialize with a direct Common keypath and arguments
+    public init(_ keyPath: KeyPath<CommonStrings, String>, arguments: [CVarArg], in context: CommonStrings = .shared) {
+        self.init(context.string(keyPath, arguments: arguments))
+    }
+
+    /// Initialize with explicit context and arguments: `Text(\.previewShareTitle, arguments: [args], in: l10n)`
+    public init<Domain: LocalizationDomain>(_ keyPath: KeyPath<Domain.Strings, String>, arguments: [CVarArg], in l10n: LocalizedContext<Domain>) {
+        self.init(l10n.string(keyPath, arguments: arguments))
+    }
+
+    /// Initialize with explicit common context and arguments
+    public init<Domain: LocalizationDomain>(_ keyPath: KeyPath<CommonStrings, String>, arguments: [CVarArg], in l10n: LocalizedContext<Domain>) {
+        self.init(l10n.string(keyPath, arguments: arguments))
+    }
 }
 
 // MARK: - SwiftUI KeyPath Button Initializers
@@ -256,6 +315,22 @@ extension String {
 
     public init(_ keyPath: KeyPath<CommonStrings, String>, in context: CommonStrings = .shared) {
         self = context[keyPath: keyPath]
+    }
+
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, arguments: [CVarArg], in context: LocalizedContext<MotivationDomain> = .shared) {
+        self = context.string(keyPath, arguments: arguments)
+    }
+
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, arguments: [CVarArg], in context: LocalizedContext<MyTVDomain> = .shared) {
+        self = context.string(keyPath, arguments: arguments)
+    }
+
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, arguments: [CVarArg], in context: LocalizedContext<ShowBookDomain> = .shared) {
+        self = context.string(keyPath, arguments: arguments)
+    }
+
+    public init(_ keyPath: KeyPath<CommonStrings, String>, arguments: [CVarArg], in context: CommonStrings = .shared) {
+        self = context.string(keyPath, arguments: arguments)
     }
 }
 
