@@ -294,6 +294,66 @@ extension View {
         self.accessibilityHint(Text(keyPath))
     }
 
+    public func accessibilityValue(_ keyPath: KeyPath<MotivationStrings, String>) -> some View {
+        self.accessibilityValue(Text(keyPath))
+    }
+
+    public func accessibilityValue(_ keyPath: KeyPath<MyTVStrings, String>) -> some View {
+        self.accessibilityValue(Text(keyPath))
+    }
+
+    public func accessibilityValue(_ keyPath: KeyPath<ShowBookStrings, String>) -> some View {
+        self.accessibilityValue(Text(keyPath))
+    }
+
+    public func accessibilityValue(_ keyPath: KeyPath<CommonStrings, String>) -> some View {
+        self.accessibilityValue(Text(keyPath))
+    }
+
+    public func navigationTitle(_ keyPath: KeyPath<MotivationStrings, String>) -> some View {
+        self.navigationTitle(Text(keyPath))
+    }
+
+    public func navigationTitle(_ keyPath: KeyPath<MyTVStrings, String>) -> some View {
+        self.navigationTitle(Text(keyPath))
+    }
+
+    public func navigationTitle(_ keyPath: KeyPath<ShowBookStrings, String>) -> some View {
+        self.navigationTitle(Text(keyPath))
+    }
+
+    public func navigationTitle(_ keyPath: KeyPath<CommonStrings, String>) -> some View {
+        self.navigationTitle(Text(keyPath))
+    }
+
+    public func searchable(
+        text: Binding<String>,
+        prompt keyPath: KeyPath<MotivationStrings, String>
+    ) -> some View {
+        self.searchable(text: text, prompt: Text(keyPath))
+    }
+
+    public func searchable(
+        text: Binding<String>,
+        prompt keyPath: KeyPath<MyTVStrings, String>
+    ) -> some View {
+        self.searchable(text: text, prompt: Text(keyPath))
+    }
+
+    public func searchable(
+        text: Binding<String>,
+        prompt keyPath: KeyPath<ShowBookStrings, String>
+    ) -> some View {
+        self.searchable(text: text, prompt: Text(keyPath))
+    }
+
+    public func searchable(
+        text: Binding<String>,
+        prompt keyPath: KeyPath<CommonStrings, String>
+    ) -> some View {
+        self.searchable(text: text, prompt: Text(keyPath))
+    }
+
     // Alert & Dialog KeyPath Modifiers
     public func alert<A: View, M: View>(
         _ titleKeyPath: KeyPath<MotivationStrings, String>,
@@ -435,9 +495,107 @@ extension Button where Label == Text {
         self.init(role: role, action: action) { Text(keyPath) }
     }
 }
+extension LabeledContent where Label == Text, Content == Text {
+    public init<S: StringProtocol>(_ keyPath: KeyPath<CommonStrings, String>, value: S) {
+        self.init(content: { Text(value) }, label: { Text(keyPath) })
+    }
+}
+extension LabeledContent where Label == Text, Content: View {
+    public init(_ keyPath: KeyPath<CommonStrings, String>, @ViewBuilder content: () -> Content) {
+        self.init(content: content, label: { Text(keyPath) })
+    }
+}
+extension TextField where Label == Text {
+    public init(_ keyPath: KeyPath<CommonStrings, String>, text: Binding<String>) {
+        self.init(text: text) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<CommonStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<CommonStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+}
+extension SecureField where Label == Text {
+    public init(_ keyPath: KeyPath<CommonStrings, String>, text: Binding<String>) {
+        self.init(text: text) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<CommonStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<CommonStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+}
+extension Toggle where Label == Text {
+    public init(_ keyPath: KeyPath<CommonStrings, String>, isOn: Binding<Bool>) {
+        self.init(isOn: isOn) { Text(keyPath) }
+    }
+}
+extension Picker where Label == Text, Content: View {
+    public init(_ keyPath: KeyPath<CommonStrings, String>, selection: Binding<SelectionValue>, @ViewBuilder content: () -> Content) {
+        self.init(selection: selection, content: content, label: { Text(keyPath) })
+    }
+}
+extension NavigationLink where Label == Text, Destination: View {
+    public init(_ keyPath: KeyPath<CommonStrings, String>, destination: Destination) {
+        self.init(destination: destination, label: { Text(keyPath) })
+    }
+}
+extension NavigationLink where Label == Text, Destination == Never {
+    public init<P: Hashable>(_ keyPath: KeyPath<CommonStrings, String>, value: P?) {
+        self.init(value: value, label: { Text(keyPath) })
+    }
+}
 extension Button where Label == Text {
     public init(_ keyPath: KeyPath<MotivationStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
         self.init(role: role, action: action) { Text(keyPath) }
+    }
+}
+extension LabeledContent where Label == Text, Content == Text {
+    public init<S: StringProtocol>(_ keyPath: KeyPath<MotivationStrings, String>, value: S) {
+        self.init(content: { Text(value) }, label: { Text(keyPath) })
+    }
+}
+extension LabeledContent where Label == Text, Content: View {
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, @ViewBuilder content: () -> Content) {
+        self.init(content: content, label: { Text(keyPath) })
+    }
+}
+extension TextField where Label == Text {
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, text: Binding<String>) {
+        self.init(text: text) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<MotivationStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<CommonStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+}
+extension SecureField where Label == Text {
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, text: Binding<String>) {
+        self.init(text: text) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<MotivationStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<CommonStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+}
+extension Toggle where Label == Text {
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, isOn: Binding<Bool>) {
+        self.init(isOn: isOn) { Text(keyPath) }
+    }
+}
+extension Picker where Label == Text, Content: View {
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, selection: Binding<SelectionValue>, @ViewBuilder content: () -> Content) {
+        self.init(selection: selection, content: content, label: { Text(keyPath) })
+    }
+}
+extension NavigationLink where Label == Text, Destination: View {
+    public init(_ keyPath: KeyPath<MotivationStrings, String>, destination: Destination) {
+        self.init(destination: destination, label: { Text(keyPath) })
+    }
+}
+extension NavigationLink where Label == Text, Destination == Never {
+    public init<P: Hashable>(_ keyPath: KeyPath<MotivationStrings, String>, value: P?) {
+        self.init(value: value, label: { Text(keyPath) })
     }
 }
 extension Button where Label == Text {
@@ -445,9 +603,113 @@ extension Button where Label == Text {
         self.init(role: role, action: action) { Text(keyPath) }
     }
 }
+extension LabeledContent where Label == Text, Content == Text {
+    public init<S: StringProtocol>(_ keyPath: KeyPath<MyTVStrings, String>, value: S) {
+        self.init(content: { Text(value) }, label: { Text(keyPath) })
+    }
+}
+extension LabeledContent where Label == Text, Content: View {
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, @ViewBuilder content: () -> Content) {
+        self.init(content: content, label: { Text(keyPath) })
+    }
+}
+extension TextField where Label == Text {
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, text: Binding<String>) {
+        self.init(text: text) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<MyTVStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<CommonStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+}
+extension SecureField where Label == Text {
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, text: Binding<String>) {
+        self.init(text: text) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<MyTVStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<CommonStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+}
+extension Toggle where Label == Text {
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, isOn: Binding<Bool>) {
+        self.init(isOn: isOn) { Text(keyPath) }
+    }
+}
+extension Picker where Label == Text, Content: View {
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, selection: Binding<SelectionValue>, @ViewBuilder content: () -> Content) {
+        self.init(selection: selection, content: content, label: { Text(keyPath) })
+    }
+}
+extension NavigationLink where Label == Text, Destination: View {
+    public init(_ keyPath: KeyPath<MyTVStrings, String>, destination: Destination) {
+        self.init(destination: destination, label: { Text(keyPath) })
+    }
+}
+extension NavigationLink where Label == Text, Destination == Never {
+    public init<P: Hashable>(_ keyPath: KeyPath<MyTVStrings, String>, value: P?) {
+        self.init(value: value, label: { Text(keyPath) })
+    }
+}
 extension Button where Label == Text {
     public init(_ keyPath: KeyPath<ShowBookStrings, String>, role: ButtonRole?, action: @escaping () -> Void) {
         self.init(role: role, action: action) { Text(keyPath) }
+    }
+}
+extension LabeledContent where Label == Text, Content == Text {
+    public init<S: StringProtocol>(_ keyPath: KeyPath<ShowBookStrings, String>, value: S) {
+        self.init(content: { Text(value) }, label: { Text(keyPath) })
+    }
+}
+extension LabeledContent where Label == Text, Content: View {
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, @ViewBuilder content: () -> Content) {
+        self.init(content: content, label: { Text(keyPath) })
+    }
+}
+extension TextField where Label == Text {
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, text: Binding<String>) {
+        self.init(text: text) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<ShowBookStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<CommonStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+}
+extension SecureField where Label == Text {
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, text: Binding<String>) {
+        self.init(text: text) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<ShowBookStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, text: Binding<String>, promptKeyPath: KeyPath<CommonStrings, String>) {
+        self.init(text: text, prompt: Text(promptKeyPath)) { Text(keyPath) }
+    }
+}
+extension Toggle where Label == Text {
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, isOn: Binding<Bool>) {
+        self.init(isOn: isOn) { Text(keyPath) }
+    }
+}
+extension Picker where Label == Text, Content: View {
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, selection: Binding<SelectionValue>, @ViewBuilder content: () -> Content) {
+        self.init(selection: selection, content: content, label: { Text(keyPath) })
+    }
+}
+extension NavigationLink where Label == Text, Destination: View {
+    public init(_ keyPath: KeyPath<ShowBookStrings, String>, destination: Destination) {
+        self.init(destination: destination, label: { Text(keyPath) })
+    }
+}
+extension NavigationLink where Label == Text, Destination == Never {
+    public init<P: Hashable>(_ keyPath: KeyPath<ShowBookStrings, String>, value: P?) {
+        self.init(value: value, label: { Text(keyPath) })
     }
 }
 extension Alert.Button {

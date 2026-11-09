@@ -434,4 +434,85 @@ extension LocalizationKitTests {
             .localizationProvider(controller)
             .localizedContext(showBook)
     }
+
+    @MainActor
+    func testKeyPathControlInitializersAndModifiers() {
+        // LabeledContent
+        _ = LabeledContent(\.allChannels, value: "1.0")
+        _ = LabeledContent(\.allChannels) { Text("1.0") }
+        _ = LabeledContent(\.discover, value: "1.0")
+        _ = LabeledContent(\.discover) { Text("1.0") }
+        _ = LabeledContent(\.motivationAppName, value: "1.0")
+        _ = LabeledContent(\.motivationAppName) { Text("1.0") }
+        _ = LabeledContent(\.ok, value: "Done")
+        _ = LabeledContent(\.ok) { Text("Done") }
+
+        // TextField & SecureField
+        var text = ""
+        let binding = Binding(get: { text }, set: { text = $0 })
+        _ = TextField(\.allChannels, text: binding)
+        _ = TextField(\.allChannels, text: binding, promptKeyPath: \.allChannels)
+        _ = TextField(\.allChannels, text: binding, promptKeyPath: \.ok)
+        _ = TextField(\.discover, text: binding)
+        _ = TextField(\.discover, text: binding, promptKeyPath: \.discover)
+        _ = TextField(\.discover, text: binding, promptKeyPath: \.ok)
+        _ = TextField(\.motivationAppName, text: binding)
+        _ = TextField(\.motivationAppName, text: binding, promptKeyPath: \.motivationAppName)
+        _ = TextField(\.motivationAppName, text: binding, promptKeyPath: \.ok)
+        _ = TextField(\.ok, text: binding)
+        _ = TextField(\.ok, text: binding, promptKeyPath: \.ok)
+
+        _ = SecureField(\.allChannels, text: binding)
+        _ = SecureField(\.allChannels, text: binding, promptKeyPath: \.allChannels)
+        _ = SecureField(\.allChannels, text: binding, promptKeyPath: \.ok)
+        _ = SecureField(\.discover, text: binding)
+        _ = SecureField(\.discover, text: binding, promptKeyPath: \.discover)
+        _ = SecureField(\.discover, text: binding, promptKeyPath: \.ok)
+        _ = SecureField(\.motivationAppName, text: binding)
+        _ = SecureField(\.motivationAppName, text: binding, promptKeyPath: \.motivationAppName)
+        _ = SecureField(\.motivationAppName, text: binding, promptKeyPath: \.ok)
+        _ = SecureField(\.ok, text: binding)
+        _ = SecureField(\.ok, text: binding, promptKeyPath: \.ok)
+
+        // Toggle
+        var isOn = false
+        let toggleBinding = Binding(get: { isOn }, set: { isOn = $0 })
+        _ = Toggle(\.allChannels, isOn: toggleBinding)
+        _ = Toggle(\.discover, isOn: toggleBinding)
+        _ = Toggle(\.motivationAppName, isOn: toggleBinding)
+        _ = Toggle(\.ok, isOn: toggleBinding)
+
+        // Picker
+        var selection = 0
+        let selectionBinding = Binding(get: { selection }, set: { selection = $0 })
+        _ = Picker(\.allChannels, selection: selectionBinding) { Text("1") }
+        _ = Picker(\.discover, selection: selectionBinding) { Text("1") }
+        _ = Picker(\.motivationAppName, selection: selectionBinding) { Text("1") }
+        _ = Picker(\.ok, selection: selectionBinding) { Text("1") }
+
+        // NavigationLink
+        _ = NavigationLink(\.allChannels, destination: Text("Detail"))
+        _ = NavigationLink(\.allChannels, value: 42)
+        _ = NavigationLink(\.discover, destination: Text("Detail"))
+        _ = NavigationLink(\.discover, value: 42)
+        _ = NavigationLink(\.motivationAppName, destination: Text("Detail"))
+        _ = NavigationLink(\.motivationAppName, value: 42)
+        _ = NavigationLink(\.ok, destination: Text("Detail"))
+        _ = NavigationLink(\.ok, value: 42)
+
+        // Modifiers
+        _ = Text("Sample")
+            .navigationTitle(\.allChannels)
+            .navigationTitle(\.discover)
+            .navigationTitle(\.motivationAppName)
+            .navigationTitle(\.ok)
+            .accessibilityValue(\.allChannels)
+            .accessibilityValue(\.discover)
+            .accessibilityValue(\.motivationAppName)
+            .accessibilityValue(\.ok)
+            .searchable(text: binding, prompt: \.allChannels)
+            .searchable(text: binding, prompt: \.discover)
+            .searchable(text: binding, prompt: \.motivationAppName)
+            .searchable(text: binding, prompt: \.ok)
+    }
 }
