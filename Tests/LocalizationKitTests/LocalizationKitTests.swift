@@ -691,4 +691,73 @@ extension LocalizationKitTests {
             XCTAssertFalse(common.errorMessage.isEmpty)
         }
     }
+
+    func testMyTVCategoriesAndDeveloperStringsAcrossLocales() {
+        for (localeId, expectedAnimation, expectedNews, expectedSports, expectedAdult, expectedApply) in [
+            ("en", "🎞 Animation", "📰 News", "🏆 Sports", "🔞 Adult", "Apply and close"),
+            ("fr", "🎞 Animation", "📰 Actualités", "🏆 Sports", "🔞 Adulte", "Appliquer et fermer"),
+            ("ar", "🎞 رسوم متحركة", "📰 أخبار", "🏆 رياضة", "🔞 للكبار", "تطبيق وإغلاق")
+        ] {
+            let controller = LocalizationController(initialLocale: Locale(identifier: localeId))
+            let mytv = MyTVStrings(provider: controller)
+
+            XCTAssertEqual(mytv.categoryAnimation, expectedAnimation)
+            XCTAssertEqual(mytv.categoryNews, expectedNews)
+            XCTAssertEqual(mytv.categorySports, expectedSports)
+            XCTAssertEqual(mytv.categoryAdult, expectedAdult)
+            XCTAssertEqual(mytv.applyAndClose, expectedApply)
+            XCTAssertFalse(mytv.developerCacheEmpty.isEmpty)
+            XCTAssertFalse(mytv.developerCacheSummary.isEmpty)
+
+            // Verify all 30 categories resolve non-empty
+            let allCategories = [
+                mytv.categoryAnimation, mytv.categoryAuto, mytv.categoryBusiness, mytv.categoryClassic,
+                mytv.categoryComedy, mytv.categoryCooking, mytv.categoryCulture, mytv.categoryDocumentary,
+                mytv.categoryEducation, mytv.categoryEntertainment, mytv.categoryFamily, mytv.categoryGeneral,
+                mytv.categoryInteractive, mytv.categoryKids, mytv.categoryLegislative, mytv.categoryLifestyle,
+                mytv.categoryMovies, mytv.categoryMusic, mytv.categoryNews, mytv.categoryOutdoor,
+                mytv.categoryPublic, mytv.categoryRelax, mytv.categoryReligious, mytv.categoryScience,
+                mytv.categorySeries, mytv.categoryShop, mytv.categorySports, mytv.categoryTravel,
+                mytv.categoryWeather, mytv.categoryAdult
+            ]
+            XCTAssertEqual(allCategories.count, 30)
+            XCTAssertTrue(allCategories.allSatisfy { !$0.isEmpty })
+        }
+    }
+
+    func testShowBookDomainAdditionsAcrossLocales() {
+        for (localeId, expectedApply, expectedStorageError, expectedNoRecord) in [
+            ("en", "Apply and close", "Library storage is temporarily unavailable. Your saved data is intact.", "No record found"),
+            ("fr", "Appliquer et fermer", "Le stockage de la bibliothèque est temporairement indisponible. Vos données enregistrées sont intactes.", "Aucun enregistrement trouvé"),
+            ("ar", "تطبيق وإغلاق", "مساحة تخزين المكتبة غير متوفرة مؤقتًا. بياناتك المحفوظة سليمة.", "لم يتم العثور على أي سجل")
+        ] {
+            let controller = LocalizationController(initialLocale: Locale(identifier: localeId))
+            let showBook = ShowBookStrings(provider: controller)
+
+            XCTAssertEqual(showBook.applyAndClose, expectedApply)
+            XCTAssertEqual(showBook.errorStorageUnavailable, expectedStorageError)
+            XCTAssertEqual(showBook.errorNoRecordFound, expectedNoRecord)
+            XCTAssertFalse(showBook.errorNoIdentifier.isEmpty)
+            XCTAssertFalse(showBook.developerCacheEmpty.isEmpty)
+            XCTAssertFalse(showBook.developerCacheSummary.isEmpty)
+        }
+    }
+
+    func testMotivationDailyDomainAdditionsAcrossLocales() {
+        for (localeId, expectedApply, expectedRole, expectedTemplatePrefix) in [
+            ("en", "Apply and close", "iOS Developer", "✨ \""),
+            ("fr", "Appliquer et fermer", "Développeur iOS", "✨ «"),
+            ("ar", "تطبيق وإغلاق", "مطور iOS", "✨ \"")
+        ] {
+            let controller = LocalizationController(initialLocale: Locale(identifier: localeId))
+            let motivation = MotivationStrings(provider: controller)
+
+            XCTAssertEqual(motivation.applyAndClose, expectedApply)
+            XCTAssertEqual(motivation.developerRole, expectedRole)
+            XCTAssertTrue(motivation.shareTemplate.hasPrefix(expectedTemplatePrefix))
+            XCTAssertFalse(motivation.appDescription.isEmpty)
+            XCTAssertFalse(motivation.developerCacheEmpty.isEmpty)
+            XCTAssertFalse(motivation.developerCacheSummary.isEmpty)
+        }
+    }
 }

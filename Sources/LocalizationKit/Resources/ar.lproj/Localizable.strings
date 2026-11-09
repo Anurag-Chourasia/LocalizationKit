@@ -925,3 +925,96 @@
 "common.error.title" = "حدث خطأ ما";
 
 "common.error.message" = "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.";
+
+/* myTV Categories */
+"channel.category.animation" = "🎞 رسوم متحركة";
+
+"channel.category.auto" = "🚗 سيارات";
+
+"channel.category.business" = "💼 أعمال";
+
+"channel.category.classic" = "🎼 كلاسيك";
+
+"channel.category.comedy" = "😂 كوميديا";
+
+"channel.category.cooking" = "🍳 طبخ";
+
+"channel.category.culture" = "🎨 ثقافة";
+
+"channel.category.documentary" = "🎥 وثائقي";
+
+"channel.category.education" = "📚 تعليم";
+
+"channel.category.entertainment" = "🎭 ترفيه";
+
+"channel.category.family" = "👨‍👩‍👧‍👦 عائلة";
+
+"channel.category.general" = "⭐️ عام";
+
+"channel.category.interactive" = "🕹 تفاعلي";
+
+"channel.category.kids" = "🧒 أطفال";
+
+"channel.category.legislative" = "🏛 تشريعي";
+
+"channel.category.lifestyle" = "✨ أسلوب حياة";
+
+"channel.category.movies" = "🎬 أفلام";
+
+"channel.category.music" = "🎵 موسيقى";
+
+"channel.category.news" = "📰 أخبار";
+
+"channel.category.outdoor" = "🏕 أنشطة خارجية";
+
+"channel.category.public" = "🏛 عام";
+
+"channel.category.relax" = "🧘 استرخاء";
+
+"channel.category.religious" = "🙏 ديني";
+
+"channel.category.science" = "🔬 علوم";
+
+"channel.category.series" = "📺 مسلسلات";
+
+"channel.category.shop" = "🛍 تسوق";
+
+"channel.category.sports" = "🏆 رياضة";
+
+"channel.category.travel" = "✈️ سفر";
+
+"channel.category.weather" = "⛅️ طقس";
+
+"channel.category.xxx" = "🔞 للكبار";
+
+"channel.developer.apply_and_close" = "تطبيق وإغلاق";
+
+"channel.developer.cache_empty" = "0 قنوات (0 ك.ب)";
+
+"channel.developer.cache_summary" = "%d قنوات (%@)";
+
+/* ShowBook Domain Additions */
+"showbook.developer.apply_and_close" = "تطبيق وإغلاق";
+
+"showbook.developer.cache_empty" = "0 استعلامات (0 ك.ب)";
+
+"showbook.developer.cache_summary" = "%d استعلامات (%@)";
+
+"showbook.error.no_identifier" = "لا يحتوي هذا الكتاب على معرّف Open Library صالح. ابحث عنه مرة أخرى لفتح التفاصيل عبر الإنترنت.";
+
+"showbook.error.storage_unavailable" = "مساحة تخزين المكتبة غير متوفرة مؤقتًا. بياناتك المحفوظة سليمة.";
+
+"showbook.error.no_record_found" = "لم يتم العثور على أي سجل";
+
+/* MotivationDaily Domain Additions */
+"motivation.developer.apply_and_close" = "تطبيق وإغلاق";
+
+"motivation.developer.cache_empty" = "0 اقتباسات (0 ك.ب)";
+
+"motivation.developer.cache_summary" = "%d اقتباسات (%@)";
+
+"motivation.about.developer_role" = "مطور iOS";
+
+"motivation.about.app_description" = "اقتباسات ملهمة مقترنة بخلفيات جمالية. مبني باستخدام SwiftUI والهندسة النظيفة و MVVM.";
+
+"motivation.share.template" = "✨ \"%@\"\n\n— %@\n\n#DailyMotivation";

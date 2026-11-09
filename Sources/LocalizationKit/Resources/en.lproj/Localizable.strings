@@ -613,3 +613,53 @@
 "common.empty.message" = "There is nothing to display right now.";
 "common.error.title" = "Something Went Wrong";
 "common.error.message" = "An unexpected error occurred. Please try again.";
+/* myTV Categories */
+"channel.category.animation" = "🎞 Animation";
+"channel.category.auto" = "🚗 Auto";
+"channel.category.business" = "💼 Business";
+"channel.category.classic" = "🎼 Classic";
+"channel.category.comedy" = "😂 Comedy";
+"channel.category.cooking" = "🍳 Cooking";
+"channel.category.culture" = "🎨 Culture";
+"channel.category.documentary" = "🎥 Documentary";
+"channel.category.education" = "📚 Education";
+"channel.category.entertainment" = "🎭 Entertainment";
+"channel.category.family" = "👨‍👩‍👧‍👦 Family";
+"channel.category.general" = "⭐️ General";
+"channel.category.interactive" = "🕹 Interactive";
+"channel.category.kids" = "🧒 Kids";
+"channel.category.legislative" = "🏛 Legislative";
+"channel.category.lifestyle" = "✨ Lifestyle";
+"channel.category.movies" = "🎬 Movies";
+"channel.category.music" = "🎵 Music";
+"channel.category.news" = "📰 News";
+"channel.category.outdoor" = "🏕 Outdoor";
+"channel.category.public" = "🏛 Public";
+"channel.category.relax" = "🧘 Relax";
+"channel.category.religious" = "🙏 Religious";
+"channel.category.science" = "🔬 Science";
+"channel.category.series" = "📺 Series";
+"channel.category.shop" = "🛍 Shop";
+"channel.category.sports" = "🏆 Sports";
+"channel.category.travel" = "✈️ Travel";
+"channel.category.weather" = "⛅️ Weather";
+"channel.category.xxx" = "🔞 Adult";
+"channel.developer.apply_and_close" = "Apply and close";
+"channel.developer.cache_empty" = "0 channels (0 KB)";
+"channel.developer.cache_summary" = "%d channels (%@)";
+
+/* ShowBook Domain Additions */
+"showbook.developer.apply_and_close" = "Apply and close";
+"showbook.developer.cache_empty" = "0 queries (0 KB)";
+"showbook.developer.cache_summary" = "%d queries (%@)";
+"showbook.error.no_identifier" = "This book has no valid Open Library identifier. Search for it again to open online details.";
+"showbook.error.storage_unavailable" = "Library storage is temporarily unavailable. Your saved data is intact.";
+"showbook.error.no_record_found" = "No record found";
+
+/* MotivationDaily Domain Additions */
+"motivation.developer.apply_and_close" = "Apply and close";
+"motivation.developer.cache_empty" = "0 quotes (0 KB)";
+"motivation.developer.cache_summary" = "%d quotes (%@)";
+"motivation.about.developer_role" = "iOS Developer";
+"motivation.about.app_description" = "Inspirational quotes paired with aesthetic wallpapers. Built with SwiftUI, Clean Architecture and MVVM.";
+"motivation.share.template" = "✨ \"%@\"\n\n— %@\n\n#DailyMotivation";

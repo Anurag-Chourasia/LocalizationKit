@@ -485,4 +485,29 @@ public struct ShowBookStrings: Sendable {
         provider.string("showbook.profile.disclaimer")
     }
 
+    /* ShowBook Domain Additions */
+    public var applyAndClose: String {
+        provider.string("showbook.developer.apply_and_close")
+    }
+
+    public var developerCacheEmpty: String {
+        provider.string("showbook.developer.cache_empty")
+    }
+
+    public var developerCacheSummary: String {
+        provider.string("showbook.developer.cache_summary")
+    }
+
+    public var errorNoIdentifier: String {
+        provider.string("showbook.error.no_identifier")
+    }
+
+    public var errorStorageUnavailable: String {
+        provider.string("showbook.error.storage_unavailable")
+    }
+
+    public var errorNoRecordFound: String {
+        provider.string("showbook.error.no_record_found")
+    }
+
 }

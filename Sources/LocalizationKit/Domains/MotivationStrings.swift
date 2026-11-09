@@ -397,4 +397,29 @@ public struct MotivationStrings: Sendable {
         provider.string("motivation.recovery.storage")
     }
 
+    /* MotivationDaily Domain Additions */
+    public var applyAndClose: String {
+        provider.string("motivation.developer.apply_and_close")
+    }
+
+    public var developerCacheEmpty: String {
+        provider.string("motivation.developer.cache_empty")
+    }
+
+    public var developerCacheSummary: String {
+        provider.string("motivation.developer.cache_summary")
+    }
+
+    public var developerRole: String {
+        provider.string("motivation.about.developer_role")
+    }
+
+    public var appDescription: String {
+        provider.string("motivation.about.app_description")
+    }
+
+    public var shareTemplate: String {
+        provider.string("motivation.share.template")
+    }
+
 }

@@ -409,4 +409,137 @@ public struct MyTVStrings: Sendable {
         provider.string("channel.filter.hide_unavailable")
     }
 
+    /* myTV Categories */
+    public var categoryAnimation: String {
+        provider.string("channel.category.animation")
+    }
+
+    public var categoryAuto: String {
+        provider.string("channel.category.auto")
+    }
+
+    public var categoryBusiness: String {
+        provider.string("channel.category.business")
+    }
+
+    public var categoryClassic: String {
+        provider.string("channel.category.classic")
+    }
+
+    public var categoryComedy: String {
+        provider.string("channel.category.comedy")
+    }
+
+    public var categoryCooking: String {
+        provider.string("channel.category.cooking")
+    }
+
+    public var categoryCulture: String {
+        provider.string("channel.category.culture")
+    }
+
+    public var categoryDocumentary: String {
+        provider.string("channel.category.documentary")
+    }
+
+    public var categoryEducation: String {
+        provider.string("channel.category.education")
+    }
+
+    public var categoryEntertainment: String {
+        provider.string("channel.category.entertainment")
+    }
+
+    public var categoryFamily: String {
+        provider.string("channel.category.family")
+    }
+
+    public var categoryGeneral: String {
+        provider.string("channel.category.general")
+    }
+
+    public var categoryInteractive: String {
+        provider.string("channel.category.interactive")
+    }
+
+    public var categoryKids: String {
+        provider.string("channel.category.kids")
+    }
+
+    public var categoryLegislative: String {
+        provider.string("channel.category.legislative")
+    }
+
+    public var categoryLifestyle: String {
+        provider.string("channel.category.lifestyle")
+    }
+
+    public var categoryMovies: String {
+        provider.string("channel.category.movies")
+    }
+
+    public var categoryMusic: String {
+        provider.string("channel.category.music")
+    }
+
+    public var categoryNews: String {
+        provider.string("channel.category.news")
+    }
+
+    public var categoryOutdoor: String {
+        provider.string("channel.category.outdoor")
+    }
+
+    public var categoryPublic: String {
+        provider.string("channel.category.public")
+    }
+
+    public var categoryRelax: String {
+        provider.string("channel.category.relax")
+    }
+
+    public var categoryReligious: String {
+        provider.string("channel.category.religious")
+    }
+
+    public var categoryScience: String {
+        provider.string("channel.category.science")
+    }
+
+    public var categorySeries: String {
+        provider.string("channel.category.series")
+    }
+
+    public var categoryShop: String {
+        provider.string("channel.category.shop")
+    }
+
+    public var categorySports: String {
+        provider.string("channel.category.sports")
+    }
+
+    public var categoryTravel: String {
+        provider.string("channel.category.travel")
+    }
+
+    public var categoryWeather: String {
+        provider.string("channel.category.weather")
+    }
+
+    public var categoryAdult: String {
+        provider.string("channel.category.xxx")
+    }
+
+    public var applyAndClose: String {
+        provider.string("channel.developer.apply_and_close")
+    }
+
+    public var developerCacheEmpty: String {
+        provider.string("channel.developer.cache_empty")
+    }
+
+    public var developerCacheSummary: String {
+        provider.string("channel.developer.cache_summary")
+    }
+
 }

@@ -925,3 +925,96 @@
 "common.error.title" = "Une erreur est survenue";
 
 "common.error.message" = "Une erreur inattendue s’est produite. Veuillez réessayer.";
+
+/* myTV Categories */
+"channel.category.animation" = "🎞 Animation";
+
+"channel.category.auto" = "🚗 Auto";
+
+"channel.category.business" = "💼 Affaires";
+
+"channel.category.classic" = "🎼 Classique";
+
+"channel.category.comedy" = "😂 Comédie";
+
+"channel.category.cooking" = "🍳 Cuisine";
+
+"channel.category.culture" = "🎨 Culture";
+
+"channel.category.documentary" = "🎥 Documentaire";
+
+"channel.category.education" = "📚 Éducation";
+
+"channel.category.entertainment" = "🎭 Divertissement";
+
+"channel.category.family" = "👨‍👩‍👧‍👦 Famille";
+
+"channel.category.general" = "⭐️ Général";
+
+"channel.category.interactive" = "🕹 Interactif";
+
+"channel.category.kids" = "🧒 Enfants";
+
+"channel.category.legislative" = "🏛 Législatif";
+
+"channel.category.lifestyle" = "✨ Mode de vie";
+
+"channel.category.movies" = "🎬 Films";
+
+"channel.category.music" = "🎵 Musique";
+
+"channel.category.news" = "📰 Actualités";
+
+"channel.category.outdoor" = "🏕 Plein air";
+
+"channel.category.public" = "🏛 Public";
+
+"channel.category.relax" = "🧘 Détente";
+
+"channel.category.religious" = "🙏 Religieux";
+
+"channel.category.science" = "🔬 Sciences";
+
+"channel.category.series" = "📺 Séries";
+
+"channel.category.shop" = "🛍 Téléachat";
+
+"channel.category.sports" = "🏆 Sports";
+
+"channel.category.travel" = "✈️ Voyage";
+
+"channel.category.weather" = "⛅️ Météo";
+
+"channel.category.xxx" = "🔞 Adulte";
+
+"channel.developer.apply_and_close" = "Appliquer et fermer";
+
+"channel.developer.cache_empty" = "0 chaîne (0 Ko)";
+
+"channel.developer.cache_summary" = "%d chaînes (%@)";
+
+/* ShowBook Domain Additions */
+"showbook.developer.apply_and_close" = "Appliquer et fermer";
+
+"showbook.developer.cache_empty" = "0 requête (0 Ko)";
+
+"showbook.developer.cache_summary" = "%d requêtes (%@)";
+
+"showbook.error.no_identifier" = "Ce livre n’a aucun identifiant Open Library valide. Recherchez-le à nouveau pour ouvrir les détails en ligne.";
+
+"showbook.error.storage_unavailable" = "Le stockage de la bibliothèque est temporairement indisponible. Vos données enregistrées sont intactes.";
+
+"showbook.error.no_record_found" = "Aucun enregistrement trouvé";
+
+/* MotivationDaily Domain Additions */
+"motivation.developer.apply_and_close" = "Appliquer et fermer";
+
+"motivation.developer.cache_empty" = "0 citation (0 Ko)";
+
+"motivation.developer.cache_summary" = "%d citations (%@)";
+
+"motivation.about.developer_role" = "Développeur iOS";
+
+"motivation.about.app_description" = "Des citations inspirantes associées à des fonds d’écran esthétiques. Conçu avec SwiftUI, Clean Architecture et MVVM.";
+
+"motivation.share.template" = "✨ « %@ »\n\n— %@\n\n#DailyMotivation";
