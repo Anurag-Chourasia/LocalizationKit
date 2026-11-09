@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 import XCTest
 @testable import LocalizationKit
 
@@ -401,5 +402,36 @@ extension LocalizationKitTests {
         let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
         let context = LocalizedContext<MockCustomDomain>(provider: controller)
         XCTAssertEqual(context.domain.greeting, "OK")
+    }
+
+    func testEnvironmentValuesProvideConsistentLocalization() {
+        let env = EnvironmentValues()
+        XCTAssertNotNil(env.localizationProvider)
+        XCTAssertEqual(env.commonL10n.ok, "OK")
+        XCTAssertEqual(env.motivationL10n.favourites, "Favourites")
+        XCTAssertEqual(env.myTVL10n.appName, "My TV")
+        XCTAssertEqual(env.showBookL10n.appName, "Show Book")
+
+        let customDomainContext = env[MockCustomDomain.self]
+        XCTAssertEqual(customDomainContext.domain.greeting, "OK")
+    }
+
+    func testEnvironmentValuesWithCustomProvider() {
+        let customController = LocalizationController(initialLocale: Locale(identifier: "fr"))
+        var env = EnvironmentValues()
+        env.localizationProvider = customController
+
+        XCTAssertEqual(env[MockCustomDomain.self].domain.greeting, "OK")
+        XCTAssertEqual(env[ShowBookDomain.self].domain.appName, "Show Book")
+    }
+
+    @MainActor
+    func testViewLocalizationModifiersCompile() {
+        let controller = LocalizationController(initialLocale: Locale(identifier: "fr"))
+        let showBook = LocalizedContext<ShowBookDomain>(provider: controller)
+
+        _ = Text("Test")
+            .localizationProvider(controller)
+            .localizedContext(showBook)
     }
 }

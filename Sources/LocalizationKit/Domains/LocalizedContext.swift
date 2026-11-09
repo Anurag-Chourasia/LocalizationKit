@@ -345,19 +345,37 @@ extension View {
 
 // MARK: - Environment Keys for Scoped Domains
 
+private struct LocalizationProviderKey: EnvironmentKey {
+    static let defaultValue: any LocalizationProviding = LocalizationController.shared
+}
+
+private struct CommonL10nKey: EnvironmentKey {
+    static let defaultValue: CommonStrings = CommonStrings(provider: LocalizationController.shared)
+}
+
 private struct MotivationL10nKey: EnvironmentKey {
-    static let defaultValue: LocalizedContext<MotivationDomain> = LocalizedContext(provider: LocalizationController())
+    static let defaultValue: LocalizedContext<MotivationDomain> = LocalizedContext(provider: LocalizationController.shared)
 }
 
 private struct MyTVL10nKey: EnvironmentKey {
-    static let defaultValue: LocalizedContext<MyTVDomain> = LocalizedContext(provider: LocalizationController())
+    static let defaultValue: LocalizedContext<MyTVDomain> = LocalizedContext(provider: LocalizationController.shared)
 }
 
 private struct ShowBookL10nKey: EnvironmentKey {
-    static let defaultValue: LocalizedContext<ShowBookDomain> = LocalizedContext(provider: LocalizationController())
+    static let defaultValue: LocalizedContext<ShowBookDomain> = LocalizedContext(provider: LocalizationController.shared)
 }
 
 extension EnvironmentValues {
+    public var localizationProvider: any LocalizationProviding {
+        get { self[LocalizationProviderKey.self] }
+        set { self[LocalizationProviderKey.self] = newValue }
+    }
+
+    public var commonL10n: CommonStrings {
+        get { self[CommonL10nKey.self] }
+        set { self[CommonL10nKey.self] = newValue }
+    }
+
     public var motivationL10n: LocalizedContext<MotivationDomain> {
         get { self[MotivationL10nKey.self] }
         set { self[MotivationL10nKey.self] = newValue }
@@ -372,23 +390,42 @@ extension EnvironmentValues {
         get { self[ShowBookL10nKey.self] }
         set { self[ShowBookL10nKey.self] = newValue }
     }
+
+    public subscript<Domain: LocalizationDomain>(domain: Domain.Type) -> LocalizedContext<Domain> {
+        LocalizedContext<Domain>(provider: self.localizationProvider)
+    }
 }
 
 // MARK: - View Extension to Inject Domain L10n
 
 extension View {
+    public func localizationProvider(_ provider: any LocalizationProviding) -> some View {
+        self.environment(\.localizationProvider, provider)
+            .environment(\.commonL10n, CommonStrings(provider: provider))
+            .environment(\.motivationL10n, LocalizedContext<MotivationDomain>(provider: provider))
+            .environment(\.myTVL10n, LocalizedContext<MyTVDomain>(provider: provider))
+            .environment(\.showBookL10n, LocalizedContext<ShowBookDomain>(provider: provider))
+    }
+
     public func localizedContext<Domain: LocalizationDomain>(
         _ context: LocalizedContext<Domain>
     ) -> some View {
         Group {
             if let motivationContext = context as? LocalizedContext<MotivationDomain> {
                 self.environment(\.motivationL10n, motivationContext)
+                    .environment(\.localizationProvider, context.provider)
+                    .environment(\.commonL10n, context.common)
             } else if let myTVContext = context as? LocalizedContext<MyTVDomain> {
                 self.environment(\.myTVL10n, myTVContext)
+                    .environment(\.localizationProvider, context.provider)
+                    .environment(\.commonL10n, context.common)
             } else if let showBookContext = context as? LocalizedContext<ShowBookDomain> {
                 self.environment(\.showBookL10n, showBookContext)
+                    .environment(\.localizationProvider, context.provider)
+                    .environment(\.commonL10n, context.common)
             } else {
-                self
+                self.environment(\.localizationProvider, context.provider)
+                    .environment(\.commonL10n, context.common)
             }
         }
     }
