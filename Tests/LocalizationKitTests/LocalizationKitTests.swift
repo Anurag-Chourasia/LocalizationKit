@@ -639,4 +639,56 @@ extension LocalizationKitTests {
         _ = Text(\.detailsFor, arguments: ["Book"], in: showBook)
         _ = Text(\.welcome, arguments: ["User"], in: motivation.common)
     }
+
+    func testUIComponentsKitStringsAcrossLocales() {
+        for (localeId, expectedTitle, expectedSystem, expectedPlay, expectedLoading, expectedOffline) in [
+            ("en", "Appearance", "System", "Play", "Loading…", "Offline"),
+            ("fr", "Apparence", "Système", "Lecture", "Chargement…", "Hors ligne"),
+            ("ar", "المظهر", "النظام", "تشغيل", "جارٍ التحميل…", "غير متصل")
+        ] {
+            let controller = LocalizationController(initialLocale: Locale(identifier: localeId))
+            let common = CommonStrings(provider: controller)
+
+            // Appearance
+            XCTAssertEqual(common.appearanceTitle, expectedTitle)
+            XCTAssertEqual(common.appearanceSystem, expectedSystem)
+            XCTAssertFalse(common.appearanceLight.isEmpty)
+            XCTAssertFalse(common.appearanceDark.isEmpty)
+            XCTAssertEqual(L10n.Appearance.title(using: controller), expectedTitle)
+            XCTAssertEqual(L10n.Appearance.system(using: controller), expectedSystem)
+            XCTAssertFalse(L10n.Appearance.light(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Appearance.dark(using: controller).isEmpty)
+
+            // Loading & Offline
+            XCTAssertEqual(common.loading, expectedLoading)
+            XCTAssertEqual(common.offline, expectedOffline)
+            XCTAssertFalse(common.offlineMessage.isEmpty)
+
+            // Playback
+            XCTAssertEqual(common.playbackPlay, expectedPlay)
+            XCTAssertFalse(common.playbackPause.isEmpty)
+            XCTAssertFalse(common.playbackStop.isEmpty)
+            XCTAssertFalse(common.playbackReplay.isEmpty)
+            XCTAssertFalse(common.playbackLive.isEmpty)
+            XCTAssertFalse(common.playbackMute.isEmpty)
+            XCTAssertFalse(common.playbackUnmute.isEmpty)
+            XCTAssertEqual(L10n.Playback.play(using: controller), expectedPlay)
+            XCTAssertFalse(L10n.Playback.pause(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Playback.stop(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Playback.replay(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Playback.live(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Playback.mute(using: controller).isEmpty)
+            XCTAssertFalse(L10n.Playback.unmute(using: controller).isEmpty)
+
+            // Toggle
+            XCTAssertFalse(common.toggleSelected.isEmpty)
+            XCTAssertFalse(common.toggleUnselected.isEmpty)
+
+            // Empty & Error states
+            XCTAssertFalse(common.emptyTitle.isEmpty)
+            XCTAssertFalse(common.emptyMessage.isEmpty)
+            XCTAssertFalse(common.errorTitle.isEmpty)
+            XCTAssertFalse(common.errorMessage.isEmpty)
+        }
+    }
 }

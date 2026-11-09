@@ -204,6 +204,26 @@ public struct CommonStrings: Sendable {
     public var layoutTitle: String { provider.string("common.layout.title") }
     public var layoutList: String { provider.string("common.layout.list") }
     public var layoutGrid: String { provider.string("common.layout.grid") }
+    public var appearanceTitle: String { provider.string("common.appearance.title") }
+    public var appearanceSystem: String { provider.string("common.appearance.system") }
+    public var appearanceLight: String { provider.string("common.appearance.light") }
+    public var appearanceDark: String { provider.string("common.appearance.dark") }
+    public var loading: String { provider.string("common.loading") }
+    public var offline: String { provider.string("common.offline") }
+    public var offlineMessage: String { provider.string("common.offline_message") }
+    public var playbackPlay: String { provider.string("common.playback.play") }
+    public var playbackPause: String { provider.string("common.playback.pause") }
+    public var playbackStop: String { provider.string("common.playback.stop") }
+    public var playbackReplay: String { provider.string("common.playback.replay") }
+    public var playbackLive: String { provider.string("common.playback.live") }
+    public var playbackMute: String { provider.string("common.playback.mute") }
+    public var playbackUnmute: String { provider.string("common.playback.unmute") }
+    public var toggleSelected: String { provider.string("common.toggle.selected") }
+    public var toggleUnselected: String { provider.string("common.toggle.unselected") }
+    public var emptyTitle: String { provider.string("common.empty.title") }
+    public var emptyMessage: String { provider.string("common.empty.message") }
+    public var errorTitle: String { provider.string("common.error.title") }
+    public var errorMessage: String { provider.string("common.error.message") }
 }
 
 // MARK: - SwiftUI KeyPath Text Initializers

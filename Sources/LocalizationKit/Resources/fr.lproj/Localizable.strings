@@ -884,3 +884,44 @@
 "common.layout.grid" = "Grille";
 
 "showbook.profile.disclaimer" = "ShowBook est une application de découverte de livres. Les métadonnées et couvertures sont fournies par Open Library. La disponibilité et l’exactitude dépendent des enregistrements sources.\n\nSource : https://openlibrary.org\n\n[Politique de confidentialité](https://github.com/Anurag-Chourasia/ShowBook/blob/main/Docs/PrivacyInventory.md) • [Support](mailto:anuragchourasiaios@gmail.com)";
+
+/* UIComponentsKit: Shared Appearance, State, and Playback */
+"common.appearance.title" = "Apparence";
+
+"common.appearance.system" = "Système";
+
+"common.appearance.light" = "Clair";
+
+"common.appearance.dark" = "Sombre";
+
+"common.loading" = "Chargement…";
+
+"common.offline" = "Hors ligne";
+
+"common.offline_message" = "La connexion Internet semble interrompue.";
+
+"common.playback.play" = "Lecture";
+
+"common.playback.pause" = "Pause";
+
+"common.playback.stop" = "Arrêter";
+
+"common.playback.replay" = "Rejouer";
+
+"common.playback.live" = "EN DIRECT";
+
+"common.playback.mute" = "Couper le son";
+
+"common.playback.unmute" = "Activer le son";
+
+"common.toggle.selected" = "Sélectionné";
+
+"common.toggle.unselected" = "Non sélectionné";
+
+"common.empty.title" = "Aucun élément";
+
+"common.empty.message" = "Il n’y a rien à afficher pour le moment.";
+
+"common.error.title" = "Une erreur est survenue";
+
+"common.error.message" = "Une erreur inattendue s’est produite. Veuillez réessayer.";

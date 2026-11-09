@@ -884,3 +884,44 @@
 "common.layout.grid" = "شبكة";
 
 "showbook.profile.disclaimer" = "تطبيق ShowBook مخصص لاكتشاف الكتب. يتم توفير بيانات الكتب والأغلفة بواسطة Open Library. يعتمد التوفر والدقة على السجلات المصدرية.\n\nالمصدر: https://openlibrary.org\n\n[سياسة الخصوصية](https://github.com/Anurag-Chourasia/ShowBook/blob/main/Docs/PrivacyInventory.md) • [الدعم](mailto:anuragchourasiaios@gmail.com)";
+
+/* UIComponentsKit: Shared Appearance, State, and Playback */
+"common.appearance.title" = "المظهر";
+
+"common.appearance.system" = "النظام";
+
+"common.appearance.light" = "فاتح";
+
+"common.appearance.dark" = "داكن";
+
+"common.loading" = "جارٍ التحميل…";
+
+"common.offline" = "غير متصل";
+
+"common.offline_message" = "يبدو أن اتصال الإنترنت غير متصل.";
+
+"common.playback.play" = "تشغيل";
+
+"common.playback.pause" = "إيقاف مؤقت";
+
+"common.playback.stop" = "إيقاف";
+
+"common.playback.replay" = "إعادة التشغيل";
+
+"common.playback.live" = "مباشر";
+
+"common.playback.mute" = "كتم الصوت";
+
+"common.playback.unmute" = "إلغاء كتم الصوت";
+
+"common.toggle.selected" = "محدد";
+
+"common.toggle.unselected" = "غير محدد";
+
+"common.empty.title" = "لا توجد عناصر";
+
+"common.empty.message" = "لا يوجد شيء لعرضه الآن.";
+
+"common.error.title" = "حدث خطأ ما";
+
+"common.error.message" = "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.";

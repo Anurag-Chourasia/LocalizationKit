@@ -167,6 +167,54 @@ public enum L10n {
         }
     }
 
+    public enum Appearance {
+        public static func title(using localization: LocalizationProviding) -> String {
+            localization.string("common.appearance.title")
+        }
+
+        public static func system(using localization: LocalizationProviding) -> String {
+            localization.string("common.appearance.system")
+        }
+
+        public static func light(using localization: LocalizationProviding) -> String {
+            localization.string("common.appearance.light")
+        }
+
+        public static func dark(using localization: LocalizationProviding) -> String {
+            localization.string("common.appearance.dark")
+        }
+    }
+
+    public enum Playback {
+        public static func play(using localization: LocalizationProviding) -> String {
+            localization.string("common.playback.play")
+        }
+
+        public static func pause(using localization: LocalizationProviding) -> String {
+            localization.string("common.playback.pause")
+        }
+
+        public static func stop(using localization: LocalizationProviding) -> String {
+            localization.string("common.playback.stop")
+        }
+
+        public static func replay(using localization: LocalizationProviding) -> String {
+            localization.string("common.playback.replay")
+        }
+
+        public static func live(using localization: LocalizationProviding) -> String {
+            localization.string("common.playback.live")
+        }
+
+        public static func mute(using localization: LocalizationProviding) -> String {
+            localization.string("common.playback.mute")
+        }
+
+        public static func unmute(using localization: LocalizationProviding) -> String {
+            localization.string("common.playback.unmute")
+        }
+    }
+
     public enum Account {
         public static func title(using localization: LocalizationProviding) -> String {
             localization.string("account.title")
