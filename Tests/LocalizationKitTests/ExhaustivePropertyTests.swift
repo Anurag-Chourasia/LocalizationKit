@@ -831,12 +831,4 @@ final class ExhaustivePropertyTests: XCTestCase {
         _ = env[MyTVDomain.self]
         _ = env[ShowBookDomain.self]
     }
-
-    @available(*, deprecated, message: "Testing deprecated API")
-    func testDeprecatedContextStringMethods() {
-        let controller = LocalizationController(initialLocale: Locale(identifier: "en"))
-        let motivation = LocalizedContext<MotivationDomain>(provider: controller)
-        XCTAssertEqual(motivation.string("common.ok"), "OK")
-        XCTAssertEqual(motivation.string("common.welcome", arguments: ["Test"]), "Welcome, Test!")
-    }
 }

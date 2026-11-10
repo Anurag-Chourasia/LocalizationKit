@@ -17,16 +17,6 @@ public struct LocalizedContext<Domain: LocalizationDomain>: Sendable {
         CommonStrings(provider: provider)
     }
 
-    @available(*, deprecated, message: "Use KeyPath subscript or format-argument API instead of raw-string lookup.")
-    public func string(_ key: String) -> String {
-        provider.string(key)
-    }
-
-    @available(*, deprecated, message: "Use KeyPath subscript or format-argument API instead of raw-string lookup.")
-    public func string(_ key: String, arguments: [CVarArg]) -> String {
-        provider.string(key, arguments: arguments)
-    }
-
     public func string(_ keyPath: KeyPath<Domain.Strings, String>, arguments: [CVarArg]) -> String {
         let template = domain[keyPath: keyPath]
         return LocalizedFormatters.interpolate(template, locale: provider.locale, arguments: arguments)

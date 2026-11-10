@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0
+
+- Major release removing deprecated raw-string lookup API (`LocalizedContext.string(_:)` and `LocalizedContext.string(_:arguments:)`):
+  - Mandatory KeyPath syntax: all localization lookups across consumer views and domain contexts must strictly use Swift KeyPaths (`\.property` and `\.property, arguments: [...]`).
+  - Maintains strict 100.0% line and region test coverage gate across all package sources (`2135/2135` lines, `809/809` functions).
+  - Enforces zero raw-strings ecosystem invariant with zero SwiftLint violations and Swift 6 complete concurrency compliance.
+
 ## 0.9.0
 
 - Enforce Ecosystem Architectural Governance Specification requirements across all localization interfaces:
