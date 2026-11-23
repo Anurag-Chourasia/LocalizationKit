@@ -37,6 +37,42 @@
 
 "auth.button.delete_account" = "حذف الحساب";
 
+"auth.section.profile" = "الملف الشخصي";
+
+"auth.field.first_name" = "الاسم الأول";
+
+"auth.field.last_name" = "اسم العائلة";
+
+"auth.field.phone_optional" = "رقم الهاتف (اختياري)";
+
+"auth.button.save_profile" = "حفظ الملف الشخصي";
+
+"auth.section.security" = "الأمان";
+
+"auth.button.change_password" = "تغيير كلمة المرور";
+
+"auth.title.change_password" = "تغيير كلمة المرور";
+
+"auth.field.new_password" = "كلمة المرور الجديدة";
+
+"auth.button.update_password" = "تحديث كلمة المرور";
+
+"auth.section.ecosystem_apps" = "تطبيقاتنا";
+
+"auth.apps.open" = "فتح";
+
+"auth.apps.motivation_daily" = "Motivation Daily";
+
+"auth.apps.motivation_daily_subtitle" = "اقتباسات يومية وخلفيات ملهمة";
+
+"auth.apps.showbook" = "ShowBook";
+
+"auth.apps.showbook_subtitle" = "اكتشف واستكشف الكتب";
+
+"auth.apps.mytv" = "My TV";
+
+"auth.apps.mytv_subtitle" = "قنوات تلفزيونية مباشرة وترفيه";
+
 "auth.or_continue_with" = "أو المتابعة باستخدام";
 
 "auth.status.please_wait" = "يرجى الانتظار";

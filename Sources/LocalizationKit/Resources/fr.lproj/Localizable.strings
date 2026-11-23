@@ -37,6 +37,42 @@
 
 "auth.button.delete_account" = "Supprimer le compte";
 
+"auth.section.profile" = "Profil";
+
+"auth.field.first_name" = "Prénom";
+
+"auth.field.last_name" = "Nom";
+
+"auth.field.phone_optional" = "Numéro de téléphone (facultatif)";
+
+"auth.button.save_profile" = "Enregistrer le profil";
+
+"auth.section.security" = "Sécurité";
+
+"auth.button.change_password" = "Changer le mot de passe";
+
+"auth.title.change_password" = "Changer le mot de passe";
+
+"auth.field.new_password" = "Nouveau mot de passe";
+
+"auth.button.update_password" = "Mettre à jour le mot de passe";
+
+"auth.section.ecosystem_apps" = "Nos applications";
+
+"auth.apps.open" = "Ouvrir";
+
+"auth.apps.motivation_daily" = "Motivation Daily";
+
+"auth.apps.motivation_daily_subtitle" = "Citations quotidiennes et fonds d'écran inspirants";
+
+"auth.apps.showbook" = "ShowBook";
+
+"auth.apps.showbook_subtitle" = "Découvrez et explorez des livres";
+
+"auth.apps.mytv" = "My TV";
+
+"auth.apps.mytv_subtitle" = "Chaînes de télévision en direct et divertissement";
+
 "auth.or_continue_with" = "ou continuer avec";
 
 "auth.status.please_wait" = "Veuillez patienter";

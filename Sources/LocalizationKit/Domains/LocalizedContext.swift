@@ -95,6 +95,24 @@ public struct CommonStrings: Sendable {
     public var authButtonBackToSignIn: String { provider.string("auth.button.back_to_sign_in") }
     public var authButtonSignOut: String { provider.string("auth.button.sign_out") }
     public var authButtonDeleteAccount: String { provider.string("auth.button.delete_account") }
+    public var authSectionProfile: String { provider.string("auth.section.profile") }
+    public var authFieldFirstName: String { provider.string("auth.field.first_name") }
+    public var authFieldLastName: String { provider.string("auth.field.last_name") }
+    public var authFieldPhoneOptional: String { provider.string("auth.field.phone_optional") }
+    public var authButtonSaveProfile: String { provider.string("auth.button.save_profile") }
+    public var authSectionSecurity: String { provider.string("auth.section.security") }
+    public var authButtonChangePassword: String { provider.string("auth.button.change_password") }
+    public var authTitleChangePassword: String { provider.string("auth.title.change_password") }
+    public var authFieldNewPassword: String { provider.string("auth.field.new_password") }
+    public var authButtonUpdatePassword: String { provider.string("auth.button.update_password") }
+    public var authSectionEcosystemApps: String { provider.string("auth.section.ecosystem_apps") }
+    public var authAppsOpen: String { provider.string("auth.apps.open") }
+    public var authAppsMotivationDaily: String { provider.string("auth.apps.motivation_daily") }
+    public var authAppsMotivationDailySubtitle: String { provider.string("auth.apps.motivation_daily_subtitle") }
+    public var authAppsShowbook: String { provider.string("auth.apps.showbook") }
+    public var authAppsShowbookSubtitle: String { provider.string("auth.apps.showbook_subtitle") }
+    public var authAppsMytv: String { provider.string("auth.apps.mytv") }
+    public var authAppsMytvSubtitle: String { provider.string("auth.apps.mytv_subtitle") }
     public var authOrContinueWith: String { provider.string("auth.or_continue_with") }
     public var authStatusPleaseWait: String { provider.string("auth.status.please_wait") }
     public var authInstructionPasswordRequirements: String { provider.string("auth.instruction.password_requirements") }
