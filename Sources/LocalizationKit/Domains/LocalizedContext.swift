@@ -104,6 +104,11 @@ public struct CommonStrings: Sendable {
     public var authButtonChangePassword: String { provider.string("auth.button.change_password") }
     public var authTitleChangePassword: String { provider.string("auth.title.change_password") }
     public var authFieldNewPassword: String { provider.string("auth.field.new_password") }
+    public var authFieldCurrentPassword: String { provider.string("auth.field.current_password") }
+    public var authFieldOtpCode: String { provider.string("auth.field.otp_code") }
+    public var authButtonSendOtp: String { provider.string("auth.button.send_otp") }
+    public var authButtonResendOtp: String { provider.string("auth.button.resend_otp") }
+    public var authStatusOtpSent: String { provider.string("auth.status.otp_sent") }
     public var authButtonUpdatePassword: String { provider.string("auth.button.update_password") }
     public var authSectionEcosystemApps: String { provider.string("auth.section.ecosystem_apps") }
     public var authAppsOpen: String { provider.string("auth.apps.open") }

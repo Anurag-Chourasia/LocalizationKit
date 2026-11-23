@@ -28,6 +28,11 @@
 "auth.button.change_password" = "Change Password";
 "auth.title.change_password" = "Change Password";
 "auth.field.new_password" = "New Password";
+"auth.field.current_password" = "Current Password";
+"auth.field.otp_code" = "Verification Code (OTP)";
+"auth.button.send_otp" = "Send OTP";
+"auth.button.resend_otp" = "Resend OTP";
+"auth.status.otp_sent" = "Code sent to your email";
 "auth.button.update_password" = "Update Password";
 "auth.section.ecosystem_apps" = "Our Apps";
 "auth.apps.open" = "Open";

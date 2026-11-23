@@ -55,6 +55,16 @@
 
 "auth.field.new_password" = "Nouveau mot de passe";
 
+"auth.field.current_password" = "Mot de passe actuel";
+
+"auth.field.otp_code" = "Code de vérification (OTP)";
+
+"auth.button.send_otp" = "Envoyer l'OTP";
+
+"auth.button.resend_otp" = "Renvoyer l'OTP";
+
+"auth.status.otp_sent" = "Code envoyé à votre adresse e-mail";
+
 "auth.button.update_password" = "Mettre à jour le mot de passe";
 
 "auth.section.ecosystem_apps" = "Nos applications";

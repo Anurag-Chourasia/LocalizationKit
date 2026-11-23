@@ -55,6 +55,16 @@
 
 "auth.field.new_password" = "كلمة المرور الجديدة";
 
+"auth.field.current_password" = "كلمة المرور الحالية";
+
+"auth.field.otp_code" = "رمز التحقق (OTP)";
+
+"auth.button.send_otp" = "إرسال رمز التحقق";
+
+"auth.button.resend_otp" = "إعادة إرسال رمز التحقق";
+
+"auth.status.otp_sent" = "تم إرسال الرمز إلى بريدك الإلكتروني";
+
 "auth.button.update_password" = "تحديث كلمة المرور";
 
 "auth.section.ecosystem_apps" = "تطبيقاتنا";
