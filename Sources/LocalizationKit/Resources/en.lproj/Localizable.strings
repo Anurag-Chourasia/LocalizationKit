@@ -530,7 +530,7 @@
 
 "motivation.feed.end.message" = "Sorry, there is nothing more to show. You reached the bottom of this section. Try changing the tabs/section.";
 
-"motivation.about.disclaimer" = "Quotes and wallpapers are provided by public APIs (Quotable, ZenQuotes, AdviceSlip, and Picsum). All content is owned by their respective authors and creators.";
+"motivation.about.disclaimer" = "Quotes and wallpapers are provided by public APIs (Quotable, ZenQuotes, AdviceSlip, and Picsum). All content is owned by their respective authors and creators.\n\n[Privacy Policy](https://github.com/Anurag-Chourasia/MotivationDaily/blob/main/Docs/PrivacyInventory.md) • [Support](mailto:anuragchourasiaios@gmail.com)";
 
 "motivation.profile.app_information" = "App Information";
 

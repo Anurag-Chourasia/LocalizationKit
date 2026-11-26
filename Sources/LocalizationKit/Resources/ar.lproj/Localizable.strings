@@ -805,7 +805,7 @@
 
 "motivation.feed.end.message" = "لقد وصلت إلى نهاية هذا القسم. جرّب تغيير علامة التبويب أو القسم.";
 
-"motivation.about.disclaimer" = "تُقدَّم الاقتباسات والخلفيات عبر واجهات برمجة عامة (Quotable وZenQuotes وAdviceSlip وPicsum). تعود ملكية المحتوى إلى مؤلفيه ومنشئيه.";
+"motivation.about.disclaimer" = "تُقدَّم الاقتباسات والخلفيات عبر واجهات برمجة عامة (Quotable وZenQuotes وAdviceSlip وPicsum). تعود ملكية المحتوى إلى مؤلفيه ومنشئيه.\n\n[سياسة الخصوصية](https://github.com/Anurag-Chourasia/MotivationDaily/blob/main/Docs/PrivacyInventory.md) • [الدعم](mailto:anuragchourasiaios@gmail.com)";
 
 "motivation.profile.app_information" = "معلومات التطبيق";
 

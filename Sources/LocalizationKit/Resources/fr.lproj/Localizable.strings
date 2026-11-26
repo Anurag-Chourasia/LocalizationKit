@@ -805,7 +805,7 @@
 
 "motivation.feed.end.message" = "Vous avez atteint la fin de cette section. Essayez un autre onglet ou une autre section.";
 
-"motivation.about.disclaimer" = "Les citations et fonds d’écran proviennent d’API publiques (Quotable, ZenQuotes, AdviceSlip et Picsum). Tous les contenus appartiennent à leurs auteurs et créateurs respectifs.";
+"motivation.about.disclaimer" = "Les citations et fonds d’écran proviennent d’API publiques (Quotable, ZenQuotes, AdviceSlip et Picsum). Tous les contenus appartiennent à leurs auteurs et créateurs respectifs.\n\n[Politique de confidentialité](https://github.com/Anurag-Chourasia/MotivationDaily/blob/main/Docs/PrivacyInventory.md) • [Support](mailto:anuragchourasiaios@gmail.com)";
 
 "motivation.profile.app_information" = "Informations sur l’application";
 

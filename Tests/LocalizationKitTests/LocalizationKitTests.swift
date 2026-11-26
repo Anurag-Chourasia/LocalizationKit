@@ -25,6 +25,24 @@ final class LocalizationKitTests: XCTestCase {
         }
     }
 
+    func testMotivationDailyDisclaimerRetainsPrivacyAndSupportAcrossLocales() {
+        for language in ["en", "fr", "ar"] {
+            let provider = LocalizationController(initialLocale: Locale(identifier: language))
+            let disclaimer = MotivationStrings(provider: provider).aboutDisclaimer
+            XCTAssertTrue(disclaimer.contains("Docs/PrivacyInventory.md"))
+            XCTAssertTrue(disclaimer.contains("mailto:anuragchourasiaios@gmail.com"))
+        }
+    }
+
+    func testShowBookDisclaimerRetainsPrivacyAndSupportAcrossLocales() {
+        for language in ["en", "fr", "ar"] {
+            let provider = LocalizationController(initialLocale: Locale(identifier: language))
+            let disclaimer = ShowBookStrings(provider: provider).profileDisclaimer
+            XCTAssertTrue(disclaimer.contains("Docs/PrivacyInventory.md"))
+            XCTAssertTrue(disclaimer.contains("mailto:anuragchourasiaios@gmail.com"))
+        }
+    }
+
     func testShowBookPresentationStringsResolveAcrossSupportedLocales() {
         for (locale, expected) in [("en", "Loading edition…"),
                                    ("fr", "Chargement de l’édition…"),
